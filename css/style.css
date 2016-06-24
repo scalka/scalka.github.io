@@ -1,0 +1,31 @@
+body {
+	position: relative;  /*data-spy scroll requires it to work properly*/
+	padding-top: 50px;
+}
+#about {
+	background-color: #2f5333;
+	padding: 10px;
+}
+#portfolio{
+	background-color: #FFB27F;
+	padding: 10px;
+}
+#contact {
+	background-color: #FF7F7F;
+	padding: 10px;
+	height: 700px;
+}
+
+.about-content{
+	color: white;
+}
+.project-content{
+	border-radius: 10px;
+	background-color: white;
+	opacity: 0.5;
+	margin: 10px;
+}
+
+.group{
+
+}

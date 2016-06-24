@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Portfolio</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"/>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	<script type="text/javascript" src="js/javascript.js"> </script>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <!-- optional data-offset attribute specifies the number of pixels to offset from top when calculating the position of scroll. This is useful when you feel that the links inside the navbar changes the active state too soon or too early when jumping to the scrollable elements. Default is 10 pixels -->
+  <body data-spy="scroll" data-target=".navbar" data-offset="50"> <!-- scrollable area -->
+  	<!-- navbar-inverse or default == colors -->
+  	<nav class="navbar navbar-inverse navbar-fixed-top">
+
+	  <div class="container-fluid">
+
+	  	<div class="navbar-header">
+	  		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          <span class="icon-bar"></span>
+	          </button>
+	          <a class="navbar-brand" href="#">MyPortfolio</a>
+	  	</div>
+<!-- id="about"> matches <a href="#about"> -->
+	  	<div class="collapse navbar-collapse" id="myNavbar">
+	  	<ul class="nav navbar-nav">
+	  		<li><a href="#about">ABOUT</a></li>
+	  		<li><a href="#portfolio">PORTFOLIO</a></li>
+	  		<li><a href="#contact">CONTACT</a></li>
+	  	</ul>
+	  	</div>
+	  </div>
+  	</nav>
+    
+	<div id="about" class="container-fluid">
+	  
+	  <div class="text-center about-content">
+	 	<h1>ABOUT</h1>
+	  	My name is Sylwia and I'm a Creative Computing student at IADT in Dublin.<br> My field of expertise is Web and Mobile Application Development.<br> I spent one year at Stuttgat Media University in Germany doing Mobile Media minor.
+	  	<br><br>
+			Web Developer<br>
+			Mobile App Developer<br>
+			User Experience Designer
+
+	  </div>
+	</div>
+	<div id="portfolio" class="container-fluid">
+	  <h1>PORTFOLIO</h1>
+	  
+	  <div class="container-fluid project">
+	  	<div class="row project-content">
+		  <div class="col-md-6">
+		  	<img class="img-responsive" src="http://placehold.it/500x550">	
+		  </div>
+		  <div class="col-md-6 text-center">
+		  <h4 class="">FestApp</h4>
+		  	<p class="lead">Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+			  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p><p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p><p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p><p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section</p>
+		  </div>
+		</div>
+		<div class="row project-content">
+		  <div class="col-md-6">
+		  	<img class="img-responsive" src="http://placehold.it/500x550">	
+		  </div>
+		  <div class="col-md-6 text-center">
+		  <h4 class="">FestApp</h4>
+		  	<p class="lead">Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p>
+			  <p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p><p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p><p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section and look at the navigation bar while scrolling!</p><p>Try to scroll this section and look at the navigation bar while scrolling! Try to scroll this section</p>
+		  </div>
+		</div>
+
+	  </div>
+
+
+	</div>
+	<div id="contact" class="container-fluid">
+		<h1>CONTACT</h1>
+	  <div class="row">
+	  	<div class="col-md-4">
+		  	<form name="email-form">
+		  		  <div class="group">      
+				    <input type="text" required>
+				    <span class="highlight"></span>
+				    <span class="bar"></span>
+				    <label>Name</label>
+				  </div>
+		  		<input type="text" name="email" placeholder="Name">
+		  		<input type="email" name="email" placeholder="Your e-mail">
+		  		<input type="text" name="message" placeholder="Message">
+		  		
+		  	</form>
+	  	</div>
+	  	<div class="col-md-4">
+
+	  	</div>
+	  	<div class="col-md-4">
+
+		        <a class="btn btn-social-icon btn-linkedin" href="https://ie.linkedin.com/in/sylwia-calka-08387069" target="_blank">
+		         <span class="fa fa-3x fa-linkedin "></span>
+		        </a>
+		        <a class="btn btn-social-icon btn-github" href="https://github.com/scalka">
+		         <span class="fa fa-3x fa-github"></span>
+		        </a>
+
+	  	</div>
+	  </div>
+
+	  <footer>
+	  	Made by Szy
+	  </footer>
+    
+  </body>
+</html>
+
+
+
+
