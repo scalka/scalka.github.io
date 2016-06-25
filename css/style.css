@@ -2,30 +2,116 @@ body {
 	position: relative;  /*data-spy scroll requires it to work properly*/
 	padding-top: 50px;
 }
+h2 {
+  color: green;
+}
 #about {
-	background-color: #2f5333;
 	padding: 10px;
 }
+.jumbotron{
+	background: url("http://res.cloudinary.com/dr6bmrkow/image/upload/v1466846052/banner_huohsl.jpg") no-repeat center center;
+	background-size: cover;
+}
 #portfolio{
-	background-color: #FFB27F;
+	background-color: #white;
 	padding: 10px;
 }
 #contact {
-	background-color: #FF7F7F;
+	background-color: #e9f3fd;
 	padding: 10px;
-	height: 700px;
 }
-
+footer {
+	clear: all;
+}
 .about-content{
-	color: white;
+	color: 	#e9f3fd;
 }
 .project-content{
 	border-radius: 10px;
 	background-color: white;
-	opacity: 0.5;
 	margin: 10px;
+	color: #135480;
+}
+hr {
+	display: block;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	margin-left: 10%;
+	margin-right: 10%;
+	border-style: ridge;
+	border-width: 1px;
 }
 
+form {
+	margin: 20px 10px;
+}
 .group{
-
+	/* so that we can place the other elements relative to that*/
+	position: relative; 
+	margin-bottom: 45px;
 }
+input         {
+  font-size:18px;
+  padding:10px 10px 10px 5px;
+  display:block;
+  width:300px;
+  border: none;
+  border-bottom: 1px solid #135480;
+}
+input:focus {
+	outline:none;
+}
+/*LABEL*/
+label {
+	color:#135480;
+  font-size:18px;
+  font-weight:normal;
+	position: absolute;
+	pointer-events: none; /* none clicks - allows to control over HTML elements respond to mouse/touch events including hover/active states*/
+	left:5px;
+  	top:10px;
+	transition: 0.2s ease all;
+}
+/*active state
+:valid pseudo class is applied if box is filled and it let's lebel stay in active state*/
+input:focus ~ label, input:valid ~ label {
+	top: -20px;
+	font-size: 14px;
+	color: #135480;
+}
+/*Bottom bars*/
+.bar {
+	position: relative; 
+	display: block; 
+	width:300px;
+}
+.bar:before, .bar:after {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 1px;
+	position: absolute;
+	background: #135480;
+	transition: 0.2s ease all;
+}
+.bar:before {
+	left: 50%;
+}
+.bar:after {
+	right: 50%;
+}
+/*active state*/
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+	width: 50%;
+}
+.input-msg {
+	min-height: 100px;
+}
+
+/*FOOTER---------------------------------------------------------------------------------------*/
+.foot{
+    color: #135480;
+    border-top: 1px solid #135480;
+    padding: 10px;
+    text-align: center;
+ } 
