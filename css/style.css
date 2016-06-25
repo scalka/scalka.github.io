@@ -1,12 +1,14 @@
 body {
+  	margin: 0 auto;
 	position: relative;  /*data-spy scroll requires it to work properly*/
 	padding-top: 50px;
 }
-h2 {
-  color: green;
+.btn {
+  background-color: #c33a34;
+  color: #ffffff;
 }
-#about {
-	padding: 10px;
+.section{
+	padding: 20px;
 }
 .jumbotron{
 	background: url("http://res.cloudinary.com/dr6bmrkow/image/upload/v1466846052/banner_huohsl.jpg") no-repeat center center;
@@ -14,21 +16,27 @@ h2 {
 }
 #portfolio{
 	background-color: #white;
-	padding: 10px;
 }
 #contact {
 	background-color: #e9f3fd;
-	padding: 10px;
+    padding: 10%;
+    background-clip: padding-box;
+    width: 100%;
 }
 footer {
 	clear: all;
+	color: #135480;
+    border-top: 1px solid #135480;
+    padding: 10px;
+    text-align: center;
 }
 .about-content{
 	color: 	#e9f3fd;
 }
+.profile-pic{
+	max-width: 400px;
+}
 .project-content{
-	border-radius: 10px;
-	background-color: white;
 	margin: 10px;
 	color: #135480;
 }
@@ -41,16 +49,17 @@ hr {
 	border-style: ridge;
 	border-width: 1px;
 }
+/*           FORM            */
 
 form {
 	margin: 20px 10px;
 }
-.group{
+.group {
 	/* so that we can place the other elements relative to that*/
 	position: relative; 
 	margin-bottom: 45px;
 }
-input         {
+input {
   font-size:18px;
   padding:10px 10px 10px 5px;
   display:block;
@@ -64,8 +73,8 @@ input:focus {
 /*LABEL*/
 label {
 	color:#135480;
-  font-size:18px;
-  font-weight:normal;
+  	font-size:18px;
+  	font-weight:normal;
 	position: absolute;
 	pointer-events: none; /* none clicks - allows to control over HTML elements respond to mouse/touch events including hover/active states*/
 	left:5px;
@@ -107,11 +116,4 @@ input:focus ~ .bar:before, input:focus ~ .bar:after {
 .input-msg {
 	min-height: 100px;
 }
-
-/*FOOTER---------------------------------------------------------------------------------------*/
-.foot{
-    color: #135480;
-    border-top: 1px solid #135480;
-    padding: 10px;
-    text-align: center;
- } 
+/*              END FORM STYLE               */
