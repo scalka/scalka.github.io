@@ -3,20 +3,40 @@ body {
 	position: relative;  /*data-spy scroll requires it to work properly*/
 	padding-top: 50px;
 }
-.btn {
-  background-color: #c33a34;
-  color: #ffffff;
+nav, h1, h2, h3, .lead {
+	font-family: 'Alegreya Sans', sans-serif;
 }
+p {
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 1.2em;
+}
+.navigation{
+	background-color: #fff299;
+	font-size: 1.4em;
+}
+
+ul li:hover{
+	color: red;
+}
+.nav>li>a:hover{
+	background-color: #fe8d53;
+}
+
+
 .section{
 	padding: 20px;
 }
 .jumbotron{
-	background: url("http://res.cloudinary.com/dr6bmrkow/image/upload/v1466846052/banner_huohsl.jpg") no-repeat center center;
+	background: url("#") no-repeat center center;
 	background-size: cover;
+
 }
-#portfolio{
-	background-color: #white;
+/*projects button with skills*/
+.btn {
+  background-color: #c33a34;
+  color: #ffffff;
 }
+
 #contact {
 	background-color: #e9f3fd;
     padding: 10%;
@@ -31,10 +51,10 @@ footer {
     text-align: center;
 }
 .about-content{
-	color: 	#e9f3fd;
+	
 }
 .profile-pic{
-	max-width: 400px;
+	max-width: 300px;
 }
 .project-content{
 	margin: 10px;
@@ -49,6 +69,17 @@ hr {
 	border-style: ridge;
 	border-width: 1px;
 }
+
+
+
+
+
+
+
+
+
+
+
 /*           FORM            */
 
 form {
