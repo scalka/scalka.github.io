@@ -1,4 +1,5 @@
 $(document).ready(function () {
+	// call function
     $(document).on("scroll", onScroll);
     
     //smoothscroll
@@ -10,7 +11,7 @@ $(document).ready(function () {
             $(this).removeClass('active');
         });
         $(this).addClass('active');
-      
+      	// this.hash - reads href atribute of this ex. #contact
         var target = this.hash,
             menu = target;
         $target = $(target);
@@ -31,11 +32,10 @@ function onScroll(event){
         var refElement = $(currLink.attr("href"));
 
         if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-            $('#myNavbar ul li a').removeClass("active");
+            $('#myNavbar ul li').removeClass("active");
             currLink.addClass("active");
             $('#hero').removeClass("active");
-
-        }
+        } 
         else{
             currLink.removeClass("active");
         }
