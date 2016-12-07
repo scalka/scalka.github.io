@@ -1,8 +1,9 @@
 $primaryColor: #fff;
-$secondaryColor: #fe8d53;
-$accentColor: #892e37;
-$btnColor:  #c33a34;
-$lightColor: #fff;
+$secondaryColor: #75D9B5;
+$accentColor: #FF795A;
+$btnColor:  #75D9B5;
+$lightColor: #F8F6A9 ; 
+$contactColor: #E2E3E9;
 
 $font-basic: Source Sans Pro, sans-serif;
 $font-decor: Alegreya Sans, sans-serif;
@@ -59,8 +60,8 @@ p {
 }
 
 #contact {
-	background-color: #e9f3fd;
-    padding: 10%;
+	background-color: $contactColor;
+    padding: 5%;
     background-clip: padding-box;
     width: 100%;
 }
@@ -87,15 +88,6 @@ hr {
 	border-style: ridge;
 	border-width: 1px;
 }
-
-
-
-
-
-
-
-
-
 
 
 /*           FORM            */

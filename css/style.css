@@ -12,21 +12,21 @@ p {
   font-size: 1.2em; }
 
 .navbar {
-  background-color: #fff;
+  background-color: #F8F6A9;
   font-size: 1.4em; }
 
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li > a:focus {
-  color: #fff;
-  background-color: #892e37; }
+  color: #F8F6A9;
+  background-color: #FF795A; }
 
 .navbar-default .navbar-nav > .active > a {
-  color: #fff;
-  background-color: #fe8d53; }
+  color: #F8F6A9;
+  background-color: #75D9B5; }
 
 .active {
-  color: #fff;
-  background-color: #fe8d53; }
+  color: #F8F6A9;
+  background-color: #75D9B5; }
 
 .section {
   padding: 20px;
@@ -38,12 +38,12 @@ p {
 
 /*projects button with skills*/
 .btn {
-  background-color: #c33a34;
+  background-color: #75D9B5;
   color: #ffffff; }
 
 #contact {
-  background-color: #e9f3fd;
-  padding: 10%;
+  background-color: #E2E3E9;
+  padding: 5%;
   background-clip: padding-box;
   width: 100%; }
 
@@ -53,9 +53,6 @@ footer {
   border-top: 1px solid #135480;
   padding: 10px;
   text-align: center; }
-
-.profile-pic {
-  max-width: 300px; }
 
 .project-content {
   margin: 10px;
