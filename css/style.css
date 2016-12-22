@@ -1,0 +1,139 @@
+body {
+  margin: 0 auto;
+  position: relative;
+  /*data-spy scroll requires it to work properly*/
+  padding-top: 50px; }
+
+nav, h1, h2, h3, .lead {
+  font-family: Alegreya Sans, sans-serif; }
+
+p {
+  font-family: Source Sans Pro, sans-serif;
+  font-size: 1.2em; }
+
+.navbar {
+  background-color: #F8F6A9;
+  font-size: 1.4em; }
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  color: #F8F6A9;
+  background-color: #FF795A; }
+
+.navbar-default .navbar-nav > .active > a {
+  color: #F8F6A9;
+  background-color: #75D9B5; }
+
+.active {
+  color: #F8F6A9;
+  background-color: #75D9B5; }
+
+.section {
+  padding: 20px;
+  padding-top: 100px; }
+
+.jumbotron {
+  background: url("#") no-repeat center center;
+  background-size: cover; }
+
+/*projects button with skills*/
+.btn {
+  background-color: #75D9B5;
+  color: #ffffff; }
+
+#contact {
+  background-color: #E2E3E9;
+  padding: 5%;
+  background-clip: padding-box;
+  width: 100%; }
+
+footer {
+  clear: all;
+  color: #135480;
+  border-top: 1px solid #135480;
+  padding: 10px;
+  text-align: center; }
+
+.project-content {
+  margin: 10px;
+  color: #135480; }
+
+hr {
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-style: ridge;
+  border-width: 1px; }
+
+/*           FORM            */
+form {
+  margin: 20px 10px; }
+
+.group {
+  /* so that we can place the other elements relative to that*/
+  position: relative;
+  margin-bottom: 45px; }
+
+input {
+  font-size: 18px;
+  padding: 10px 10px 10px 5px;
+  display: block;
+  width: 300px;
+  border: none;
+  border-bottom: 1px solid #135480; }
+
+input:focus {
+  outline: none; }
+
+/*LABEL*/
+label {
+  color: #135480;
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  /* none clicks - allows to control over HTML elements respond to mouse/touch events including hover/active states*/
+  left: 5px;
+  top: 10px;
+  transition: 0.2s ease all; }
+
+/*active state
+:valid pseudo class is applied if box is filled and it let's lebel stay in active state*/
+input:focus ~ label, input:valid ~ label {
+  top: -20px;
+  font-size: 14px;
+  color: #135480; }
+
+/*Bottom bars*/
+.bar {
+  position: relative;
+  display: block;
+  width: 300px; }
+
+.bar:before, .bar:after {
+  content: '';
+  height: 2px;
+  width: 0;
+  bottom: 1px;
+  position: absolute;
+  background: #135480;
+  transition: 0.2s ease all; }
+
+.bar:before {
+  left: 50%; }
+
+.bar:after {
+  right: 50%; }
+
+/*active state*/
+input:focus ~ .bar:before, input:focus ~ .bar:after {
+  width: 50%; }
+
+.input-msg {
+  min-height: 100px; }
+
+/*              END FORM STYLE               */
+
+/*# sourceMappingURL=style.css.map */
