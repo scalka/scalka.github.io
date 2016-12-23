@@ -5,6 +5,11 @@ $btnColor:  #75D9B5;
 $lightColor: #F8F6A9 ; 
 $contactColor: #E2E3E9;
 
+$firstPage: #312783;
+$secondPage: #CED87C;
+$thirdPage: #FD4741;
+$fourthPage: #E2E3E9;
+
 $font-basic: Source Sans Pro, sans-serif;
 $font-decor: Alegreya Sans, sans-serif;
 
@@ -14,20 +19,49 @@ $font-decor: Alegreya Sans, sans-serif;
 	height: 50px;
 	display:block;
 	width: 100%;
-	background: #333;
+	//background: #333;
 	z-index:9;
 	text-align:center;
 	color: #f2f2f2;
-	padding: 20px 0 0 0;
+	/* padding: 20px 0 0 0; */
 	top: 0px;
 }
 
-h1, h2, h3, .lead {
+#logo{
+	width: 50px;
+  	height: 45px;
+  	background-image: url("../images/cone.svg");
+  	background-repeat: no-repeat;
+}
+
+#logo:hover{
+	opacity: 0.5;
+}
+
+h1, h2, h3, h4 .lead {
 	font-family: $font-decor;
 }
 p {
 	font-family: $font-basic;
 	font-size: 1.2em;
+}
+#name-border{
+	padding-top: 20px;
+	height: 50%;
+}
+#name{
+	color: $primaryColor;
+	border: 1px solid white;
+	margin: 20%;
+}
+.canvas-content {
+	display:block;
+    width:100%;
+    height:50%;
+    //border: 1px solid black;
+}
+#canvas{
+	//border: 1px solid black;
 }
 
 .section{
@@ -37,7 +71,7 @@ p {
 
 /*projects button with skills*/
 .btn {
-  background-color: $btnColor;
+  background-color: $firstPage;
   color: #ffffff;
 }
 
@@ -51,4 +85,11 @@ p {
 .project-content{
 	margin: 10px;
 	color: #135480;
+}
+.profile-pic{
+	padding: 5%;
+	width: 80%;
+}
+.about-text {
+	//margin: 20px;
 }

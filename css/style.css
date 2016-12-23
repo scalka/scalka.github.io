@@ -3,19 +3,41 @@
   height: 50px;
   display: block;
   width: 100%;
-  background: #333;
   z-index: 9;
   text-align: center;
   color: #f2f2f2;
-  padding: 20px 0 0 0;
+  /* padding: 20px 0 0 0; */
   top: 0px; }
 
-h1, h2, h3, .lead {
+#logo {
+  width: 50px;
+  height: 45px;
+  background-image: url("../images/cone.svg");
+  background-repeat: no-repeat; }
+
+#logo:hover {
+  opacity: 0.5; }
+
+h1, h2, h3, h4 .lead {
   font-family: Alegreya Sans, sans-serif; }
 
 p {
   font-family: Source Sans Pro, sans-serif;
   font-size: 1.2em; }
+
+#name-border {
+  padding-top: 20px;
+  height: 50%; }
+
+#name {
+  color: #fff;
+  border: 1px solid white;
+  margin: 20%; }
+
+.canvas-content {
+  display: block;
+  width: 100%;
+  height: 50%; }
 
 .section {
   padding: 20px;
@@ -23,7 +45,7 @@ p {
 
 /*projects button with skills*/
 .btn {
-  background-color: #75D9B5;
+  background-color: #312783;
   color: #ffffff; }
 
 #contact-section {
@@ -35,5 +57,9 @@ p {
 .project-content {
   margin: 10px;
   color: #135480; }
+
+.profile-pic {
+  padding: 5%;
+  width: 80%; }
 
 /*# sourceMappingURL=style.css.map */

@@ -38,6 +38,8 @@ html.fp-enabled,
     display: block;
 }
 .fp-slides {
+    margin-left: 20px;
+    margin- right: 20px;
     z-index:1;
     height: 100%;
     overflow: hidden;
@@ -81,12 +83,12 @@ html.fp-enabled,
     left: 15px;
     width: 0;
     border-width: 38.5px 34px 38.5px 0;
-    border-color: transparent #fff transparent transparent;
+    border-color: transparent #FFBF00 transparent transparent;
 }
 .fp-controlArrow.fp-next {
     right: 15px;
     border-width: 38.5px 0 38.5px 34px;
-    border-color: transparent transparent transparent #fff;
+    border-color: transparent transparent transparent #FFBF00;
 }
 .fp-scrollable {
     overflow: hidden;
@@ -114,6 +116,7 @@ html.fp-enabled,
     right: 17px;
 }
 #fp-nav.left {
+    top: 80%;
     left: 17px;
 }
 .fp-slidesNav{
@@ -174,7 +177,7 @@ html.fp-enabled,
     height: 4px;
     width: 4px;
     border: 0;
-    background: #333;
+    background: #FFBF00;
     left: 50%;
     top: 50%;
     margin: -2px 0 0 -2px;
@@ -215,6 +218,7 @@ html.fp-enabled,
 }
 #fp-nav ul li .fp-tooltip.left {
     left: 20px;
+    color:#FFBF00;
 }
 .fp-auto-height.fp-section,
 .fp-auto-height .fp-slide,

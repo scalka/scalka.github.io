@@ -1,69 +1,60 @@
+<!DOCTYPE html>
 <html lang="en">
-  <head>
-  	<meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="jquery.fullPage.css" />
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <script src="js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Source+Sans+Pro" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-    <script src="https://use.fontawesome.com/c8da454be6.js"></script>
-    <script type="text/javascript" src="jquery.fullPage.js"></script>
-    
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-    <script type="text/javascript" src="js/javascript.js"> </script>
-
+	<head>
+	  	<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+	    <title>Portfolio</title>
+	    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <script src="js/bootstrap.min.js"></script>
+	    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	    <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans|Source+Sans+Pro" rel="stylesheet">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	    <script src="https://use.fontawesome.com/c8da454be6.js"></script>
+	    <script type="text/javascript" src="js/jquery.fullPage.js"></script>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	    <script type="text/javascript" src="js/javascript.js"> </script>
+	    <script src="js/cone.js"></script> 
   </head>
-<body data-spy="scroll" data-target=".navbar" data-offset="50"> <!-- scrollable area -->
-  	<!-- navbar-inverse or default == colors -->
-  	<header id="home" class="jumbotron">
-	  	<nav  class="navbar navbar-default navbar-fixed-top">
-		  	<div  class="container-fluid">
-			  	<div class="navbar-header">
-			  		<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-			          <span class="icon-bar"></span>
-			          <span class="icon-bar"></span>
-			          <span class="icon-bar"></span>
-			          </button>
-			          <a class="navbar-brand" href="#hero">S.Calka</a>
-			  	</div>
-	<!-- id="about"> matches <a href="#about"> -->
-		  	<div id="myNavbar" class="collapse navbar-collapse">
-			  	<ul class="nav navbar-nav">
-			  		<li><a href="#about">ABOUT</a></li>
-			  		<li><a href="#portfolio">PORTFOLIO</a></li>
-			  		<li><a href="#contact">CONTACT</a></li>
-			  	</ul>
-		  	</div>
-		  </div> <!-- container-fluid  -->
-	  	</nav>
-	  	
-	    <section id="hero" class="section">
-			<div class="container-fluid">
-				<div class="text-center about-content">
-					<h2>Hello, my name is Sylwia!</h2>
-					<h4>Web Developer &bull; Mobile App Developer &bull; User Experience Designer</h4> 
-				</div> 
+  <body>
+	<div id="header">
+		<!-- <div id="logo">
+			
+		</div> -->
+		<!-- <ul id="ul-menu">
+		    <li data-menuanchor="home" class="active"><a href="#home-section">First section</a></li>
+		    <li data-menuanchor="about"><a href="#about-section">Second section</a></li>
+		    <li data-menuanchor="portfolio"><a href="#portfolio-section">Third section</a></li>
+		    <li data-menuanchor="contact"><a href="#contact-section">Fourth section</a></li>
+		</ul> -->
+	</div> 
+  	<div id="fullpage">
+  		<div class="section" id="home-section">
+			<div class="canvas-content">
+				<canvas id="canvas"  width="800" height="600"></canvas>
+			</div>  
+	    	<div class="text-center" id="name-border">
+					<div id="name">
+						<h2>SYLWIA CALKA</h2>
+						<h4>Web and Mobile Developer</h4>
+					</div>
 			</div>
-		</section>
-		
-	</header>
-	 <div id="content" class="container">
-		<div id="about" class="container-fluid section row">
-			<!-- <div class="row"> -->
-				<div class="col-sm-4">
+		</div> <!-- top section end  -->
+
+		<div class="section" id="about-section">
+		    <div class="container">
+		    	<div class="row"> 
+				<div class="col-sm-6 col-md-4">
 	        		<div class="profile-pic center-block">
-						<img class="img-responsive img-rounded" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1466853694/profile_t2spfg.jpg" alt="picture picture">
+						<img class="img-responsive img-rounded" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1466853694/profile_t2spfg.jpg" alt="picture">
 	      			</div>
 				</div>
-				<div class="col-sm-8 text-center">
+				<div class="col-sm-6 col-md-8 about-text">
 					<p>
 			          <b>Hello, welcome to my portfolio!</b><br>
 			          My name is Sylwia I am a Polish woman currently living in Dublin.
@@ -77,12 +68,16 @@
 			          My portfolio consists of projects I developed alone and contributed significantly to. Short description, picture and videos of  the projects are ready to be checked out here. For a more in depth view, visit my GitHub.
 			          </p>
 				</div>
-			<!-- </div>	 -->
-		</div> <!-- about -->
-		<hr>
-		<div id="portfolio" class="container-fluid section">
-		  <div class="container-fluid project">
-			  	<div class="row project-content">
+			</div>
+		    </div>
+		</div> <!--about  section end  -->
+
+		<div class="section" id="portfolio-section">
+		    <!-- <div class="slide"> Slide 1 
+		    </div> <!-- slide end -->
+		    <div class="slide"> 
+		    	<div class="container">
+		    		<div class="row project-content">
 				  <div class="col-sm-6">
 				  	<img class="img-responsive" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1466845666/festapp1_hrj7qx.png">	
 				  </div>
@@ -106,9 +101,11 @@
 		               	<button class="btn">Photoshop</button> 
 		            </div>
 				  </div>
-				</div>
-				<hr>
-				<div class="row project-content">
+				</div> <!-- row end -->
+		    	</div>
+		    </div> <!-- slide end -->
+		    <div class="slide"> 
+		    	<div class="row project-content">
 				  <div class="col-sm-6">
 				  	<img class="img-responsive" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1475246896/traveltune_ywwiii.png">	
 				  </div>
@@ -122,9 +119,10 @@
 		            <button class="btn">Proto.io</button>
 		            <button class="btn">Eye tracking analysis</button>
 				  </div>
-				</div>
-				<hr>
-				<div class="row project-content">
+				</div> <!-- row end -->
+		    </div> <!-- slide end -->
+		    <div class="slide"> 
+		    	<div class="row project-content">
 				  <div class="col-sm-6">
 				  	<img class="img-responsive" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1475248037/lapica_m0vfbj.png">	
 				  </div>
@@ -140,27 +138,27 @@
 		          <button class="btn">JavaScript</button>
 		          <button class="btn">HTML</button>   
 				  </div>
-				</div>
-			<hr>
-			<div class="row project-content">
-			  <div class="col-sm-6">
-			  	<img class="img-responsive" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1475248217/life_oossw7.png">	
-			  </div>
-			  <div class="col-sm-6 text-center">
-			  <h2>Life We Live</h2>
-			  	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-				  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-          <button class="btn">HTML</button>   
-          <button class="btn">CSS</button>
-          <button class="btn">JavaScript</button>
-			  </div>
-			</div>	<!-- row -->
-		  </div> <!-- project -->
-		</div> 
-		</div><!-- portfolio --> 
-	</div> <!-- content-container --> 
-		<div id="contact" class="container">
-		  <div class="row">
+				</div> <!-- row end -->
+		    </div> <!-- slide end -->
+		    <div class="slide"> 
+		    	<div class="row project-content">
+				  <div class="col-sm-6">
+				  	<img class="img-responsive" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1475248217/life_oossw7.png">	
+				  </div>
+				  <div class="col-sm-6 text-center">
+				  	<h2>Life We Live</h2>
+				  	<p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+					  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+			          <button class="btn">HTML</button>   
+			          <button class="btn">CSS</button>
+			          <button class="btn">JavaScript</button>
+				  </div>
+				</div><!-- row end -->
+		    </div> <!-- slide end -->
+		</div> <!-- portfolio section end  -->
+
+		<div class="section" id="contact-section">
+		   <div class="row">
 		  	<div class=" col-md-12 col-sm-12 text-center">
 
 		        <a class="btn btn-social-icon btn-linkedin" href="https://ie.linkedin.com/in/sylwia-calka-08387069" target="_blank">
@@ -175,14 +173,10 @@
 		         	<span class="fa fa-3x fa-skype"></span>
 		        </a>
 		  	</div>
-		  </div> <!-- row -->
-		 </div> <!-- contact -->
-	   
-	  <footer>
-	  	<p class="foot">&copy; 2016, Szy. All rights reserved.</p>
-	  </footer>
+		  </div> <!-- row end -->
+		</div> <!-- contact section end -->
+	 </div> <!-- fullpage end -->
+
   </body>
+
 </html>
-
-
-

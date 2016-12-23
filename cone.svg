@@ -1,0 +1,27 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 261.02 305.65">
+<defs>
+	<style>.cls-1{fill:#ffc248;}.cls-2{fill:#f60;}.cls-3{fill:#c11b00;}.cls-4{fill:#f90;}.cls-5{fill:#f43900;}
+	</style>
+</defs>
+<title>cone</title>
+<g id="_Group_" class="cone" data-name="&lt;Group&gt;">
+	<polygon id="_Path_" data-name="&lt;Path&gt;" class="cls-1" 
+		points="131.23 102.93 181.51 47.67 131.23 0 81.06 47.68 131.23 102.93"/>
+	<polygon id="_Path_2" data-name="&lt;Path&gt;" class="cls-2" 
+		points="131.22 222.1 185.83 176.51 131.22 110.19 72.56 176.39 131.22 222.1"/>
+	<polygon id="_Path_3" data-name="&lt;Path&gt;" class="cls-3" 
+		points="131.22 305.65 185.83 292.29 131.22 238.29 72.56 292.16 131.22 305.65"/>
+	<polygon id="_Path_4" data-name="&lt;Path&gt;" class="cls-4" 
+		points="67.16 171.18 111.61 107.49 60.52 44.07 16.7 138.59 67.16 171.18"/>
+	<polygon id="_Path_5" data-name="&lt;Path&gt;" class="cls-4" 
+		points="192.73 171.18 148.28 107.49 199.37 44.07 243.19 138.59 192.73 171.18"/>
+	<polygon id="_Path_6" data-name="&lt;Path&gt;" class="cls-5" 
+		points="247.42 238.29 193.85 185.23 140.46 235.19 194.41 284.43 247.42 238.29"/>
+	<polygon id="_Path_7" data-name="&lt;Path&gt;" class="cls-2" 
+		points="244.89 221.11 200.43 176.64 261.02 150.92 244.89 221.11"/>
+	<polygon id="_Path_8" data-name="&lt;Path&gt;" class="cls-2" 
+		points="16.13 221.11 60.59 176.64 0 150.92 16.13 221.11"/>
+	<polygon id="_Path_9" data-name="&lt;Path&gt;" class="cls-5" 
+		points="14.63 238.29 68.2 185.23 121.59 235.19 67.64 284.43 14.63 238.29"/>
+</g>
+</svg>
