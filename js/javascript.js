@@ -98,9 +98,11 @@ $(document).ready(function() {
 });
 
 function cones(ctxt) {
+
 	var canvasWidth = canvas.width;
 	var canvasHeight = canvas.height;
 	var canvesquarter = canvasWidth/6 + 0;
+
 	var cone1 = new Cone();
 		cone1.x = canvesquarter;
 		cone1.y = canvasHeight/2 + 30;
@@ -154,3 +156,4 @@ function cones(ctxt) {
 			cone4.draw(ctxt);
 		}	
 }
+
