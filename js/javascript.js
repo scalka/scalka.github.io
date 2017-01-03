@@ -115,7 +115,7 @@ function conesSmall(ctxt){
     console.log(screenwidth);
     var canvasWidth = canvas.width;
     var canvasHeight = canvas.height;
-    var canvesquarter = canvasWidth/6 + 0;
+    var canvesquarter = canvasWidth/6 + 20;
 
     var scale = screenwidth/(screenwidth*4);
     console.log(scale);
@@ -135,18 +135,11 @@ function conesSmall(ctxt){
         cone3.x = canvesquarter*3;
         cone3.y = canvasHeight/2 -130;
         cone3.scaleX =scale;
-        cone3.scaleY =scale;
-
-    var cone4 = new Cone();
-        cone4.x = canvesquarter*4 ;
-        cone4.y = canvasHeight/2 -130;   
-        cone4.scaleX =scale;
-        cone4.scaleY =scale;       
+        cone3.scaleY =scale;    
 
         cone1.draw(ctxt);
         cone2.draw(ctxt);
         cone3.draw(ctxt);
-        cone4.draw(ctxt);
 }
 
 function conesBig(ctxt) {

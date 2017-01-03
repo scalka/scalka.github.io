@@ -57,7 +57,14 @@ p {
 /*projects button with skills*/
 .btn {
   background-color: #312783;
+  color: #ffffff;
+  margin: 1px; }
+
+.btn:hover {
   color: #ffffff; }
+
+.btn-social-icon:hover {
+  color: #FFBF00; }
 
 #contact-section {
   background-color: #FF795A;
@@ -73,8 +80,14 @@ p {
   padding: 5%;
   width: 80%; }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-device-width: 568px) {
   #name-border {
     width: 260px; } }
+@media only screen and (max-width: 568px) {
+  #name-border {
+    width: 260px; }
+
+  p {
+    text-align: left; } }
 
 /*# sourceMappingURL=style.css.map */

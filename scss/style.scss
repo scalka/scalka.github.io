@@ -84,6 +84,13 @@ p {
 .btn {
   background-color: $firstPage;
   color: #ffffff;
+  margin: 1px;
+}
+.btn:hover {
+	color: #ffffff;
+}
+.btn-social-icon:hover{
+	color: $yellowAccent;
 }
 
 #contact-section {
@@ -105,8 +112,16 @@ p {
 	//margin: 20px;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-device-width: 568px) {
 	#name-border {
 		width: 260px;
+	}
+}
+@media only screen and (max-width: 568px) {
+	#name-border {
+		width: 260px;
+	}
+	p {
+		text-align: left;
 	}
 }
