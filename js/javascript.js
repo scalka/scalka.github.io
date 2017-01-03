@@ -15,14 +15,15 @@ $(document).ready(function() {
 	var container = $(canvas).parent();*/
 	var canvas = $('#canvas');
 	var ctxt = canvas.get(0).getContext("2d");
-	var container = $(canvas).parent();
+	var container = $('#home-section');
+    var name_border = $('#name-border');
 	respondCanvas();
 	cones(ctxt);
 	// run function when browser resizes
 	$(window).resize(respondCanvas);
 		function respondCanvas(){
 			canvas.attr('width', $(container).width()); // max width
-			canvas.attr('height', $(container).height()); // max height	
+			//canvas.attr('height', ($(container).height())-($(name_border).height) );// max height	
 			cones(ctxt);
 		}
 
