@@ -17,13 +17,17 @@ $(document).ready(function() {
 	var ctxt = canvas.get(0).getContext("2d");
 	var container = $('#home-section');
     var name_border = $('#name-border');
+    
 	respondCanvas();
 	cones(ctxt);
 	// run function when browser resizes
 	$(window).resize(respondCanvas);
 		function respondCanvas(){
+            var contW = container.width() ;
+            var nameW = name_border.width();
+            var canvasW = contW - nameW;
 			canvas.attr('width', $(container).width()); // max width
-			//canvas.attr('height', ($(container).height())-($(name_border).height) );// max height	
+			canvas.attr('height', canvasW );// max height	
 			cones(ctxt);
 		}
 
@@ -99,62 +103,98 @@ $(document).ready(function() {
 });
 
 function cones(ctxt) {
-
+     ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
+    var screenwidth = $(window).width();
+    console.log(screenwidth);
 	var canvasWidth = canvas.width;
 	var canvasHeight = canvas.height;
 	var canvesquarter = canvasWidth/6 + 0;
 
-	var cone1 = new Cone();
-		cone1.x = canvesquarter;
-		cone1.y = canvasHeight/2 + 30;
-	var cone2 = new Cone();
-		cone2.x = canvesquarter*2;
-		cone2.y = canvasHeight/2 + 30;
+	if (screenwidth >= 900){
+        var cone1 = new Cone();
+            cone1.x = canvesquarter;
+            cone1.y = canvasHeight/2 + 30;
+        var cone2 = new Cone();
+            cone2.x = canvesquarter*2;
+            cone2.y = canvasHeight/2 + 30;
 
-	var cone3 = new Cone();
-		cone3.x = canvesquarter*3;
-		cone3.y = canvasHeight/2 + 30;
+        var cone3 = new Cone();
+            cone3.x = canvesquarter*3;
+            cone3.y = canvasHeight/2 + 30;
 
-	var cone4 = new Cone();
-		cone4.x = canvesquarter*4 ;
-		cone4.y = canvasHeight/2 + 30;			
+        var cone4 = new Cone();
+            cone4.x = canvesquarter*4 ;
+            cone4.y = canvasHeight/2 + 30;          
 
-		cone1.draw(ctxt);
-		cone2.draw(ctxt);
-		cone3.draw(ctxt);
-		cone4.draw(ctxt);
+            cone1.draw(ctxt);
+            cone2.draw(ctxt);
+            cone3.draw(ctxt);
+            cone4.draw(ctxt);
+        window.onmousemove = function (){
+            // clear canvas each onmousemove
+            ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
+            // mouse coordinates relative to the top left corner of the browser window’s client area
+            xMouse = event.clientX;
+            yMouse = event.clientY;
+            // dx dy - difference between x,y of arrow and x,y of mouse 
+            var dx = xMouse - cone1.x ;
+            var dy = yMouse - cone1.y ;
+            angle =  Math.atan2(dy, dx);
+            cone1.rotation = angle;
+            cone1.draw(ctxt);
 
-	window.onmousemove = function (){
-		// clear canvas each onmousemove
-			ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
-			// mouse coordinates relative to the top left corner of the browser window’s client area
-			xMouse = event.clientX;
-			yMouse = event.clientY;
-			// dx dy - difference between x,y of arrow and x,y of mouse 
-			var dx = xMouse - cone1.x ;
-			var dy = yMouse - cone1.y ;
-			angle =  Math.atan2(dy, dx);
-			cone1.rotation = angle;
-			cone1.draw(ctxt);
-
-			var dx = xMouse - cone2.x ;
-			var dy = yMouse - cone2.y ;
-			angle =  Math.atan2(dy, dx);
-			cone2.rotation = angle;
-			cone2.draw(ctxt);
+            var dx = xMouse - cone2.x ;
+            var dy = yMouse - cone2.y ;
+            angle =  Math.atan2(dy, dx);
+            cone2.rotation = angle;
+            cone2.draw(ctxt);
 
 
-			var dx = xMouse - cone3.x ;
-			var dy = yMouse - cone3.y ;
-			angle =  Math.atan2(dy, dx);
-			cone3.rotation = angle;
-			cone3.draw(ctxt);
+            var dx = xMouse - cone3.x ;
+            var dy = yMouse - cone3.y ;
+            angle =  Math.atan2(dy, dx);
+            cone3.rotation = angle;
+            cone3.draw(ctxt);
 
-			var dx = xMouse - cone4.x ;
-			var dy = yMouse - cone4.y ;
-			angle =  Math.atan2(dy, dx);
-			cone4.rotation = angle;
-			cone4.draw(ctxt);
-		}	
+            var dx = xMouse - cone4.x ;
+            var dy = yMouse - cone4.y ;
+            angle =  Math.atan2(dy, dx);
+            cone4.rotation = angle;
+            cone4.draw(ctxt);
+        }       
+
+    } else {
+        console.log("window less than 900px");
+        var scale = screenwidth/(screenwidth*4);
+        console.log(scale);
+
+        var cone1 = new Cone();
+            cone1.x = canvesquarter;
+            cone1.y = canvasHeight/2 -130;
+            cone1.scaleX =scale;
+            cone1.scaleY =scale;
+        var cone2 = new Cone();
+            cone2.x = canvesquarter*2;
+            cone2.y = canvasHeight/2 -130;
+            cone2.scaleX =scale;
+            cone2.scaleY =scale;
+
+        var cone3 = new Cone();
+            cone3.x = canvesquarter*3;
+            cone3.y = canvasHeight/2 -130;
+            cone3.scaleX =scale;
+            cone3.scaleY =scale;
+
+        var cone4 = new Cone();
+            cone4.x = canvesquarter*4 ;
+            cone4.y = canvasHeight/2 -130;   
+            cone4.scaleX =scale;
+            cone4.scaleY =scale;       
+
+            cone1.draw(ctxt);
+            cone2.draw(ctxt);
+            cone3.draw(ctxt);
+            cone4.draw(ctxt);
+    }    
 }
 
