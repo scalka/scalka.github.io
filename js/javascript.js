@@ -19,16 +19,22 @@ $(document).ready(function() {
     var name_border = $('#name-border');
     
 	respondCanvas();
-	cones(ctxt);
+	//cones(ctxt);
 	// run function when browser resizes
 	$(window).resize(respondCanvas);
 		function respondCanvas(){
             var contW = container.width() ;
             var nameW = name_border.width();
             var canvasW = contW - nameW;
-			canvas.attr('width', $(container).width()); // max width
-			canvas.attr('height', canvasW );// max height	
-			cones(ctxt);
+            if (nameW > 260){
+                canvas.attr('width', $(container).width()); // max width
+                canvas.attr('height', canvasW );// max height   
+                conesBig(ctxt);
+            } else if ( nameW <= 260) {
+                canvas.attr('width', $(container).width()); // max width
+                canvas.attr('height', 500 );// max height   
+                conesSmall(ctxt);
+            }
 		}
 
     $('#fullpage').fullpage({
@@ -102,8 +108,49 @@ $(document).ready(function() {
 
 });
 
-function cones(ctxt) {
-     ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
+function conesSmall(ctxt){
+    console.log("window less than 900px");
+    ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
+    var screenwidth = $(window).width();
+    console.log(screenwidth);
+    var canvasWidth = canvas.width;
+    var canvasHeight = canvas.height;
+    var canvesquarter = canvasWidth/6 + 0;
+
+    var scale = screenwidth/(screenwidth*4);
+    console.log(scale);
+
+    var cone1 = new Cone();
+        cone1.x = canvesquarter;
+        cone1.y = canvasHeight/2 -130;
+        cone1.scaleX =scale;
+        cone1.scaleY =scale;
+    var cone2 = new Cone();
+        cone2.x = canvesquarter*2;
+        cone2.y = canvasHeight/2 -130;
+        cone2.scaleX =scale;
+        cone2.scaleY =scale;
+
+    var cone3 = new Cone();
+        cone3.x = canvesquarter*3;
+        cone3.y = canvasHeight/2 -130;
+        cone3.scaleX =scale;
+        cone3.scaleY =scale;
+
+    var cone4 = new Cone();
+        cone4.x = canvesquarter*4 ;
+        cone4.y = canvasHeight/2 -130;   
+        cone4.scaleX =scale;
+        cone4.scaleY =scale;       
+
+        cone1.draw(ctxt);
+        cone2.draw(ctxt);
+        cone3.draw(ctxt);
+        cone4.draw(ctxt);
+}
+
+function conesBig(ctxt) {
+    ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
     var screenwidth = $(window).width();
     console.log(screenwidth);
 	var canvasWidth = canvas.width;
@@ -130,7 +177,7 @@ function cones(ctxt) {
             cone2.draw(ctxt);
             cone3.draw(ctxt);
             cone4.draw(ctxt);
-        window.onmousemove = function (){
+        window.onmousemove = function (event){
             // clear canvas each onmousemove
             ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
             // mouse coordinates relative to the top left corner of the browser window’s client area
@@ -162,39 +209,6 @@ function cones(ctxt) {
             cone4.rotation = angle;
             cone4.draw(ctxt);
         }       
-
-    } else {
-        console.log("window less than 900px");
-        var scale = screenwidth/(screenwidth*4);
-        console.log(scale);
-
-        var cone1 = new Cone();
-            cone1.x = canvesquarter;
-            cone1.y = canvasHeight/2 -130;
-            cone1.scaleX =scale;
-            cone1.scaleY =scale;
-        var cone2 = new Cone();
-            cone2.x = canvesquarter*2;
-            cone2.y = canvasHeight/2 -130;
-            cone2.scaleX =scale;
-            cone2.scaleY =scale;
-
-        var cone3 = new Cone();
-            cone3.x = canvesquarter*3;
-            cone3.y = canvasHeight/2 -130;
-            cone3.scaleX =scale;
-            cone3.scaleY =scale;
-
-        var cone4 = new Cone();
-            cone4.x = canvesquarter*4 ;
-            cone4.y = canvasHeight/2 -130;   
-            cone4.scaleX =scale;
-            cone4.scaleY =scale;       
-
-            cone1.draw(ctxt);
-            cone2.draw(ctxt);
-            cone3.draw(ctxt);
-            cone4.draw(ctxt);
-    }    
+    }  
 }
 

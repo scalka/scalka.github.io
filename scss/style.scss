@@ -104,3 +104,9 @@ p {
 .about-text {
 	//margin: 20px;
 }
+
+@media only screen and (max-width: 500px) {
+	#name-border {
+		width: 260px;
+	}
+}
