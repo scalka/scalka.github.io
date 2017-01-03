@@ -4,14 +4,15 @@ $accentColor: #FF795A;
 $btnColor:  #75D9B5;
 $lightColor: #F8F6A9 ; 
 $contactColor: #E2E3E9;
+$yellowAccent: #FFBF00;
 
 $firstPage: #312783;
-$secondPage: #CED87C;
-$thirdPage: #FD4741;
+$secondPage: #3BAC50;
+$thirdPage: #f60;
 $fourthPage: #E2E3E9;
 
-$font-basic: Source Sans Pro, sans-serif;
-$font-decor: Alegreya Sans, sans-serif;
+$font-basic: Roboto, sans-serif;
+$font-decor: Arima Madurai,;
 
 
 #header {
@@ -21,10 +22,22 @@ $font-decor: Alegreya Sans, sans-serif;
 	width: 100%;
 	//background: #333;
 	z-index:9;
-	text-align:center;
-	color: #f2f2f2;
+	/* text-align:center; */
+	color: $primaryColor;
 	/* padding: 20px 0 0 0; */
 	top: 0px;
+}
+#ul-menu {
+	list-style-type: none;
+}
+#ul-menu li{
+	display: inline-block;
+	margin: 0px 10px 0px 10px;
+}
+#ul-menu li a {
+	font-family: $font-decor;
+	color: $yellowAccent;
+	text-decoration: none;
 }
 
 #logo{
@@ -38,7 +51,7 @@ $font-decor: Alegreya Sans, sans-serif;
 	opacity: 0.5;
 }
 
-h1, h2, h3, h4 .lead {
+h1, h2, h3, h4, .lead {
 	font-family: $font-decor;
 }
 p {

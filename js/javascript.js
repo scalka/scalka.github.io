@@ -34,7 +34,7 @@ $(document).ready(function() {
         anchors:['home', 'about', 'portfolio', 'contact'],
         navigation: true,
         navigationPosition: 'left',
-        navigationTooltips: ['', 'About me', 'My work', 'Contact'],
+        //navigationTooltips: ['', 'About me', 'My work', 'Contact'],
         showActiveTooltip: true,
         slidesNavigation: false,
         slidesNavPosition: 'bottom',
@@ -74,12 +74,12 @@ $(document).ready(function() {
         //Design
         controlArrows: true, /*arrows change slides*/
         verticalCentered: true, /*centering content*/
-        sectionsColor : ['#312783', '#CED87C', '#fff', '#FD4741'], /*colors of sections*/
+        sectionsColor : ['#312783', '#39b477', '#fff', '#e1465d'], /*colors of sections*/
         paddingTop: '3em',
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
-        responsiveWidth: 0,
-        responsiveHeight: 0,
+        responsiveWidth: 900,
+        responsiveHeight: 900,
         responsiveSlides: false,
 
         //Custom selectors
