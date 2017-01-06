@@ -16,7 +16,7 @@ $font-decor: Arima Madurai,;
 
 
 #header {
-	position:fixed;
+	position:absolute;
 	height: 50px;
 	display:block;
 	width: 100%;
@@ -110,6 +110,29 @@ p {
 }
 .about-text {
 	//margin: 20px;
+}
+.half {
+	width: 35%;
+	display: inline-block;
+	vertical-align: top;
+}
+
+@media only screen and (max-device-width: 900) {
+	.about-section {
+		padding-bottom: 20px;
+	}
+	.portfolio-section {
+		padding-bottom: 20px;
+	}
+
+}
+@media only screen and (max-width: 900) {
+	.section {
+		padding-bottom: 20px;
+	}
+	.portfolio-section {
+		padding-bottom: 20px;
+	}
 }
 
 @media only screen and (max-device-width: 568px) {

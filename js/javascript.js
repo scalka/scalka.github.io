@@ -179,26 +179,33 @@ function conesBig(ctxt) {
             // dx dy - difference between x,y of arrow and x,y of mouse 
             var dx = xMouse - cone1.x ;
             var dy = yMouse - cone1.y ;
-            angle =  Math.atan2(dy, dx);
-            cone1.rotation = angle;
+            angle =  Math.atan2(cone1.x, dx);
+            if (dx <100){
+                cone1.rotation = angle;
+            }
+            console.log(dx);
             cone1.draw(ctxt);
 
             var dx = xMouse - cone2.x ;
             var dy = yMouse - cone2.y ;
-            angle =  Math.atan2(dy, dx);
-            cone2.rotation = angle;
+            angle =  Math.atan2(cone1.x, dx);
+            if(dx <100){
+                cone2.rotation = angle;
+            }
             cone2.draw(ctxt);
 
 
             var dx = xMouse - cone3.x ;
             var dy = yMouse - cone3.y ;
-            angle =  Math.atan2(dy, dx);
-            cone3.rotation = angle;
+            angle =  Math.atan2(cone1.x, dx);
+            if(dx <100){
+                cone3.rotation = angle;
+            }
             cone3.draw(ctxt);
 
             var dx = xMouse - cone4.x ;
             var dy = yMouse - cone4.y ;
-            angle =  Math.atan2(dy, dx);
+            angle =  Math.atan2(cone1.x, dx);
             cone4.rotation = angle;
             cone4.draw(ctxt);
         }       
