@@ -15,7 +15,7 @@ $font-basic: Roboto, sans-serif;
 $font-decor: Arima Madurai,;
 
 .slide {
-	
+
 }
 #header {
 	position:absolute;
@@ -82,6 +82,15 @@ p {
 	padding-top: 100px;
 }
 
+.skills {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+}
+.skills li {
+	flex: 0 1 auto;
+}
+
 /*projects button with skills*/
 .btn {
   background-color: $firstPage;
@@ -140,11 +149,13 @@ p {
 @media only screen and (max-device-width: 767px) {
 	.project-img {
 		max-height: 300px; 
+		margin: auto;
 	}
 }
 @media only screen and (max-width: 767px) {
 	.project-img {
 		max-height: 300px; 
+		margin: auto;
 	}
 	.project-text {
 		

@@ -54,6 +54,14 @@ p {
   padding: 20px;
   padding-top: 100px; }
 
+.skills {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+.skills li {
+  flex: 0 1 auto; }
+
 /*projects button with skills*/
 .btn {
   background-color: #312783;
@@ -99,10 +107,12 @@ p {
     padding-bottom: 20px; } }
 @media only screen and (max-device-width: 767px) {
   .project-img {
-    max-height: 300px; } }
+    max-height: 300px;
+    margin: auto; } }
 @media only screen and (max-width: 767px) {
   .project-img {
-    max-height: 300px; } }
+    max-height: 300px;
+    margin: auto; } }
 @media only screen and (max-device-width: 568px) {
   #name-border {
     width: 260px; } }
