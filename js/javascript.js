@@ -8,7 +8,11 @@ var force= 0.01;
 var angle;
 
 $(document).ready(function() {
-	
+
+    if ($(window).width() < 560){
+        $(".mySlide").removeClass('slide');
+        console.log("removed");
+    }
     // cones
     /*var canvas = document.getElementById("canvas");
 	var ctxt = canvas.getContext("2d");
@@ -22,20 +26,22 @@ $(document).ready(function() {
 	//cones(ctxt);
 	// run function when browser resizes
 	$(window).resize(respondCanvas);
-		function respondCanvas(){
-            var contW = container.width() ;
-            var nameW = name_border.width();
-            var canvasW = contW - nameW;
-            if (nameW > 260){
-                canvas.attr('width', $(container).width()); // max width
-                canvas.attr('height', canvasW );// max height   
-                conesBig(ctxt);
-            } else if ( nameW <= 260) {
-                canvas.attr('width', $(container).width()); // max width
-                canvas.attr('height', 500 );// max height   
-                conesSmall(ctxt);
-            }
-		}
+    //$(window).resize(respondSlides);
+
+	function respondCanvas(){
+        var contW = container.width() ;
+        var nameW = name_border.width();
+        var canvasW = contW - nameW;
+        if (nameW > 260){
+            canvas.attr('width', $(container).width()); // max width
+            canvas.attr('height', canvasW );// max height   
+            conesBig(ctxt);
+        } else if ( nameW <= 260) {
+            canvas.attr('width', $(container).width()); // max width
+            canvas.attr('height', 500 );// max height   
+            conesSmall(ctxt);
+        } 
+    }
 
     $('#fullpage').fullpage({
         //Navigation
@@ -90,8 +96,6 @@ $(document).ready(function() {
         fixedElements: '#header, .footer',
         responsiveWidth: 900,
         responsiveHeight: 900,
-        responsiveSlides: false,
-
         //Custom selectors
         sectionSelector: '.section',
         slideSelector: '.slide',
@@ -112,13 +116,13 @@ function conesSmall(ctxt){
     console.log("window less than 900px");
     ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
     var screenwidth = $(window).width();
-    console.log(screenwidth);
+    //console.log(screenwidth);
     var canvasWidth = canvas.width;
     var canvasHeight = canvas.height;
     var canvesquarter = canvasWidth/6 + 20;
 
     var scale = screenwidth/(screenwidth*4);
-    console.log(scale);
+    //console.log(scale);
 
     var cone1 = new Cone();
         cone1.x = canvesquarter;
@@ -145,7 +149,7 @@ function conesSmall(ctxt){
 function conesBig(ctxt) {
     ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
     var screenwidth = $(window).width();
-    console.log(screenwidth);
+    //console.log(screenwidth);
 	var canvasWidth = canvas.width;
 	var canvasHeight = canvas.height;
 	var canvesquarter = canvasWidth/6 + 0;
