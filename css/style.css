@@ -60,7 +60,8 @@ p {
   justify-content: space-around; }
 
 .skills li {
-  flex: 0 1 auto; }
+  flex: 0 1 auto;
+  margin-bottom: 5px; }
 
 /*projects button with skills*/
 .btn {
