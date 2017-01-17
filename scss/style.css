@@ -1,0 +1,132 @@
+#header {
+  position: absolute;
+  height: 50px;
+  display: block;
+  width: 100%;
+  z-index: 9;
+  /* text-align:center; */
+  color: #fff;
+  /* padding: 20px 0 0 0; */
+  top: 0px; }
+
+#ul-menu {
+  list-style-type: none; }
+
+#ul-menu li {
+  display: inline-block;
+  margin: 0px 10px 0px 10px; }
+
+#ul-menu li a {
+  font-family: Arima Madurai;
+  color: #FFBF00;
+  text-decoration: none; }
+
+#logo {
+  width: 50px;
+  height: 45px;
+  background-image: url("../images/cone.svg");
+  background-repeat: no-repeat; }
+
+#logo:hover {
+  opacity: 0.5; }
+
+h1, h2, h3, h4, .lead {
+  font-family: Arima Madurai; }
+
+p {
+  font-family: Roboto, sans-serif;
+  font-size: 1.2em; }
+
+#name-border {
+  padding-top: 20px;
+  margin: auto;
+  width: 30%; }
+
+#name {
+  color: #fff;
+  border: 1px solid white; }
+
+.canvas-content {
+  display: block;
+  width: 100%; }
+
+.section {
+  padding: 20px;
+  padding-top: 100px; }
+
+.thumbnail_ul {
+  display: flex;
+  flex-flow: row wrap;
+  list-style: none; }
+
+.skills {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around; }
+
+.skills li {
+  flex: 0 1 auto;
+  margin-bottom: 5px; }
+
+/*projects button with skills*/
+.btn {
+  background-color: #312783;
+  color: #ffffff;
+  margin: 1px; }
+
+.btn:hover {
+  color: #ffffff; }
+
+.btn-social-icon:hover {
+  color: #FFBF00; }
+
+#contact-section {
+  background-color: #FF795A;
+  padding: 5%;
+  background-clip: padding-box;
+  width: 100%; }
+
+.project-content {
+  margin: 10px;
+  color: #135480; }
+
+.profile-pic {
+  padding: 5%;
+  width: 80%; }
+
+.half {
+  width: 35%;
+  display: inline-block;
+  vertical-align: top; }
+
+@media only screen and (max-device-width: 900px) {
+  .about-section {
+    padding-bottom: 20px; }
+
+  .portfolio-section {
+    padding-bottom: 20px; } }
+@media only screen and (max-width: 900px) {
+  .section {
+    padding-bottom: 20px; }
+
+  .portfolio-section {
+    padding-bottom: 20px; } }
+@media only screen and (max-device-width: 767px) {
+  .project-img {
+    max-height: 300px;
+    margin: auto; } }
+@media only screen and (max-width: 767px) {
+  .project-img {
+    max-height: 300px;
+    margin: auto; } }
+@media only screen and (max-device-width: 568px) {
+  #name-border {
+    width: 260px; } }
+@media only screen and (max-width: 568px) {
+  #name-border {
+    width: 260px; }
+
+  p {
+    text-align: left; } }
+
+/*# sourceMappingURL=style.css.map */
