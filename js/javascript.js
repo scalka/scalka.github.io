@@ -174,7 +174,7 @@ function conesBig(ctxt) {
             cone2.draw(ctxt);
             cone3.draw(ctxt);
             cone4.draw(ctxt);
-        window.onmousemove = function (event){
+        /*window.onmousemove = function (event){
             // clear canvas each onmousemove
             ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
             // mouse coordinates relative to the top left corner of the browser window’s client area
@@ -212,7 +212,7 @@ function conesBig(ctxt) {
             angle =  Math.atan2(cone1.x, dx);
             cone4.rotation = angle;
             cone4.draw(ctxt);
-        }       
+        }       */
     }  
 }
 
