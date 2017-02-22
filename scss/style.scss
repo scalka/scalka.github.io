@@ -82,6 +82,12 @@ p {
 	padding-top: 100px;
 }
 
+.thumbnail_ul {
+	display: flex;
+	flex-flow: row wrap;
+	list-style: none;
+}
+
 .skills {
 	display: flex;
 	flex-flow: row wrap;
