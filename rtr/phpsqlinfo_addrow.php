@@ -1,8 +1,8 @@
 <?php
 $servername = "localhost";
-$username = "root";
-$password = "root";
-$dbname = "routeplanner";
+$username = "id884420_root";
+$password = "matthew";
+$dbname = "id884420_routeplanner";
 
 
 // Opens a connection to a MySQL server.
