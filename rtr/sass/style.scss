@@ -1,9 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Source+Sans+Pro');
 
 $primaryColor: #757575;
-$secondaryColor: #43a047;
+$secondaryColor: #a6bf3a;
 $accentColor: #f4511e;
-$btnColor:  #7cb342;
+$btnColor:  #f2964b;
 $lightColor: #f6f2f2 ; 
 $textColor: #37474f;
 $transparentColor: rgba(117, 117, 117, 0.59);
@@ -26,6 +26,42 @@ html, body {
 
 p {
   font-family: $source_sans;
+}
+
+.li_button{
+  padding-left: 22%; 
+}
+
+#listview_btn{
+  background-color: $btnColor;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    display: inline-block;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.button {
+    background-color: $btnColor;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    padding: 20px 80px;
+    display: inline-block;
+    margin: 20px 0;
+    letter-spacing: 1px;
+    font-weight: 700;
+}
+
+.buttonAddToRoute{
+    margin-top: 15px;
+    padding: 10px;
+    margin-left: 40%;
+    font-weight: 500;
+    letter-spacing: 1px;
+    cursor: pointer;
+    background-color: rgba(185, 183, 183, 0.59);
 }
 
 .navbar {
@@ -93,7 +129,10 @@ p {
 }
 
 label, input {
-  display: block
+  //display: block;
+  transition: color 0.4s ease, background-color 0.1s ease-in-out;
+  margin: 5px;
+
 }
 
 .flex-ul {
@@ -125,9 +164,20 @@ label, input {
     color: darken(#0074D9, 10);
     font-weight: bold;
     letter-spacing: -0.01em;
+    }
   }
-}
-input, input:focus {
+  .ul_label {
+    font-family: $open_sans;
+    font-size: 70%;
+    color: lighten($color, 15);
+    letter-spacing: 0.03em;
+    margin-left: 10px;
+    margin-top: 10px;
+    top: 10px;
+    left: 10px;
+    text-transform: uppercase;
+  }
+.dest_input, .dest_input:focus {
   background-color: transparent;
   border: none;
   color: darken($color, 15);
@@ -139,13 +189,10 @@ input, input:focus {
   width: 100%;
 }
 
-input:focus {
+.dest_input:focus {
   color: #000;
     background-color: lighten($color, 40);
     box-shadow: 0px 3px 4px -2px rgba(0,0,115,0.25) inset;
-}
-label, input {
-  transition: color 0.4s ease, background-color 0.1s ease-in-out;
 }
 
 .checkbox_ul{

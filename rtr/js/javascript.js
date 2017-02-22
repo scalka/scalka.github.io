@@ -25,7 +25,7 @@ var directionsService; // google directions service
 var directionsDisplay; // google directions service
 var poliline; //bounds
 var infowindow;
-var infoWindowHtml = '<div id="iw"> <div id="iw_content">  <div id="iw_text">      <h2 id="iw_heading">heading</h2>      <p id="iw_paraghraph"></p>    </div>    <div id="iw_image"> </div>  </div>  <button type="button" id="addToRouteBtn">Add</button></div> <button type="button" id="removeFromRouteBtn">Remove</button></div>';
+var infoWindowHtml = '<div id="iw"> <div id="iw_content">  <div id="iw_text">      <h2 id="iw_heading">heading</h2>      <p id="iw_paraghraph"></p>    </div>    <div id="iw_image"> </div>  </div>  <button type="button" class="buttonAddToRoute" id="addToRouteBtn">Add to route</button></div></div>';
 //second version
 /*var infoWindowHtml = '<div id="iw">  <div id="iw_header"></div>  <div id="iw_content">    <div id="iw_text">      <h2 id="iw_heading">heading</h2>      <p id="iw_paraghraph">iw_paraghraph</p>    </div>    <div id="iw_image"></div>  </div>  <button type="button" id="addToRouteBtn">Add</button></div>';
 */
@@ -250,13 +250,14 @@ function callback(results, status, pagination) {
 		
     if (status === google.maps.places.PlacesServiceStatus.OK ){
         placesResult = results;
-        if (pagination.hasNextPage) {
+
+        /*if (pagination.hasNextPage) {
           console.log("nextPage pagination");
           pagination.nextPage();
           loader.style.display = "block";
          } else {
           loader.style.display = "none";
-         }
+         }*/
 
          for (var i = 0; i < results.length; i++) {
           createMarker(results[i]);
@@ -368,8 +369,8 @@ function createMarker(place) {
        iw_paraghraph.innerHTML += place.vicinity;
        iw_paraghraph.innerHTML += "<br>Types: " + place_types;
        iw_paraghraph.innerHTML += "<br> Rating " + place.rating;
-       iw_paraghraph.innerHTML += "<br>Price level " + place.price_level;
-       iw_paraghraph.innerHTML += "<br>Website " + place.website;
+      /* iw_paraghraph.innerHTML += "<br>Price level " + place.price_level;
+       iw_paraghraph.innerHTML += "<br>Website " + place.website;*/
        iw_image.innerHTML = '<img src="'+photo_url+'" class="img-thumbnail" alt="image" width="100" height="100"> ';
        //adding to the route as a waypoint
         if (addToRouteBtn){
@@ -419,10 +420,9 @@ function addToRoute(place) {
 };  // if add to route end
 
 
-function secondsToHms(d) {
-  d = Number(d);
-  var h = Math.floor(d / 3600);
-  var m = Math.floor(d % 3600 / 60);
- // var s = Math.floor(d % 3600 % 60);
-  return ((h > 0 ? h + ":" + (m < 10 ? "0" : "") : "") + m  ); 
-}
+function secondsToHms(SECONDS) {
+    var date = new Date(null);
+    date.setSeconds(SECONDS); // specify value for SECONDS here
+    var result = date.toISOString().substr(11, 8);
+    return result;
+ } 

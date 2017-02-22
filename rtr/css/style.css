@@ -8,6 +8,38 @@ html, body {
 p {
   font-family: "Source Sans Pro", sans-serif; }
 
+.li_button {
+  padding-left: 22%; }
+
+#listview_btn {
+  background-color: #f2964b;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-weight: 700; }
+
+.button {
+  background-color: #f2964b;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 20px 80px;
+  display: inline-block;
+  margin: 20px 0;
+  letter-spacing: 1px;
+  font-weight: 700; }
+
+.buttonAddToRoute {
+  margin-top: 15px;
+  padding: 10px;
+  margin-left: 40%;
+  font-weight: 500;
+  letter-spacing: 1px;
+  cursor: pointer;
+  background-color: rgba(185, 183, 183, 0.59); }
+
 .navbar {
   margin-bottom: 0; }
 
@@ -62,7 +94,8 @@ p {
   transform: translate(0, 95%); }
 
 label, input {
-  display: block; }
+  transition: color 0.4s ease, background-color 0.1s ease-in-out;
+  margin: 5px; }
 
 .flex-ul {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -93,7 +126,18 @@ label, input {
     font-weight: bold;
     letter-spacing: -0.01em; }
 
-input, input:focus {
+.ul_label {
+  font-family: "Open Sans", sans-serif;
+  font-size: 70%;
+  color: #aeaeae;
+  letter-spacing: 0.03em;
+  margin-left: 10px;
+  margin-top: 10px;
+  top: 10px;
+  left: 10px;
+  text-transform: uppercase; }
+
+.dest_input, .dest_input:focus {
   background-color: transparent;
   border: none;
   color: #626262;
@@ -104,13 +148,10 @@ input, input:focus {
   outline: none;
   width: 100%; }
 
-input:focus {
+.dest_input:focus {
   color: #000;
   background-color: #eeeeee;
   box-shadow: 0px 3px 4px -2px rgba(0, 0, 115, 0.25) inset; }
-
-label, input {
-  transition: color 0.4s ease, background-color 0.1s ease-in-out; }
 
 .checkbox_ul {
   list-style-type: none; }
@@ -163,7 +204,7 @@ label, input {
   width: 150px; }
 
 input[type=radio]:checked + label {
-  background-color: #43a047; }
+  background-color: #a6bf3a; }
 
 input[type="checkbox"] {
   vertical-align: middle; }
