@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Router</title>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all">
+
+    <!--     <script src='http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/jquery-ui.min.js'></script> -->
+    <script type="text/javascript" src="js/javascript.js"></script>
+
+  </head>
+  <body >
+<div id="content">
+    <nav class="navbar navbar-static-top custom-navbar " role="navigation" id="nav">
+      <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a href="index.html">Start</a>
+        <a href="addnewstops.html">Add new stop</a>
+      </div>
+      <div class="top_nav">
+        <span style="font-size:30px;cursor:pointer" onclick="openNav(mySidenav, 250)">&#9776; </span>
+
+        <h2 id="top_header" class="text-center">Plan your route</h2>
+      </div>
+    </nav>
+
+     <div id="form_div" class="container-fluid center-block" onclick="closeNav()">
+       <form id="plan_form col-sm-12" >
+
+              <ul class="flex-ul">             
+                <li class="flex-li">
+                  <input id="origin-input"  type="text"
+                  placeholder="Enter an origin location">
+                  <label class="form_label" for="origin-input">Start</label>
+                </li>
+                <li class="flex-li">
+                  <input id="destination-input"  type="text"
+                    placeholder="Enter a destination location">
+                  <label class="form_label" for="destination-input">Destination</label>
+                </li>  
+                
+                <ul class="segmented_control_ul">
+           
+                  <li class="segmented_control_li">
+                    <input class="segmented_control_input" type="radio" value="2" name="type" id="changemode-driving" checked="checked">
+                    <label class="segment_control_label" for="changemode-driving">Driving</label>
+                  </li>
+                  <li class="segmented_control_li">
+                    <input class="segmented_control_input" type="radio" name="type" value="1" id="changemode-walking" >
+                    <label class="segment_control_label" for="changemode-walking">Walking</label>
+                  </li>
+                </ul> 
+
+                <ul class="checkbox_ul">
+                  <li class="checkbox_li">
+                    <input class="cat_checkbox" type="checkbox" name="checkbox" id="cat_history" value="museum"/>
+                    <label for="cat_history">History</label>
+                  </li>  
+                  <li class="checkbox_li">
+                    <input class="cat_checkbox" type="checkbox" name="checkbox" id="cat_outdoors" value="value"/>
+                    <label for="cat_outdoors">Outdoors</label>
+                  </li> 
+                  <li class="checkbox_li">
+                    <input class="cat_checkbox" type="checkbox" name="checkbox" id="cat_sport" value="value"/>
+                    <label for="cat_sport">Sport</label>
+                  </li> 
+                  <li class="checkbox_li">
+                    <input class="cat_checkbox" type="checkbox" name="checkbox" id="cat_food" value="value"/>
+                    <label for="cat_food">Food</label>
+                  </li> 
+                  <li class="checkbox_li">
+                    <input class="cat_checkbox" type="checkbox" name="checkbox" id="cat_entertainment" value="value"/>
+                    <label for="cat_entertainment">Entertainment</label>
+                  </li> 
+                </ul>
+
+
+                <li>
+                  <button type="button" onclick="plan()">PLAN</button>
+                </li>
+              </ul>
+
+        </form>
+     </div>
+
+     <div id="loader" class="loader" style="display: none"></div>
+
+    <div id="switch_view_control_list">
+      <button class="control" id="listview_btn">ListView</button> 
+
+    </div>
+
+    <div id="map" onclick="closeNav()"></div>
+
+    <div id="switch_view_summary">
+      <button type="button" class="btn control" id="route_summary_btn">Summary</button>
+    </div>
+
+
+
+    <!-- Modal list view-->
+    <div class="modal fade" id="modal_list" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+ <!--            
+            <div id="listview">
+              <ul id="list">
+                <li></li>
+              </ul>
+            </div> -->
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+    <div id="listview" >
+      <ul id="list">
+      </ul>
+    </div>
+
+
+        
+
+
+    <!-- Modal summary -->
+    <div class="modal fade" id="modal_summary" tabindex="-1" role="dialog" aria-labelledby="ModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="ModalLabel">Route summary</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <h3>Travel mode: </h3><h3 id="h3_travel_mode"></h3>
+            <h3>Total distance: </h3><h3 id="distance"></h3>
+            <h3>Total duration: </h3><h3 id="duration"></h3>
+            <div class="control" id="route_summary"></div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCeFcGGhlohNnd4WKjN703Un99fGRjuAZs&libraries=geometry,places&callback=initMap"
+        async defer></script>
+
+  </body>
+</html>
+
+<!-- 
+<div id="iw">
+  <div id="iw-header"></div>
+  <div id="iw-content">
+    <div id="iw-text">
+      <h2 id="iw-heading"></h2>
+      <p id="iw-paraghraph"></p>
+    </div>
+    <div id="iw-image"></div>
+  </div>
+  <button type="button" id="addToRouteBtn">Click</button>
+</div> -->
+
+<!-- 
+            <div class="card" style="width: 20rem;">
+             <img src="http://placehold.it/350x150" class="img-thumbnail" alt="image" width="304" height="236">
+              <div class="card-block">
+                <h4 class="place_name"></h4>
+                <p class="place_description"></p>
+                <a href="#" class="btn btn-primary">Add</a>
+              </div>
+            </div> -->
+
+
