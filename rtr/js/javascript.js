@@ -271,12 +271,6 @@ function callback(results, status, pagination) {
         //TODO DISPLAY msg
         console.log("zero results");
      }  
-
-
-      
-
-
-
 	 //  loader.style.display = "none";
 
 }
