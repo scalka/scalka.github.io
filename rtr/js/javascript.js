@@ -196,7 +196,11 @@ function initMap() {
 	//opening list view
     listview_btn = document.getElementById("listview_btn")
 	listview_btn.addEventListener('click', function(){
-		document.getElementById("listview").style.display = "block";
+		if (document.getElementById("listview").style.display === "none"){
+      document.getElementById("listview").style.display = "block";
+    } else if (document.getElementById("listview").style.display === "block"){
+      document.getElementById("listview").style.display = "none"
+    }
 	});
 	//closing list view
 	map.addListener('click', function(){
@@ -341,9 +345,9 @@ function createMarker(place) {
     markersArray.push(marker);
     //creating a list view li element for each place
     var ul = document.getElementById("list");
-	var li = document.createElement("li");
-	li.setAttribute("id", markersArray.length-1);
-	li.innerHTML = '<img src="'+photo_url+'"  alt="image" width="150" height="150"> <p class="place_name">' + place.name + '</p> ';
+  	var li = document.createElement("li");
+  	li.setAttribute("id", markersArray.length-1);
+  	li.innerHTML = '<img src="'+photo_url+'"  alt="image" width="150" height="150"> <p class="place_name">' + place.name + '</p> ';
     ul.appendChild(li);
     
     //listener on li
