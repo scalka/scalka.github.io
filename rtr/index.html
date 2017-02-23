@@ -33,7 +33,10 @@
         <a href="addnewstops.html">Add new stop</a>
       </div>
       <div class="top_nav">
-        <span style="font-size:30px;cursor:pointer" onclick="openNav(mySidenav, 250)">&#9776; </span>
+        <span class="nav_icon" onclick="openNav(mySidenav, 250)"><i class="fa fa-bars fa-1x" aria-hidden="true"></i></span>
+
+        <span class="nav_icon" onclick=""><i class="fa fa-map-signs fa-1x" aria-hidden="true"></i></span>
+
 
         <h2 id="top_header" class="text-center">Plan your route</h2>
       </div>
@@ -119,8 +122,7 @@
      <div id="loader" class="loader" style="display: none"></div>
 
     <div id="switch_view_control_list">
-      <button class="control" id="listview_btn"><i class="fa fa-4x fa-list-ul" aria-hidden="true"></i></button> 
-
+      <button class="control" id="listview_btn"><i class="fa fa-4x fa-list-ul icon-white" aria-hidden="true" ></i></button> 
     </div>
 
     <div id="map" onclick="closeNav()"></div>

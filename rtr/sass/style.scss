@@ -7,7 +7,7 @@ $btnColor:  #f2964b;
 $lightColor: #f6f2f2 ; 
 $textColor: #37474f;
 $transparentColor: rgba(117, 117, 117, 0.59);
-$color  : #888888;
+$grey: #888888;
 $bgColor: #fffdfa;
 $lucida: "Lucida Grande", "Trebuchet MS", sans-serif;
 $font: "Source Sans", sans-serif;
@@ -28,6 +28,8 @@ p {
   font-family: $source_sans;
 }
 
+.icon-white {color: white}
+
 .li_button{
   padding-left: 22%; 
 }
@@ -40,6 +42,20 @@ p {
     display: inline-block;
     letter-spacing: 1px;
     font-weight: 700;
+    display:block;
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    margin: 10px;
+}
+.nav_icon{
+    font-size: 30px;
+    cursor: pointer;
+    margin: 0px 15px;
+    color: $grey;
+}
+.nav_icon > i:hover{
+    color: $secondaryColor;
 }
 
 .button {
@@ -82,7 +98,7 @@ p {
     z-index: 1;
     top: 0;
     left: 0;
-    background-color: #111;
+    background-color: $grey;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -92,13 +108,13 @@ p {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #818181;
+    color: white;
     display: block;
     transition: 0.3s
 }
 
 .sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
+    color: $secondaryColor;
 }
 
 .sidenav .closebtn {
@@ -146,7 +162,7 @@ label, input {
 }
 .flex-li {
   min-height: 30px;
-  border-bottom: 1px solid lighten($color, 25);
+  border-bottom: 1px solid lighten($grey, 25);
   margin-top: -1px; // border collapser
   position: relative;
 }
@@ -154,7 +170,7 @@ label, input {
 .form_label {
   font-family: $open_sans;
   font-size: 70%;
-  color: lighten($color, 15);
+  color: lighten($grey, 15);
   letter-spacing: 0.03em;
   position: absolute;
   top: 10px;
@@ -169,7 +185,7 @@ label, input {
   .ul_label {
     font-family: $open_sans;
     font-size: 70%;
-    color: lighten($color, 15);
+    color: lighten($grey, 15);
     letter-spacing: 0.03em;
     margin-left: 10px;
     margin-top: 10px;
@@ -180,7 +196,7 @@ label, input {
 .dest_input, .dest_input:focus {
   background-color: transparent;
   border: none;
-  color: darken($color, 15);
+  color: darken($grey, 15);
   font-size: 18px;
   margin: 9px 0 7px 0;
   margin: 0;
@@ -191,7 +207,7 @@ label, input {
 
 .dest_input:focus {
   color: #000;
-    background-color: lighten($color, 40);
+    background-color: lighten($grey, 40);
     box-shadow: 0px 3px 4px -2px rgba(0,0,115,0.25) inset;
 }
 

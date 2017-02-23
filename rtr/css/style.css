@@ -8,6 +8,9 @@ html, body {
 p {
   font-family: "Source Sans Pro", sans-serif; }
 
+.icon-white {
+  color: white; }
+
 .li_button {
   padding-left: 22%; }
 
@@ -18,7 +21,21 @@ p {
   cursor: pointer;
   display: inline-block;
   letter-spacing: 1px;
-  font-weight: 700; }
+  font-weight: 700;
+  display: block;
+  height: 70px;
+  width: 70px;
+  border-radius: 50%;
+  margin: 10px; }
+
+.nav_icon {
+  font-size: 30px;
+  cursor: pointer;
+  margin: 0px 15px;
+  color: #888888; }
+
+.nav_icon > i:hover {
+  color: #a6bf3a; }
 
 .button {
   background-color: #f2964b;
@@ -57,7 +74,7 @@ p {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color: #888888;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px; }
@@ -66,12 +83,12 @@ p {
   padding: 8px 8px 8px 32px;
   text-decoration: none;
   font-size: 25px;
-  color: #818181;
+  color: white;
   display: block;
   transition: 0.3s; }
 
 .sidenav a:hover, .offcanvas a:focus {
-  color: #f1f1f1; }
+  color: #a6bf3a; }
 
 .sidenav .closebtn {
   position: absolute;
