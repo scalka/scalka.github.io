@@ -5,6 +5,9 @@ html, body {
   padding: 0;
   font-family: "Open Sans", sans-serif; }
 
+h2 {
+  color: #888888; }
+
 p {
   font-family: "Source Sans Pro", sans-serif; }
 
@@ -139,7 +142,7 @@ label, input {
   left: 10px;
   text-transform: uppercase; }
   .active .form_label, input:focus + .form_label {
-    color: #0059a6;
+    color: #84982e;
     font-weight: bold;
     letter-spacing: -0.01em; }
 
@@ -258,11 +261,14 @@ input[type="checkbox"] {
 #route_summary_btn {
   width: 200px;
   height: 50px;
-  background-color: #757575;
+  background-color: #888888;
   border-top-left-radius: 50%;
   border-top-right-radius: 50%;
   color: white;
   font-weight: 500; }
+
+#route_summary_btn:hover {
+  color: #a6bf3a; }
 
 .navbar-toggle {
   float: left; }

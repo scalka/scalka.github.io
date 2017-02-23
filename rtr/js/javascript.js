@@ -55,17 +55,19 @@ function changeHeader(header){
 	top_header.innerHTML = header;
 }
 
-/*function openForm(){
-	document.getElementById("form_div").classList.add("form_opened");
-	document.getElementById("form_div").classList.remove("form_closed");
-}*/
 function closeForm(){
-	document.getElementById("form_div").classList.add("form_closed");
-/*	document.getElementById("form_div").classList.remove("form_opened");*/
+  document.getElementById("form_div").classList.add("form_closed");
+/*  document.getElementById("form_div").classList.remove("form_opened");*/
 }
 
-function hideDiv(divId){
-	$('#'+divId+'').hide();
+function hideDiv(){
+  document.getElementById("form_div").style.display = "none";
+  //$('#'+divId+'').hide();
+}
+
+function openForm(){
+  document.getElementById("form_div").style.display = "block";
+	//$('form_div').show();
 }
 
 //sending form as a route function
@@ -78,7 +80,7 @@ function plan() {
 	routeFunction(origin_place_id, destination_place_id, travel_mode,
 		directionsService, directionsDisplay);
 
-	setTimeout( hideDiv("form_div"), 4000); 
+	setTimeout( hideDiv(), 4000); 
 	changeHeader("Pick your stops");	
 }
 
