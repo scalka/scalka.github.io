@@ -1,3 +1,5 @@
+// Pagination is turned off, if you want to see more stops on the route, uncomment line 262 to 268
+
 var map; 
 var origin_input; // start
 var origin_autocomplete;
@@ -342,7 +344,9 @@ function createMarker(place) {
     //creating a list view li element for each place
     var ul = document.getElementById("list");
   	var li = document.createElement("li");
+
   	li.setAttribute("id", markersArray.length-1);
+
   	li.innerHTML = '<img src="'+photo_url+'"  alt="image" width="150" height="150"> <p class="place_name">' + place.name + '</p> ';
     ul.appendChild(li);
     
