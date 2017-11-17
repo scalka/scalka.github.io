@@ -1,4 +1,9 @@
 @import url('https://fonts.googleapis.com/css?family=Lora');
+@import url('https://fonts.googleapis.com/css?family=Noticia+Text|Playfair+Display');
+
+/*font-family: 'Playfair Display', serif;
+font-family: 'Noticia Text', serif;*/
+
 /* MENU */
 #header {
   position: absolute;
@@ -20,8 +25,23 @@
 
 #ul-menu li a {
   font-family: 'Lora', serif;
+  font-size: 17px;
   color: #222222;
-  text-decoration: none; }
+  text-decoration: none; 
+}
+#ul-menu li a:hover{
+  height: 30%;
+  bottom: 25%;
+  width: 101%;
+  background-color: #FAF076;
+  left: -2%;
+  z-index: -1;
+  font-weight: 600;
+}
+
+#ul-menu li.active{
+  font-weight: 600;
+}
 
 ul.no-bullets { list-style-type: none; margin: 0px; padding: 0px; }
 
@@ -38,17 +58,24 @@ ul.no-bullets { list-style-type: none; margin: 0px; padding: 0px; }
 /* TYPOGRAPHY */  
 
 h1, h2, h3, h4, .lead {
-  font-family: 'Lora', serif; }
+  font-family: 'Playfair Display', serif; 
+}
 
 p {
-  font-family: Roboto, sans-serif;
-  font-size: 1.2em; }
+  font-family: 'Noticia Text', serif;
+  font-size: 1.2em; 
+  text-align: justify;
+}
 h1{
   font-size: 55px;
 }
 
 h4 {
   font-size: 28px;
+}
+
+a {
+  color: #333;
 }
 
 /* HIGHLIGHTER */
@@ -138,32 +165,44 @@ mark::after {
     -o-transition: all 0.3s;
     transition: all 0.3s;
 }
-#abilit ul > li .ability-score .glyphicon.filled { color: #388697 }
+#abilit ul > li .ability-score .glyphicon.filled { color: #9de03d }
 
 #abilit ul > li:hover .ability-score .glyphicon { margin-left: 2px; } 
 
 
+.github_link:hover {
+  color: #777;
+  text-decoration-line: underline;
+}
+
+
+/*Slides*/
 /*projects button with skills*/
 .btn {
-  background-color: #312783;
-  color: #ffffff;
-  margin: 1px; }
+  background-color: rgba(0,0,0,.05);
+  color: rgba(0,0,0,.68);
+  margin: 1px; 
+  cursor: inherit;
+  touch-action: none;
+}
 
 .btn:hover {
-  color: #ffffff; }
+  color: rgba(0,0,0,.68); 
+}
 
 .btn-social-icon:hover {
-  color: #FFBF00; }
+  color: #FFBF00; 
+}
 
-#contact-section {
+.project-content {
+  margin: 10px;
+}
+/*#contact-section {
   background-color: #FF795A;
   padding: 5%;
   background-clip: padding-box;
   width: 100%; }
 
-.project-content {
-  margin: 10px;
-  color: #135480; }
 
 .profile-pic {
   padding: 5%;
@@ -172,7 +211,8 @@ mark::after {
 .half {
   width: 35%;
   display: inline-block;
-  vertical-align: top; }
+  vertical-align: top; 
+}*/
 
 @media only screen and (max-device-width: 900px) {
   .about-section {

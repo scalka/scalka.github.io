@@ -1,11 +1,15 @@
-
-$(document).ready(function() {
-
-
+function resetSlides() {
     if ($(window).width() < 560){
         $(".mySlide").removeClass('slide');
-        console.log("removed");
     }
+    console.log("rese");
+}
+
+window.addEventListener("resize", resetSlides());
+
+
+$(document).ready(function() {
+    resetSlides();
     // cones
     /*var canvas = document.getElementById("canvas");
 	var ctxt = canvas.getContext("2d");
@@ -39,11 +43,11 @@ $(document).ready(function() {
         menu: '#ul-menu',
         lockAnchors: false, /*Determines whether anchors in the URL will have any effect at all in the plugin*/
         anchors:['home', 'about', 'experience', 'abilities', 'portfolio', 'contact'],
-        navigation: true,
+        navigation: false,
         navigationPosition: 'left',
         //navigationTooltips: ['', 'About me', 'My work', 'Contact'],
         showActiveTooltip: true,
-        slidesNavigation: false,
+        slidesNavigation: true,
         slidesNavPosition: 'bottom',
 
         //Scrolling
@@ -61,7 +65,6 @@ $(document).ready(function() {
         continuousHorizontal: false,
         scrollHorizontally: false,
         interlockedSlides: false,
-        dragAndMove: false,
         offsetSections: false,
         resetSliders: false,
         fadingEffect: false,
