@@ -5,7 +5,7 @@
   width: 100%;
   z-index: 9;
   /* text-align:center; */
-  color: #fff;
+  color: #222222;
   /* padding: 20px 0 0 0; */
   top: 0px; }
 
@@ -31,6 +31,7 @@
   opacity: 0.5; }
 
 h1, h2, h3, h4, .lead {
+  color: #222222;
   font-family: Arima Madurai; }
 
 p {
@@ -45,6 +46,13 @@ p {
 #name {
   color: #fff;
   border: 1px solid white; }
+
+h2 {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #FFFFFF;
+    border-bottom-color: rgba(255,255,255,0.35);
+    display: inline-block;
+} 
 
 .canvas-content {
   display: block;

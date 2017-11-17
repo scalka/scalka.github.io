@@ -1,13 +1,6 @@
-var xMouse;
-var yMouse;
-var ax = 0;
-var ay = 0;
-var vx = 0;
-var vy = 0;
-var force= 0.01;
-var angle;
 
 $(document).ready(function() {
+
 
     if ($(window).width() < 560){
         $(".mySlide").removeClass('slide');
@@ -35,11 +28,9 @@ $(document).ready(function() {
         if (nameW > 260){
             canvas.attr('width', $(container).width()); // max width
             canvas.attr('height', canvasW );// max height   
-            conesBig(ctxt);
         } else if ( nameW <= 260) {
             canvas.attr('width', $(container).width()); // max width
             canvas.attr('height', 500 );// max height   
-            conesSmall(ctxt);
         } 
     }
 
@@ -47,7 +38,7 @@ $(document).ready(function() {
         //Navigation
         menu: '#ul-menu',
         lockAnchors: false, /*Determines whether anchors in the URL will have any effect at all in the plugin*/
-        anchors:['home', 'about', 'portfolio', 'contact'],
+        anchors:['home', 'about', 'experience', 'abilities', 'portfolio', 'contact'],
         navigation: true,
         navigationPosition: 'left',
         //navigationTooltips: ['', 'About me', 'My work', 'Contact'],
@@ -90,7 +81,7 @@ $(document).ready(function() {
         //Design
         controlArrows: true, /*arrows change slides*/
         verticalCentered: true, /*centering content*/
-        sectionsColor : ['#312783', '#39b477', '#fff', '#e1465d'], /*colors of sections*/
+        sectionsColor : ['#fff'], /*colors of sections*/
         paddingTop: '3em',
         paddingBottom: '10px',
         fixedElements: '#header, .footer',
@@ -111,108 +102,3 @@ $(document).ready(function() {
     });
 
 });
-
-function conesSmall(ctxt){
-    console.log("window less than 900px");
-    ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
-    var screenwidth = $(window).width();
-    //console.log(screenwidth);
-    var canvasWidth = canvas.width;
-    var canvasHeight = canvas.height;
-    var canvesquarter = canvasWidth/6 + 20;
-
-    var scale = screenwidth/(screenwidth*4);
-    //console.log(scale);
-
-    var cone1 = new Cone();
-        cone1.x = canvesquarter;
-        cone1.y = canvasHeight/2 -130;
-        cone1.scaleX =scale;
-        cone1.scaleY =scale;
-    var cone2 = new Cone();
-        cone2.x = canvesquarter*2;
-        cone2.y = canvasHeight/2 -130;
-        cone2.scaleX =scale;
-        cone2.scaleY =scale;
-
-    var cone3 = new Cone();
-        cone3.x = canvesquarter*3;
-        cone3.y = canvasHeight/2 -130;
-        cone3.scaleX =scale;
-        cone3.scaleY =scale;    
-
-        cone1.draw(ctxt);
-        cone2.draw(ctxt);
-        cone3.draw(ctxt);
-}
-
-function conesBig(ctxt) {
-    ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
-    var screenwidth = $(window).width();
-    //console.log(screenwidth);
-	var canvasWidth = canvas.width;
-	var canvasHeight = canvas.height;
-	var canvesquarter = canvasWidth/6 + 0;
-
-	if (screenwidth >= 900){
-        var cone1 = new Cone();
-            cone1.x = canvesquarter;
-            cone1.y = canvasHeight/2 + 30;
-        var cone2 = new Cone();
-            cone2.x = canvesquarter*2;
-            cone2.y = canvasHeight/2 + 30;
-
-        var cone3 = new Cone();
-            cone3.x = canvesquarter*3;
-            cone3.y = canvasHeight/2 + 30;
-
-        var cone4 = new Cone();
-            cone4.x = canvesquarter*4 ;
-            cone4.y = canvasHeight/2 + 30;          
-
-            cone1.draw(ctxt);
-            cone2.draw(ctxt);
-            cone3.draw(ctxt);
-            cone4.draw(ctxt);
-        /*window.onmousemove = function (event){
-            // clear canvas each onmousemove
-            ctxt.clearRect(0, 0, canvasWidth, canvasHeight);
-            // mouse coordinates relative to the top left corner of the browser window’s client area
-            xMouse = event.clientX;
-            yMouse = event.clientY;
-            // dx dy - difference between x,y of arrow and x,y of mouse 
-            var dx = xMouse - cone1.x ;
-            var dy = yMouse - cone1.y ;
-            angle =  Math.atan2(cone1.x, dx);
-            if (dx <100){
-                cone1.rotation = angle;
-            }
-            console.log(dx);
-            cone1.draw(ctxt);
-
-            var dx = xMouse - cone2.x ;
-            var dy = yMouse - cone2.y ;
-            angle =  Math.atan2(cone1.x, dx);
-            if(dx <100){
-                cone2.rotation = angle;
-            }
-            cone2.draw(ctxt);
-
-
-            var dx = xMouse - cone3.x ;
-            var dy = yMouse - cone3.y ;
-            angle =  Math.atan2(cone1.x, dx);
-            if(dx <100){
-                cone3.rotation = angle;
-            }
-            cone3.draw(ctxt);
-
-            var dx = xMouse - cone4.x ;
-            var dy = yMouse - cone4.y ;
-            angle =  Math.atan2(cone1.x, dx);
-            cone4.rotation = angle;
-            cone4.draw(ctxt);
-        }       */
-    }  
-}
-

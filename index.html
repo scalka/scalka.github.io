@@ -13,7 +13,7 @@
 	    
 		<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
 	    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-	    <link href="css/bootstrap.min.css" rel="stylesheet">
+	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	    <script src="js/bootstrap.min.js"></script>
 	    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
 	    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico"/>
@@ -29,7 +29,7 @@
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script type="text/javascript" src="js/utils.js"></script>
 
-		<link rel="stylesheet" type="text/css" href="scss/style.css">
+		<!-- <link rel="stylesheet" type="text/css" href="scss/style.css"> -->
 
 	    <script type="text/javascript" src="js/javascript.js"> </script>
 	    <script src="js/cone.js"></script> 
@@ -42,6 +42,8 @@
 		<ul id="ul-menu">
 		    <li data-menuanchor="home" class="active"><a href="#home">S.Calka</a></li>
 		    <li data-menuanchor="about"><a href="#about">About</a></li>
+		    <li data-menuanchor="experience"><a href="#experience">Experience</a></li>
+		    <li data-menuanchor="abilities"><a href="#abilities">Abilities</a></li>
 		    <li data-menuanchor="portfolio"><a href="#portfolio">Portoflio</a></li>
 		    <li data-menuanchor="contact"><a href="#contact">Contact</a></li>
 		</ul> 
@@ -50,8 +52,11 @@
   		<div class="section fp-auto-height-responsive" id="home-section" role="banner">
 	    	<div class="text-center" id="name-border">
 					<div id="name">
-						<h2>SYLWIA CALKA</h2>
-						<h4>web and mobile developer</h4>
+						<h1 class="h-highlight">
+						<mark>SYLWIA CALKA</mark>
+						</h1>
+						<h4 >Interactive resume</h4>
+
 					</div>
 			</div>
 			<div class="canvas-content">
@@ -62,37 +67,23 @@
 		<div class="section fp-auto-height-responsive" id="about-section" role="main">
 		    <div class="container">
 		    	<div class="row"> 
-					<div class="col-sm-6 col-md-4">
-		        		<div class="profile-pic center-block">
+		    		<h1 class="h-highlight">
+						<mark>Profile</mark>
+					</h1>
+
+					<div class="details-div col-sm-6 col-md-4">
 							<img class="img-responsive img-rounded" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1466853694/profile_t2spfg.jpg" alt="my picture">
-
-		      			</div>
-		      			<div class="">
-		      				<h2>Skills</h2>
-	      					<ul class="skills">
-	      						<li class="col-xs-6">Java</li>
-	      						<li class="col-xs-6">HTML5</li>
-	      						<li class="col-xs-6">CSS3</li>
-	      						<li class="col-xs-6">SCSS</li>
-	      						<li class="col-xs-6">JavaScript</li>
-	      						<li class="col-xs-6">Android Development</li>
-	      						<li class="col-xs-6">jQuery</li>
-	      						<li class="col-xs-6">AngularJS</li>
-	  
-	      						<li class="col-xs-6">Ionic</li>
-	      						<li class="col-xs-6">Phaser</li>
-	      						<li class="col-xs-6">User Interface Design</li>
-	      						<li class="col-xs-6">User Experience Design</li>
-	      						<li class="col-xs-6">Google Maps API</li>
-	      						<li class="col-xs-6">Git</li>
-	      						<li class="col-xs-6">Adobe Photoshop</li>
-	      						<li class="col-xs-6">Adobe Premiere</li>
-
-	      					</ul>
+		      			<div class="details-card ">
+					        <h3 class="h-highlight"><mark>Sylwia</mark><br>Calka</h3>
+					        <div>
+					            Dublin, Ireland
+					            <br><br>
+					            Something else
+					        </div>
 		      			</div>	
 					</div>
 					<div class="col-sm-6 col-md-8 about-text">
-				        <h2>Introduction</h2>
+				        <h2>About me</h2>
 							
 					  <p>
 			          My name is Sylwia and I am a Creative Computing student at IADT in Dublin.
@@ -108,6 +99,132 @@
 			</div>
 		    </div>
 		</div> <!--about  section end  -->
+
+
+		<div class="section fp-auto-height-responsive" id="experience-section" role="main">
+		    <div class="container">
+		    	<div class="row"> 
+					<h2 class="h-highlight">
+						<mark>EXPERIENCE</mark>
+					</h2>
+				</div>
+		    </div>
+		</div> <!--experience  section end  -->
+
+
+		<div class="section fp-auto-height-responsive" id="abilities-section" role="main">
+		    <div id="abilit"  class="container">
+		    	<div class="row"> 
+					<div class="col-sm-6">
+		      			<div class="">
+		      				<h2 class="h-highlight">
+								<mark>ABILITIES</mark>
+							</h2>
+			      				<ul class="no-bullets">
+			      					<h2 >
+										Skills
+									</h2>
+											<li>
+										<span class="ability-title">Java</span>
+										<span class="ability-score">
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star "></span>
+										</span>
+									</li>
+									<li>
+										<span class="ability-title">JavaScript</span>
+										<span class="ability-score">
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										</span>
+									</li>
+									<li>
+										<span class="ability-title">HTML5</span>
+										<span class="ability-score">
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										</span>
+									</li>
+									<li>
+										<span class="ability-title">CSS3</span>
+										<span class="ability-score">
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star "></span>
+										</span>
+									</li>
+									<li>
+										<span class="ability-title">Python</span>
+										<span class="ability-score">
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star"></span>
+										<span class="glyphicon glyphicon-star "></span>
+										<span class="glyphicon glyphicon-star "></span>
+										</span>
+									</li>
+	      						</ul>
+	      						<ul class="no-bullets">
+			      					<h2 class>
+										Languages
+									</h2>
+											<li>
+										<span class="ability-title">English</span>
+										<span class="ability-score">
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star "></span>
+										</span>
+									</li>
+									<li>
+										<span class="ability-title">Polish</span>
+										<span class="ability-score">
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										</span>
+									</li>
+									<li>
+										<span class="ability-title">German</span>
+										<span class="ability-score">
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star "></span>
+										<span class="glyphicon glyphicon-star "></span>
+										<span class="glyphicon glyphicon-star "></span>
+										</span>
+									</li>
+									<li>
+										<span class="ability-title">Dutch</span>
+										<span class="ability-score">
+										<span class="glyphicon glyphicon-star filled"></span>
+										<span class="glyphicon glyphicon-star "></span>
+										<span class="glyphicon glyphicon-star "></span>
+										<span class="glyphicon glyphicon-star "></span>
+										<span class="glyphicon glyphicon-star "></span>
+										</span>
+									</li>
+	      						</ul>
+						</div>
+					</div>
+				</div>
+		    </div>
+		</div> <!--abilities  section end  -->
 
 		<div class="section fp-auto-height-responsive" id="portfolio-section" role="complementary">
 		    <!--  
