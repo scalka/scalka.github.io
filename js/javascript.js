@@ -53,7 +53,7 @@ $(document).ready(function() {
         //Scrolling
         css3: true,
         scrollingSpeed: 1500, /*scrolling speed in ms*/
-        autoScrolling: true,
+        autoScrolling: false,
         fitToSection: true, /*fit to viewport*/
         fitToSectionDelay: 1000,
         scrollBar: false,
