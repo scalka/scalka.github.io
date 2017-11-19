@@ -92,11 +92,21 @@ mark::after {
     height: 30%;
     bottom: 25%;
     width: 101%;
-    background-color: #FAF076;
+    background-position: 100% center;
     left: -2%;
+    width: 0%;
     z-index: -1;
-    transition: all .5s ease;
+    transition: width 1s;
+    -webkit-transition: width 1s;
+    -webkit-transition-delay: 1s; /* Safari */
+    transition-delay: 1s;
 }
+
+mark.highlighted:after{
+  width: 100%;
+  background-color: #FAF076;
+}
+
 
 
 .h-highlight {
@@ -259,6 +269,7 @@ mark::after {
     margin: auto; } 
   #experience-cont .experience .experience-details > span { display: block; margin-bottom: 6px; }
   #experience-cont .experience .experience-details .seperator { display: none; }
+  .hidden-phone { display: none; }
 }
 
 

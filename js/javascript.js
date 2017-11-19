@@ -8,35 +8,35 @@ function resetSlides() {
 window.addEventListener("resize", resetSlides());
 
 
+function isScrolledIntoView(elem) {
+    var docViewTop = $(window).scrollTop();
+    var docViewBottom = docViewTop + $(window).height();
+
+    var elemTop = $(elem).offset().top;
+    var elemBottom = elemTop + $(elem).height();
+
+    return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+}
+
 $(document).ready(function() {
+
+    /*highligh headings on scroll*/
+    $(window).scroll(function () {
+        console.log("scroll")
+       $('mark').each(function () {
+          if (isScrolledIntoView(this) === true) {
+              $(this).addClass('highlighted')
+          }
+       });
+    });
+
     resetSlides();
-    // cones
-    /*var canvas = document.getElementById("canvas");
-	var ctxt = canvas.getContext("2d");
-	var container = $(canvas).parent();*/
-	var canvas = $('#canvas');
-	var ctxt = canvas.get(0).getContext("2d");
-	var container = $('#home-section');
-    var name_border = $('#name-border');
-    
-	respondCanvas();
+
 	//cones(ctxt);
 	// run function when browser resizes
-	$(window).resize(respondCanvas);
+	//$(window).resize(respondCanvas);
     //$(window).resize(respondSlides);
-
-	function respondCanvas(){
-        var contW = container.width() ;
-        var nameW = name_border.width();
-        var canvasW = contW - nameW;
-        if (nameW > 260){
-            canvas.attr('width', $(container).width()); // max width
-            canvas.attr('height', canvasW );// max height   
-        } else if ( nameW <= 260) {
-            canvas.attr('width', $(container).width()); // max width
-            canvas.attr('height', 500 );// max height   
-        } 
-    }
+    //}
 
     $('#fullpage').fullpage({
         //Navigation
@@ -46,17 +46,16 @@ $(document).ready(function() {
         navigation: false,
         navigationPosition: 'left',
         //navigationTooltips: ['', 'About me', 'My work', 'Contact'],
-        showActiveTooltip: true,
         slidesNavigation: true,
         slidesNavPosition: 'bottom',
 
         //Scrolling
         css3: true,
         scrollingSpeed: 1500, /*scrolling speed in ms*/
-        autoScrolling: false,
+        autoScrolling: true,
         fitToSection: true, /*fit to viewport*/
         fitToSectionDelay: 1000,
-        scrollBar: false,
+        scrollBar: true,
         easingcss3: 'ease',
         loopBottom: false,
         loopTop: false, /*Defines whether scrolling up in the first section should scroll to the last one or not*/
@@ -69,9 +68,6 @@ $(document).ready(function() {
         resetSliders: false,
         fadingEffect: false,
         normalScrollElements: '#header',
-        scrollOverflow: false,
-        scrollOverflowReset: false,
-        scrollOverflowOptions: null,
         touchSensitivity: 15,
         normalScrollElementTouchThreshold: 5,
         bigSectionsDestination: null,
@@ -104,4 +100,5 @@ $(document).ready(function() {
         onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex){}
     });
 
+    $('mark').first().addClass('highlighted');
 });
