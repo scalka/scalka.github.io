@@ -22,7 +22,6 @@ $(document).ready(function() {
 
     /*highligh headings on scroll*/
     $(window).scroll(function () {
-        console.log("scroll")
        $('mark').each(function () {
           if (isScrolledIntoView(this) === true) {
               $(this).addClass('highlighted')
@@ -83,7 +82,7 @@ $(document).ready(function() {
         sectionsColor : ['#fff'], /*colors of sections*/
         paddingTop: '3em',
         paddingBottom: '10px',
-        fixedElements: '#header, .footer',
+        fixedElements: '#header',
         responsiveWidth: 900,
         responsiveHeight: 900,
         //Custom selectors

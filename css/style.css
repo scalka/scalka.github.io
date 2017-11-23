@@ -9,19 +9,22 @@ body {
 
 /* MENU */
 #header {
-  position: absolute;
+  position: fixed;
   height: 50px;
   display: block;
   width: 100%;
   z-index: 9;
   /* text-align:center; */
   color: #222222;
-  /* padding: 20px 0 0 0; */
-  top: 0px; }
+  padding: 20px 0 0 0; 
+  top: 0px; 
+  background: white;
+}
 
 #ul-menu {
   list-style-type: none;
-  padding-top: 15px; }
+  padding-top: 15px; 
+}
 
 #ul-menu li {
   display: inline-block;
