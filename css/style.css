@@ -274,6 +274,11 @@ hr::after {
   vertical-align: top;
 }*/
 
+@media only screen and (max-width: 1281px) {
+  .hidden-tablet { display: none; }
+}
+
+
 @media only screen and (max-device-width: 900px) {
   .about-section {
     padding-bottom: 20px; }
@@ -291,12 +296,12 @@ hr::after {
 @media only screen and (max-device-width: 767px) {
   .project-img {
     max-height: 300px;
-    margin: 0 auto; } }
+    margin: 10px auto; } }
 
 @media only screen and (max-width: 767px) {
   .project-img {
     max-height: 300px;
-    margin: 0 auto; }
+    margin: 10px auto; }
   #experience-cont .experience .experience-details > span { display: block; margin-bottom: 6px; }
   #experience-cont .experience .experience-details .seperator { display: none; }
   .hidden-phone { display: none; }
