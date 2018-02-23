@@ -5,11 +5,14 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111404905-1"></script>
 	<script>
-	  window.dataLayer = window.dataLayer || [];
-	  function gtag(){dataLayer.push(arguments);}
-	  gtag('js', new Date());
+		window.dataLayer = window.dataLayer || [];
 
-	  gtag('config', 'UA-111404905-1');
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-111404905-1');
 	</script>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -91,8 +94,8 @@
 						<h2>About me</h2>
 
 						<p>
-							My name is Sylwia and I am a Creative Computing student at IADT in Dublin. I will graduate in May 2018. On the second year as a part of Erasmus programme, I studied Mobile Media at the Stuttgart Media University in Germany. Within the field of computing
-							in multimedia and web engineering, I am largely invested in front-end design and development.
+							My name is Sylwia and I am a graduating in Programming, Multimedia & Web Engineering student at IADT in Dublin. I will graduate in May 2018. On the second year as a part of Erasmus programme, I studied Mobile Media at the Stuttgart Media University in
+							Germany. Within the field of computing in multimedia and web engineering, I am largely invested in front-end design and development.
 						</p>
 						<hr>
 						<p>
@@ -100,8 +103,8 @@
 						</p>
 						<hr>
 						<p>
-							My hobbies are traveling in foreign countries and exploring my local area for interesting places, reading books about technology and getting lost in novels. Another interest of mine is cooking, I like to combine different kind of tastes from all over
-							the World and experiment with ingredients.
+							My hobbies are traveling in foreign countries and exploring my local area through sightseeing and hiking. Last year I started a
+							<a href="www.jointrails.com"> travelling blog </a> to share experiences, stories and pictures from my travels. Another interest of mine is cooking, I like to combine different kind of tastes from all over the World and experiment with ingredients.
 						</p>
 					</div>
 				</div>
@@ -585,13 +588,13 @@
 							<a href="https://github.com/scalka/GraduationProject" target="_blank">
 								<h2 class="github_link">Recipy - Recipe Recommender System</h2>
 							</a>
-							<p class="lead hidden-phone">Recipy is a recipe recommendation system developed as a part of Graduation Project. This recommender is implemented into a web application. The back-end of the application is built using Python and Flask. The front-end is constructed with JavaScript, Jinja2 template engine and Bootstrap. The
-							recommender engine uses Python, scikit-learn, NumPy and Pandas.
+							<p class="lead hidden-phone">Recipy is a recipe recommendation system developed as a part of Graduation Project. This recommender is implemented into a web application. The back-end of the application is built using Python and Flask. The front-end is constructed with JavaScript,
+								Jinja2 template engine and Bootstrap. The recommender engine uses Python, scikit-learn, NumPy and Pandas.
 							</p>
 							<p class="hidden-tablet">
-								The user can create an account, after login the user can look for cooking inspiration and recipes. Each recipe can be rated. The rating system is essential for the machine learning model to learn about user’s preferences. The application
-								is designed for users who look for recipes online on a daily basis. The goal of this project is to utilise machine learning techniques to develop a recommender system which can suggest new recipes based on user's historical behaviour. Besides
-								development, my work includes background research, concept development and project management.
+								The user can create an account, after login the user can look for cooking inspiration and recipes. Each recipe can be rated. The rating system is essential for the machine learning model to learn about user’s preferences. The application is designed for
+								users who look for recipes online on a daily basis. The goal of this project is to utilise machine learning techniques to develop a recommender system which can suggest new recipes based on user's historical behaviour. Besides development, my
+								work includes background research, concept development and project management.
 							</p><br>
 							<div class="container-fluid buttons">
 								<button class="btn">Python</button>
@@ -615,34 +618,69 @@
 			</div>
 			<!-- slide end -->
 
-						<div class="mySlide slide">
-							<div class="container">
-								<div class="row project-content">
-									<div class="col-sm-6">
-										<a href="rtr/index.html" target="_blank">
-											<h2>RtR - Travel planner</h2>
-										</a>
-										<p class="lead hidden-phone">This project is a part of the third year of B.Sc. in Creative Computing at the IADT. The primary goal of this project is to design and implement a mobile web application. This project consists of a number of interim progress reports, presentations,
-											source code of the application and a dissertation. </p>
-										<p class="hidden-tablet">Rtr is a travelling planner which the user can use to prepare for a trip. This application lets the users search for interesting sights including points of interest on the way to their destination. Personalising the route according to the user’s
-											preferences is possible. Moreover, it provides the user with sufficient information about the points of interest on the way to his destination. This information includes a short description, rating from other users of the system and reviews. The
-											application then plots the exact route from point A to B including the selected stops and provide real-time navigation. </p><br>
-										<div class="container-fluid buttons">
-											<button class="btn">HTML5</button>
-											<button class="btn">CSS</button>
-											<button class="btn">SASS</button>
-											<button class="btn">JavaScript</button>
-											<button class="btn">Google Maps API</button>
-										</div>
-									</div>
-									<div class="col-sm-6 ">
-										<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1513007582/N00146095_ProjectImage_1-2_fxtcdf.jpg" alt="FestApp image">
-									</div>
-								</div>
-								<!-- row end -->
+
+
+			<div class="mySlide slide">
+				<div class="container">
+					<div class="row project-content">
+						<div class="col-sm-6">
+							<a href="rtr/index.html" target="_blank">
+								<h2>Multiplayer Flying Circles</h2>
+							</a>
+							<p class="lead hidden-phone">Flying Circle (FC) is a game developed as a part of the Advanced JavaScript module. This project is a multiplayer game built with pure JavaScript (ES6).
+								The client-side was built with ES6 and the P5.js library together with HTML and CSS. The server-side was built with Express server running on Node.js, Socket.io as a web socket and Mongo database.
+								The game runs in a browser.  </p>
+							<p class="hidden-tablet">The aim of the game is to eat all the opponents’ circles on the canvas. The trick is to eat only smaller circles than the player.
+								The player can move on the screen with keyboard arrows. </p><br>
+							<div class="container-fluid buttons">
+								<button class="btn">JavaScript - ES6</button>
+								<button class="btn">Node.js</button>
+								<button class="btn">Express</button>
+								<button class="btn">Socket.io</button>
+								<button class="btn">MongoDB</button>
+								<button class="btn">CSS</button>
+								<button class="btn">HTML</button>
+								<button class="btn">P5.js</button>
 							</div>
 						</div>
-						<!-- slide end -->
+						<div class="col-sm-6 ">
+							<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1519378633/circles_znzbgj.png" alt="Flying Circles">
+						</div>
+					</div>
+					<!-- row end -->
+				</div>
+			</div>
+			<!-- slide end -->
+
+
+			<div class="mySlide slide">
+				<div class="container">
+					<div class="row project-content">
+						<div class="col-sm-6">
+							<a href="rtr/index.html" target="_blank">
+								<h2>RtR - Travel planner</h2>
+							</a>
+							<p class="lead hidden-phone">This project is a part of the third year of B.Sc. in Creative Computing at the IADT. The primary goal of this project is to design and implement a mobile web application. This project consists of a number of interim progress reports, presentations,
+								source code of the application and a dissertation. </p>
+							<p class="hidden-tablet">Rtr is a travelling planner which the user can use to prepare for a trip. This application lets the users search for interesting sights including points of interest on the way to their destination. Personalising the route according to the user’s
+								preferences is possible. Moreover, it provides the user with sufficient information about the points of interest on the way to his destination. This information includes a short description, rating from other users of the system and reviews. The
+								application then plots the exact route from point A to B including the selected stops and provide real-time navigation. </p><br>
+							<div class="container-fluid buttons">
+								<button class="btn">HTML5</button>
+								<button class="btn">CSS</button>
+								<button class="btn">SASS</button>
+								<button class="btn">JavaScript</button>
+								<button class="btn">Google Maps API</button>
+							</div>
+						</div>
+						<div class="col-sm-6 ">
+							<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1513007582/N00146095_ProjectImage_1-2_fxtcdf.jpg" alt="FestApp image">
+						</div>
+					</div>
+					<!-- row end -->
+				</div>
+			</div>
+			<!-- slide end -->
 			<div class="mySlide slide">
 				<div class="container">
 					<div class="row project-content">
@@ -652,11 +690,11 @@
 								<h2 class="github_link">FestApp - Mobile application for Android</h2>
 							</a>
 							<p class="lead hidden-phone"> FestApp helps user to search for music festivals around Europe, buy tickets and keep track of events. The application is location-based so it is easy to find events nearby. To make usage easier, all the festivals are divided into four music categories:
-							electro, hip-hop, reggae and rock.
+								electro, hip-hop, reggae and rock.
 							</p>
 							<p class="hidden-tablet">
-								I designed and developed a software mobile application for Android. The main goal was to implement the content I learned on my classes at HdM in Stuttgart: UI Design, UX Design class, Mobile Content and Mobile App Development. This project
-								was conducted in two stages. The first one was familiarization with design principles, prototyping tools and evaluation process. The second stage was to develop an application which I designed.
+								I designed and developed a software mobile application for Android. The main goal was to implement the content I learned on my classes at HdM in Stuttgart: UI Design, UX Design class, Mobile Content and Mobile App Development. This project was conducted
+								in two stages. The first one was familiarization with design principles, prototyping tools and evaluation process. The second stage was to develop an application which I designed.
 							</p><br>
 							<div class="container-fluid buttons">
 								<button class="btn">Java</button>
@@ -676,85 +714,82 @@
 				</div>
 			</div>
 			<!-- slide end -->
-		<div class="mySlide slide">
-			<div class="container">
-				<div class="row project-content">
-					<div class="col-sm-6">
-						<h2>TravelTune - UI functional prototype design</h2>
-						<p class="lead hidden-phone">TravelTune is a location based music app, based on Spotify's music preferences. Travellers and Music Lovers are able to see the events happening around them when travelling. It has a map incorporated, calendar and pinboard where small ads could
-							be left. This application was designed and evaluated as part of UI Design module with a group of four students. From the sketch scribbles, through wireframes, creating personas and low fidelity protortypes, we created and evaluated functional prototype
-							with Proto.io for out application.</p>
-						<div class="container-fluid buttons">
-							<button class="btn">UI Design</button>
-							<button class="btn">UX Design</button>
-							<button class="btn">Proto.io</button>
-							<button class="btn">Eye tracking analysis</button>
+			<div class="mySlide slide">
+				<div class="container">
+					<div class="row project-content">
+						<div class="col-sm-6">
+							<h2>TravelTune - UI functional prototype design</h2>
+							<p class="lead hidden-phone">TravelTune is a location based music app, based on Spotify's music preferences. Travellers and Music Lovers are able to see the events happening around them when travelling. It has a map incorporated, calendar and pinboard where small ads could
+								be left. This application was designed and evaluated as part of UI Design module with a group of four students. From the sketch scribbles, through wireframes, creating personas and low fidelity protortypes, we created and evaluated functional
+								prototype with Proto.io for out application.</p>
+							<div class="container-fluid buttons">
+								<button class="btn">UI Design</button>
+								<button class="btn">UX Design</button>
+								<button class="btn">Proto.io</button>
+								<button class="btn">Eye tracking analysis</button>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1475246896/traveltune_ywwiii.png" alt="traveltune image">
 						</div>
 					</div>
-					<div class="col-sm-6">
-						<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1475246896/traveltune_ywwiii.png" alt="traveltune image">
-					</div>
+					<!-- row end -->
 				</div>
-				<!-- row end -->
 			</div>
-		</div>
-		<!-- slide end -->
+			<!-- slide end -->
 
-		<div class="mySlide slide">
-			<div class="container">
-				<div class="row project-content">
-					<div class="col-sm-6">
-						<h2>Lapica - Mobile Web Application</h2>
-						<p class="lead hidden-phone">Lapica is an app which helps users make better purchase decisions. The main concept is to let user send the picture of the item he wants to buy to friends, notify them and receive a feedback whether they think user should buy it or not
-							<br> I developed it with two other students. My role in the project focused on Front-end, using Ionic framework with AngularJS and Sass.</p><br>
-						<div class="container-fluid buttons">
-							<button class="btn">Ionic</button>
-							<button class="btn">Angular</button>
-							<button class="btn">SCSS</button>
-							<button class="btn">JavaScript</button>
-							<button class="btn">HTML</button>
+			<div class="mySlide slide">
+				<div class="container">
+					<div class="row project-content">
+						<div class="col-sm-6">
+							<h2>Lapica - Mobile Web Application</h2>
+							<p class="lead hidden-phone">Lapica is an app which helps users make better purchase decisions. The main concept is to let user send the picture of the item he wants to buy to friends, notify them and receive a feedback whether they think user should buy it or not
+								<br> I developed it with two other students. My role in the project focused on Front-end, using Ionic framework with AngularJS and Sass.</p><br>
+							<div class="container-fluid buttons">
+								<button class="btn">Ionic</button>
+								<button class="btn">Angular</button>
+								<button class="btn">SCSS</button>
+								<button class="btn">JavaScript</button>
+								<button class="btn">HTML</button>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1475248037/lapica_m0vfbj.png" alt="lapica image">
 						</div>
 					</div>
-					<div class="col-sm-6">
-						<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1475248037/lapica_m0vfbj.png" alt="lapica image">
-					</div>
+					<!-- row end -->
 				</div>
-				<!-- row end -->
 			</div>
-		</div>
-		<!-- slide end -->
+			<!-- slide end -->
 
-		<div class="mySlide slide">
-			<div class="container">
-				<div class="row project-content">
-					<div class="col-sm-6">
-						<a href="https://azur.ie" target="_blank">
-							<h2>Azure - Joomla Website</h2> </a>
-						<p class="lead hidden-phone">Design and development of a Joomla CMS website.
-							This website is an online shop for Azur boutique.
-							The website was built from the ground up with Joomla.
-							The project involved regular meeting and presentations with the client.
+			<div class="mySlide slide">
+				<div class="container">
+					<div class="row project-content">
+						<div class="col-sm-6">
+							<a href="https://azur.ie" target="_blank">
+								<h2>Azure - Joomla Website</h2> </a>
+							<p class="lead hidden-phone">Design and development of a Joomla CMS website. This website is an online shop for Azur boutique. The website was built from the ground up with Joomla. The project involved regular meeting and presentations with the client.
 
-						</p><br>
-						<div class="container-fluid buttons">
-							<button class="btn">Joomla</button>
-							<button class="btn">CMS</button>
-							<button class="btn">HTML5</button>
-							<button class="btn">CSS</button>
-							<button class="btn">HTTP</button>
+							</p><br>
+							<div class="container-fluid buttons">
+								<button class="btn">Joomla</button>
+								<button class="btn">CMS</button>
+								<button class="btn">HTML5</button>
+								<button class="btn">CSS</button>
+								<button class="btn">HTTP</button>
+							</div>
+						</div>
+						<div class="col-sm-6">
+							<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1513008209/shopping_fy7kvn.jpg">
 						</div>
 					</div>
-					<div class="col-sm-6">
-						<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1513008209/shopping_fy7kvn.jpg">
-					</div>
+					<!-- row end -->
 				</div>
-				<!-- row end -->
 			</div>
-		</div>
-		<!-- slide end -->
+			<!-- slide end -->
 
-	</div>
-	<!-- portfolio section end  -->
+		</div>
+		<!-- portfolio section end  -->
 
 
 		<div class="section fp-auto-height-responsive" id="contact-section">
