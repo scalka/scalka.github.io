@@ -1,829 +1,481 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-111404905-1"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+  <meta name="keywords" content="portoflio, HTML, CSS, React, Front-end developer, JavaScript, es6, web developer">
+  <meta name="description" content="Sylwia Calka Portfolio - Mobile nad Web Development">
+  <meta name="author" content="Sylwia Calka">
 
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-
-		gtag('config', 'UA-111404905-1');
-	</script>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="keywords" content="portoflio, HTML, CSS, XML, JavaScript, Android">
-	<meta name="description" content="Sylwia Calka Portfolio - Mobile nad Web Development">
-	<meta name="author" content="Sylwia Calka">
-
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-	<title>Portfolio</title>
-
-	<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<script src="js/bootstrap.min.js"></script>
-
-	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
-	<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
-
-	<link href="https://fonts.googleapis.com/css?family=Arima+Madurai|Roboto" rel="stylesheet">
-	<!--
-	    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-	  	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script> -->
-
-	<script src="https://use.fontawesome.com/c8da454be6.js"></script>
-	<script type="text/javascript" src="js/jquery.fullpage.js"></script>
-	<link rel="stylesheet" type="text/css" href="css/jquery.fullpage.css" />
-
-	<link rel="stylesheet" type="text/css" href="css/style.css">
-	<script type="text/javascript" src="js/utils.js"></script>
-
-	<!-- <link rel="stylesheet" type="text/css" href="scss/style.css"> -->
-
-	<script type="text/javascript" src="js/javascript.js">
-	</script>
-	<script src="js/cone.js"></script>
+  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+    integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <title>Sylwia Calka Portoflio</title>
 </head>
 
 <body>
-	<div id="header" role="navigation">
-		<!-- <div id="logo">
+  <main class="page-container">
+    <header>
+      <div class="logo">
+        <a class="logo-text" href="#front-section">
+        <img class="logo-img" src="images/myLogo2.svg" alt="Sylwia's logo" />
+        </a>
+      </div>
+    </header>
+    <nav>
+      <ul>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#experience-section">Experience</a></li>
+        <li><a href="#projects-section">Portfolio</a></li>
+        <li><a href="#skills-section">Skills</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+    </nav>
+    <section id="front-section">
+      <article>
+        <hr>
+        <h1 class="page-title"><mark class="highlighted">Sylwia Calka</mark>
+          <!-- <span class="definition h-sub small">noun</span> -->
+        </h1>
+        <h5 class="h-sub large">Front-End Developer</h5>
+        <p>I am a front-end developer, data visualisation specialist and a user interface designer. I develop websites
+          and online applications, especially with a focus on front-end design and functionality. This website is my
+          portfolio.</p>
+      </article>
+      <img src="dev.svg" alt="Web Developer">
+    </section>
+    <section id="about-section">
+      <article>
+        <hr>
+        <h1><mark class="highlighted">About me
+            <!-- <span class="definition h-sub small">preposition</span> -->
+        </h1>
+        <p>My name is Sylwia. I was born in Lublin, Poland. After high school, I moved to Dublin, Ireland. This year I
+          am moving, with my partner to his home country &#8212; the Netherlands.</p>
 
-		</div> -->
-		<ul id="ul-menu">
-			<li data-menuanchor="home" class="active"><a href="#home">S.Calka</a></li>
-			<li data-menuanchor="about"><a href="#about">About</a></li>
-			<li data-menuanchor="experience"><a href="#experience">Experience</a></li>
-			<li data-menuanchor="abilities"><a href="#abilities">Skills</a></li>
-			<li data-menuanchor="portfolio"><a href="#portfolio">Portoflio</a></li>
-			<li data-menuanchor="contact"><a href="#contact">Contact</a></li>
-		</ul>
-	</div>
-	<div id="fullpage">
-		<div class="section fp-auto-height-responsive" id="home-section" role="banner">
-			<div class="text-center" id="name-border">
-				<div id="name">
-					<h1> </h1>
-					<h1 class="h-highlight hi">
-						Hi, I'm <mark>Sylwia Calka</mark>
-						</h1>
-					<h3>Web Developer</h3>
-				</div>
-			</div>
-		</div>
-		<!-- top section end  -->
+        <p>My journey as a developer started already as a teenager when designing and coding my blog. After that, I knew
+          that this is something I enjoy doing and I am good at. I decided to study web development and in 2018 I got my
+          degree in Computing in Multimedia and Web Engineering from IADT in Dublin. On the second year as a part of the
+          Erasmus programme, I studied Mobile Media at the Stuttgart Media University in Germany. My study was very
+          multidisciplinary, combining the artsy nature of my college with the technical side of the course. Thus,
+          within the field of web engineering, I am largely invested in front-end design and development.</p>
 
-		<div class="section fp-auto-height-responsive" id="about-section" role="main">
-			<div class="container">
-				<h1 class="h-highlight">
-					<mark>Profile</mark>
-				</h1>
-				<div class="row">
+        <p>My hobbies are travelling in foreign countries and exploring my local area through sightseeing, cycling and
+          hiking. I love to spend time reading books on my Kindle and every year I manage to read more and more novels,
+          thrillers and non-fiction. Since last year, thanks to bullet journaling I rediscovered my joy in drawing,
+          painting and meticulous planning.</p>
+      </article>
+    </section>
+    <section id="hobbies-section" class="hide-m hide-s">
+      <article>
+        <div class="hobbies_container">
+          <h2 class="hobbies_header">Hobbies</h2>
+          <ol class="hobbies_list">
+            <li id="cycling" class="hobbies_item">
+              <h4 class="hobbies_title">Cycling</h4>
+            </li>
+            <li id="buju" class="hobbies_item">
+              <h4 class="hobbies_title">Bullet Journaling</h4>
+            </li>
+            <li id="photography" class="hobbies_item">
+              <h4 class="hobbies_title">Photography</h4>
+            </li>
+            <li id="yoga" class="hobbies_item">
+              <h4 class="hobbies_title">Yoga</h4>
+            </li>
+            <li id="hiking" class="hobbies_item">
+              <h4 class="hobbies_title">Hiking</h4>
+            </li>
+            <li id="dancing" class="hobbies_item">
+              <h4 class="hobbies_title">Dancing</h4>
+            </li>
+            <li id="cooking" class="hobbies_item">
+              <h4 class="hobbies_title">Cooking</h4>
+            </li>
+          </ol>
+        </div>
+        <img id="hobby-img" class=" hobbies_img_medium" src="images/profile.png" alt="Sylwia's hobbies">
+      </article>
+    </section>
+    <section id="experience-section">
+      <hr>
+      <h1><mark class="highlighted">Experience
+          <!-- <span class="definition h-sub">noun</span> -->
+      </h1>
+      <article class="cards-container">
+        <div class="card">
+          <div class="card-logo"><img class="img-logo" src="images/core.png" alt="Core logo"></div>
+          <div>
+            <h3>Front-End Developer and Data Visualisation Specialist</h3>
+            <h5 class="h-sub small">Core &#8212; Dublin, Ireland</h5>
+            <h5 class="h-sub small">June 2018 &#8212; June 2019</h5>
+          </div>
+          <div class="card-content">
+            <p>Continuous Front-End Development for the Core161 marketing analytics platform,
+              Designing the dashboard User Interface, Focusing on Usability and User Experience,
+              Giving training to the new users of the platform.
+              Working closely with back-end developers and media stakeholders to provide the best customer experience.
+              On a daily basis using tools such as JavaScript, AngularJS, AmCharts, Adobe XD, SASS.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-logo"><img class="img-logo" src="images/sonalake.png" alt="Sonalake logo"></div>
+          <div>
+            <h3>Front-End Developer Intern</h3>
+            <h5 class="h-sub small">Sonalake &#8212; Dublin, Ireland</h5>
+            <h5 class="h-sub small">June 2017 &#8212; September 2017</h5>
+          </div>
+          <div class="card-content">
+            <p>Developed front-end software with AngularJS for a surveying system,
+              Constructed and refined data visualisation dashboards,
+              Conducted User Experience research and redesign of a Service Desk software,
+              Wrote JavaScript tests using Jasmine framework,
+              Worked in a large development team in an agile environment.
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-logo"><img class="img-logo" src="images/dojo.png" alt="Sonalake logo"></div>
+          <div>
+            <h3>Technical Mentor</h3>
+            <h5 class="h-sub small">CoderDojo &#8212; Dublin, Ireland</h5>
+            <h5 class="h-sub small">September 2017 &#8212; January 2018</h5>
+          </div>
+          <div class="card-content">
+            <p>Mentoring and teaching young people between 7 and 17 how to code. Using technologies such as
+              HTML, CSS, JavaScript, Python, Scratch. Encouraging attendees to explore technology.
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="education-section">
+      <hr>
+      <h1><mark class="highlighted">Education
+          <!--  <span class="definition h-sub small">noun</span> --></mark></h1>
+      <article class="cards-container">
+        <div class="card">
+          <div class="card-logo"><img class="img-logo" src="images/iadt.png" alt="IADT logo"></div>
+          <div>
+            <h3>BSc (Honours) in Creative Computing and Web Engineering</h3>
+            <h5 class="h-sub small">Institute of Art, Design + Technology &#8212; Dublin, Ireland</h5>
+            <h5 class="h-sub small">September 2014 &#8212; May 2018</h5>
+          </div>
+          <div class="card-content">
+            <p>Graduated with First Class Honours - GPA 3.9/4</p>
+            <p>Technical computing skills: developed the technical skills required to implement computing applications,
+              with an emphasis on web, cloud and mobile applications.<br>
+              Creative problem solving: learnt to analyse problems and to develop creative solutions to those problems.<br>
+              Design thinking: learnt to design computing applications that satisfy the goals and requirements of
+              end-users. 
+            </p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-logo"><img class="img-logo" src="images/hdm.png" alt="HDM logo"></div>
+          <div>
+            <h3>Mobile Media Minor</h3>
+            <h5 class="h-sub small">Stuttgart Media University &#8212; Stuttgart, Germany</h5>
+            <h5 class="h-sub small">September 2015 &#8212; July 2016</h5>
+          </div>
+          <div class="card-content">
+            <p>Software technology: configuration and programming of complex software systems.
+              Research networks: configuration and administration of communication networks and their security
+              requirements.<br>
+              Internet technologies: programming web applications and shared systems.<br>
+              Computer graphics: basic computer graphics and computer animation.<br>
+              Design: User Interface, User Experience and Mobile Game design.<br>
+            </p>
+          </div>
+        </div>
+      </article>
+    </section>
+    <section id="projects-section">
+      <article>
+        <hr>
+        <h1><mark class="highlighted">Projects</mark></h1>
+        <ul class="project-list">
+          <li class="project-item">
+            <div class="project-image"><img class="img-responsive" src="images/recipy1.jpg"
+                alt="Recipy - Recipe Recommender System"></div>
+            <div>
+              <span class="h-sub small">Graduation Project </span>
+              <a href="http://gradshow.iadt.ie/student/N00146095.html">
+                <h3 class="project-title project-link">ReciPy - Recipe Recommender System</h3>
+              </a>
+            </div>
+            <div class="project-content">
+              <p>ReciPy is a recipe recommendation system developed as a part of my Graduation Project. The goal of this
+                project was to utilise machine learning techniques to develop a recommender system which can suggest new
+                recipes based on user's historical behaviour. Besides development, my work included background research,
+                concept development and project management.</p>
+              <p>
+                The user can create an account, after login the user can look for cooking inspiration and recipes. Each
+                recipe can be rated. The rating system is essential for the machine learning model to learn about user’s
+                preferences. The application is designed for users who look for recipes online on a daily basis.
+              </p>
+            </div>
+            <ul class="project-tags">
+              <li class="tag project-tags-lang">Python</li>
+              <li class="tag project-tags-frame">Flask</li>
+              <li class="tag project-tags-skill">Machine Learning</li>
+              <li class="tag project-tags-frame">Scikit-learn</li>
+              <li class="tag project-tags-skill">Recommender System</li>
+              <li class="tag project-tags-frame">Pandas</li>
+              <li class="tag project-tags-frame">Jinja</li>
+              <li class="tag project-tags-frame">NumPy</li>
+              <li class="tag project-tags-lang">HTML5</li>
+              <li class="tag project-tags-frame">Bootstrap</li>
+            </ul>
+          </li>
+          <li class="project-item">
+            <div class="project-image"><img class="img-responsive"
+                src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1519378633/circles_znzbgj.png"
+                alt="Multiplayer Flying Circles"></div>
+            <div>
+              <span class="h-sub small">Advanced JavaScript Module </span>
+              <a href="https://github.com/scalka/mongo-node-express-game">
+                <h3 class="project-link project-title">Multiplayer Flying Circles</h3>
+              </a>
+            </div>
+            <div class="project-content">
+              <p>Flying Circle is a game developed as a part of the Advanced JavaScript module. This project is a
+                multiplayer game built with pure JavaScript (ES6). The client-side was built with ES6 and the P5.js
+                library together with HTML and CSS. The server-side was built with Express server running on Node.js,
+                Socket.io as a web socket and Mongo database. The game runs in a browser.</p>
+              <p>
+                The aim of the game is to eat all the opponents’ circles on the canvas. The trick is to eat only smaller
+                circles than the player. The player can move on the screen with keyboard arrows.</p>
+            </div>
+            <ul class="project-tags">
+              <li class="tag project-tags-lang">JavaScript ES6</li>
+              <li class="tag project-tags-frame">Express</li>
+              <li class="tag project-tags-frame">Node.js</li>
+              <li class="tag project-tags-frame">Socket.io</li>
+              <li class="tag project-tags-frame">MongoDB</li>
+              <li class="tag project-tags-lang">CSS</li>
+              <li class="tag project-tags-lang">HTML</li>
+              <li class="tag project-tags-frame">P5.js</li>
+            </ul>
+          </li>
+          <li class="project-item">
+            <div class="project-image"><img class="img-responsive"
+                src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1513007582/N00146095_ProjectImage_1-2_fxtcdf.jpg"
+                alt="Rtr travel planer"></div>
+            <div>
+              <span class="h-sub small">Third Year Graduation Project</span>
+              <a href="http://showcase.iadt.ie/assets/MM3/Poster/N00146095_Poster.pdf"></a>
+              <h3 class="project-link project-title">RtR &#8212; Travel planner</h3></a>
+            </div>
+            <div class="project-content">
+              <p>Rtr was developed as a part of the third year of B.Sc. in Creative Computing at the IADT. The primary
+                goal of this project was to design and implement a web application. This project consists of a number of
+                interim progress reports, presentations, source code of the application and a dissertation.</p>
+              <p>
+                Rtr is a travelling planner which the user can use to prepare for a trip. This application lets the
+                users search for interesting sights including points of interest on the way to their destination.
+                Personalising the route according to the user’s preferences is possible. Moreover, it provides the user
+                with sufficient information about the points of interest on the way to his destination. This information
+                includes a short description, rating from other users of the system and reviews. The application then
+                plots the exact route from point A to B including the selected stops and provide real-time navigation.
+              </p>
+            </div>
+            <ul class="project-tags">
+              <li class="tag project-tags-lang">JavaScript</li>
+              <li class="tag project-tags-frame">HTML</li>
+              <li class="tag project-tags-frame">CSS3</li>
+              <li class="tag project-tags-frame">SASS</li>
+              <li class="tag project-tags-frame">Google Maps API</li>
+            </ul>
+          </li>
 
-					<div class="details-div col-sm-6">
-						<img class="img-responsive " src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1466853694/profile_t2spfg.jpg" alt="my picture">
-					</div>
-					<div class="col-sm-6 bout-text">
-						<h2>About me</h2>
-
-						<p>
-							My name is Sylwia and I am a graduating in <b>Programming, Multimedia & Web Engineering</b> student at IADT in Dublin. I will graduate in May 2018. On the second year as a part of Erasmus programme, I studied Mobile Media at the Stuttgart Media
-							University in Germany. Within the field of computing in multimedia and web engineering, I am largely invested in front-end design and development.
-						</p>
-						<hr>
-						<p>
-							My portfolio consists of projects I developed alone and contributed significantly to. Short description, picture and videos of the projects are ready to be checked out here. For a more in depth view, visit my GitHub.
-						</p>
-						<hr>
-						<p>
-							My hobbies are traveling in foreign countries and exploring my local area through sightseeing and hiking. Last year I started a
-							<b><a href="http://www.jointrails.com"> travelling blog </a></b> to share experiences, stories and pictures from my travels. Another interest of mine is cooking, I like to combine different kind of tastes from all over the World and experiment
-							with ingredients.
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--about  section end  -->
-
-
-		<div class="section fp-auto-height-responsive fp-auto-height" id="experience-section" role="main">
-			<div id="experience-cont" class="container">
-				<h1 class="h-highlight">
-					<mark>Experience</mark>
-				</h1>
-				<!-- Experience rows and columns -->
-				<div class="experience row">
-					<div class="work_experience col-md-6">
-						<h2 class="h-highlight"><mark>Work Experience</mark></h2>
-
-						<div class="experience-content">
-							<div class="col-md-4">
-								<h4><strong>DisAbuse</strong></h4>
-								<p class="experience-period">
-									Nov 2017 - Present </p>
-							</div>
-
-							<div class="col-md-8">
-								<h4><strong>Drupal Web Developer</strong></h4>
-								<p>
-									<span class="hidden-phone">
-						                    Building an EU wide CMS platform 	for sharing multimedia resources about cybersafety and cyberbullying
-															</span>
-									<span class="experience-details">
-						                    <span class="location">
-						                        <span class="glyphicon glyphicon-map-marker"></span> Dublin, Ireland </span>
-									</span>
-								</p>
-							</div>
-							<!-- col-md-8 end -->
-						</div>
-						<!-- experience-content end -->
-						<div class="experience-content">
-							<div class="col-md-4">
-								<h4><strong>Sonalake</strong></h4>
-								<p class="experience-period">
-									Jun 2017 - Sep 2017 </p>
-							</div>
-
-							<div class="col-md-8">
-								<h4><strong>Software Engineering Intern</strong></h4>
-								<p>
-
-									<span class="hidden-phone">
-						                    Working in a large development team in an agile environment, Front-end software development with Angular for clients, Software testing, User Experience research and redesign of a Service Desk software </span>
-									<span class="experience-details">
-						                    <span class="location">
-						                        <span class="glyphicon glyphicon-map-marker"></span> Dublin, Ireland </span>
-
-									</span>
-								</p>
-							</div>
-							<!-- col-md-8 end -->
-						</div>
-						<!-- experience-content end -->
-						<h2 class="h-highlight">
-							    <mark>Volunteer Experience</mark>
-							</h2>
-						<div class="experience-content">
-							<div class="col-md-4">
-								<h4><strong>CoderDojo</strong></h4>
-								<p class="experience-period">
-									Sep 2017 - Present </p>
-							</div>
-
-							<div class="col-md-8">
-								<h4><strong>Technical Mentor</strong></h4>
-								<p>
-									<span class="hidden-phone">
-														Mentoring and teaching young people between 7 and 17 how to code. Using technologies such as
-														HTML, CSS, JavaScript, Python, Scratch. Encouraging attendees to explore technology.
-													</span>
-									<span class="experience-details">
-							                <span class="location">
-							                    <span class="glyphicon glyphicon-map-marker"></span> Dublin, Ireland </span>
-									</span>
-								</p>
-							</div>
-							<!-- col-md-8 end -->
-						</div>
-						<!-- experience-content end -->
-					</div>
-					<!-- work_experience col-md-6 end -->
-					<div class=" education_experience col-md-6">
-						<h2 class="h-highlight"><mark>Education</mark></h2>
-
-						<div class="experience-content">
-							<div class="col-md-4">
-								<h4><strong>Institute of Art, Design + Technology</strong></h4>
-								<p class="experience-period">
-									Sep 2014 - May 2018 </p>
-							</div>
-
-							<div class="col-md-8">
-								<p>
-									<strong>Creative Computing and Web Engineering BSc (Hons)</strong>
-									<span class="hidden-phone">
-															Creative problem solving: learn to analyse problems and to develop creative solutions to those problems.
-															Design thinking: learn to design computing applications that satisfy the goals and requirements of end-users.
-															Technical computing skills: develop the technical skills required to implement computing applications, with an emphasis on web, cloud and mobile applications.
-															  </span>
-									<span class="experience-details">
-						                    <span class="location">
-						                        <span class="glyphicon glyphicon-map-marker"></span> Dublin, Ireland </span>
-
-									</span>
-								</p>
-							</div>
-							<!-- col-md-8 end -->
-						</div>
-						<!-- experience-content end -->
-						<div class="experience-content">
-							<div class="col-md-4">
-								<h4><strong>Hochschule der Medien</strong></h4>
-								<p class="experience-period">
-									Sep 2015 - July 2016 </p>
-							</div>
-
-							<div class="col-md-8">
-								<p>
-									<strong>Mobile Media Minor</strong>
-									<span class="hidden-phone">
-															Software technology: configuration and programming of complex software systems.
-															Research networks: configuration and administration of communication networks and their security requirements.
-															Internet technologies: programming web applications and shared systems.
-															Computer graphics: basic computer graphics and computer animation.
-															  </span>
-									<span class="experience-details">
-						                    <span class="location">
-						                        <span class="glyphicon glyphicon-map-marker"></span> Stuttgart, Germany </span>
-
-									</span>
-								</p>
-							</div>
-							<!-- col-md-8 end -->
-						</div>
-						<!-- experience-content end -->
-					</div>
-					<!-- education experience end -->
-				</div>
-
-
-
-
-
-				<!-- Experience rows and columns end-->
-			</div>
-			<!-- container end -->
-		</div>
-		<!--experience  section end  -->
-
-
-
-		<div class="section fp-auto-height-responsive" id="abilities-section" role="main">
-			<div id="abilit" class="container">
-				<h1 class="h-highlight">
-					<mark>Skills</mark>
-				</h1>
-				<div class="row">
-					<div class="col-sm-6">
-
-						<ul class="no-bullets">
-							<h2>
-										Programming <br> Languages
-									</h2>
-							<li>
-								<span class="ability-title">Java</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">JavaScript</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Python</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">C#</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-
-							<li>
-								<span class="ability-title">HTML</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">CSS</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-						</ul>
-
-						<ul class="no-bullets">
-							<h2>
-										Frameworks <br>and libraries etc.
-									</h2>
-							<li>
-								<span class="ability-title">scikit-learn</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Android Development</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Angular</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">React</span>
-								<span class="ability-score">
-                  <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Node.js</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Flask</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">.NET</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Unity</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Jasmine</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">JIRA</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Git</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Agile</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-						</ul>
-					</div>
-					<div class="col-sm-6">
-						<ul class="no-bullets">
-							<h2>
-										Design <br>
-									</h2>
-							<!-- Design -->
-							<li>
-								<span class="ability-title">UI Design</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">UX Design</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Adobe Photoshop</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Adobe XD</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Adobe Lightroom</span>
-								<span class="ability-score">
-                                        <span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								</span>
-							</li>
-						</ul>
-						<ul class="no-bullets">
-							<h2 class>
-										Languages <br>
-									</h2>
-
-							<li>
-								<span class="ability-title">English</span>
-								<span class="ability-score">
-										<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Polish</span>
-								<span class="ability-score">
-										<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">German</span>
-								<span class="ability-score">
-										<span class="circle filled"></span>
-								<span class="circle filled"></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-							<li>
-								<span class="ability-title">Dutch</span>
-								<span class="ability-score">
-										<span class="circle filled"></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								<span class="circle "></span>
-								</span>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!--abilities  section end  -->
-
-		<div class="section fp-auto-height-responsive" id="portfolio-section" role="complementary">
-			<div class="mySlide slide">
-				<h1 class="h-highlight">
-					<mark>Portfolio</mark>
-				</h1>
-				<div class="container">
-					<div class="row project-content">
-						<div class="col-sm-6 project-text">
-
-							<a href="https://github.com/scalka/GraduationProject" target="_blank">
-								<h2 class="github_link">Recipy - Recipe Recommender System</h2>
-							</a>
-							<p class="lead hidden-phone">Recipy is a recipe recommendation system developed as a part of Graduation Project. This recommender is implemented into a web application. The back-end of the application is built using Python and Flask. The front-end is constructed with JavaScript,
-								Jinja2 template engine and Bootstrap. The recommender engine uses Python, scikit-learn, NumPy and Pandas.
-							</p>
-							<p class="hidden-tablet">
-								The user can create an account, after login the user can look for cooking inspiration and recipes. Each recipe can be rated. The rating system is essential for the machine learning model to learn about user’s preferences. The application is designed for
-								users who look for recipes online on a daily basis. The goal of this project is to utilise machine learning techniques to develop a recommender system which can suggest new recipes based on user's historical behaviour. Besides development, my
-								work includes background research, concept development and project management.
-							</p><br>
-							<div class="container-fluid buttons">
-								<button class="btn">Python</button>
-								<button class="btn">Flask</button>
-								<button class="btn">Machine Learning</button>
-								<button class="btn">Recommender System</button>
-								<button class="btn">Scikit-learn</button>
-								<button class="btn">Pandas</button>
-								<button class="btn">NumPy</button>
-								<button class="btn">HTML</button>
-								<button class="btn">Jinja</button>
-								<button class="btn">Bootstrap</button>
-							</div>
-						</div>
-						<div class="col-sm-6 ">
-							<img class="img-responsive centre-block project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1513005989/recipy_lad8gm.png" alt="Recipy image">
-						</div>
-					</div>
-					<!-- row end -->
-				</div>
-			</div>
-			<!-- slide end -->
-
-
-
-			<div class="mySlide slide">
-				<div class="container">
-					<div class="row project-content">
-						<div class="col-sm-6">
-							<a href="rtr/index.html" target="_blank">
-								<h2>Multiplayer Flying Circles</h2>
-							</a>
-							<p class="lead hidden-phone">Flying Circle (FC) is a game developed as a part of the Advanced JavaScript module. This project is a multiplayer game built with pure JavaScript (ES6). The client-side was built with ES6 and the P5.js library together with HTML and CSS. The server-side
-								was built with Express server running on Node.js, Socket.io as a web socket and Mongo database. The game runs in a browser. </p>
-							<p class="hidden-tablet">The aim of the game is to eat all the opponents’ circles on the canvas. The trick is to eat only smaller circles than the player. The player can move on the screen with keyboard arrows. </p><br>
-							<div class="container-fluid buttons">
-								<button class="btn">JavaScript - ES6</button>
-								<button class="btn">Node.js</button>
-								<button class="btn">Express</button>
-								<button class="btn">Socket.io</button>
-								<button class="btn">MongoDB</button>
-								<button class="btn">CSS</button>
-								<button class="btn">HTML</button>
-								<button class="btn">P5.js</button>
-							</div>
-						</div>
-						<div class="col-sm-6 ">
-							<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1519378633/circles_znzbgj.png" alt="Flying Circles">
-						</div>
-					</div>
-					<!-- row end -->
-				</div>
-			</div>
-			<!-- slide end -->
-
-
-			<div class="mySlide slide">
-				<div class="container">
-					<div class="row project-content">
-						<div class="col-sm-6">
-							<a href="rtr/index.html" target="_blank">
-								<h2>RtR - Travel planner</h2>
-							</a>
-							<p class="lead hidden-phone">This project is a part of the third year of B.Sc. in Creative Computing at the IADT. The primary goal of this project is to design and implement a mobile web application. This project consists of a number of interim progress reports, presentations,
-								source code of the application and a dissertation. </p>
-							<p class="hidden-tablet">Rtr is a travelling planner which the user can use to prepare for a trip. This application lets the users search for interesting sights including points of interest on the way to their destination. Personalising the route according to the user’s
-								preferences is possible. Moreover, it provides the user with sufficient information about the points of interest on the way to his destination. This information includes a short description, rating from other users of the system and reviews. The
-								application then plots the exact route from point A to B including the selected stops and provide real-time navigation. </p><br>
-							<div class="container-fluid buttons">
-								<button class="btn">HTML5</button>
-								<button class="btn">CSS</button>
-								<button class="btn">SASS</button>
-								<button class="btn">JavaScript</button>
-								<button class="btn">Google Maps API</button>
-							</div>
-						</div>
-						<div class="col-sm-6 ">
-							<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1513007582/N00146095_ProjectImage_1-2_fxtcdf.jpg" alt="FestApp image">
-						</div>
-					</div>
-					<!-- row end -->
-				</div>
-			</div>
-			<!-- slide end -->
-			<div class="mySlide slide">
-				<div class="container">
-					<div class="row project-content">
-						<div class="col-sm-6 project-text">
-
-							<a href="https://github.com/scalka/FestAppTabs" target="_blank">
-								<h2 class="github_link">FestApp - Mobile application for Android</h2>
-							</a>
-							<p class="lead hidden-phone"> FestApp helps user to search for music festivals around Europe, buy tickets and keep track of events. The application is location-based so it is easy to find events nearby. To make usage easier, all the festivals are divided into four music categories:
-								electro, hip-hop, reggae and rock.
-							</p>
-							<p class="hidden-tablet">
-								I designed and developed a software mobile application for Android. The main goal was to implement the content I learned on my classes at HdM in Stuttgart: UI Design, UX Design class, Mobile Content and Mobile App Development. This project was conducted
-								in two stages. The first one was familiarization with design principles, prototyping tools and evaluation process. The second stage was to develop an application which I designed.
-							</p><br>
-							<div class="container-fluid buttons">
-								<button class="btn">Java</button>
-								<button class="btn">Android</button>
-								<button class="btn">Database</button>
-								<button class="btn">XML</button>
-								<button class="btn">Proto.io</button>
-								<button class="btn">Axure</button>
-								<button class="btn">Photoshop</button>
-							</div>
-						</div>
-						<div class="col-sm-6 ">
-							<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1466845666/festapp1_hrj7qx.png" alt="FestApp image">
-						</div>
-					</div>
-					<!-- row end -->
-				</div>
-			</div>
-			<!-- slide end -->
-			<div class="mySlide slide">
-				<div class="container">
-					<div class="row project-content">
-						<div class="col-sm-6">
-							<h2>TravelTune - UI functional prototype design</h2>
-							<p class="lead hidden-phone">TravelTune is a location based music app, based on Spotify's music preferences. Travellers and Music Lovers are able to see the events happening around them when travelling. It has a map incorporated, calendar and pinboard where small ads could
-								be left. This application was designed and evaluated as part of UI Design module with a group of four students. From the sketch scribbles, through wireframes, creating personas and low fidelity protortypes, we created and evaluated functional
-								prototype with Proto.io for out application.</p>
-							<div class="container-fluid buttons">
-								<button class="btn">UI Design</button>
-								<button class="btn">UX Design</button>
-								<button class="btn">Proto.io</button>
-								<button class="btn">Eye tracking analysis</button>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1475246896/traveltune_ywwiii.png" alt="traveltune image">
-						</div>
-					</div>
-					<!-- row end -->
-				</div>
-			</div>
-			<!-- slide end -->
-
-			<div class="mySlide slide">
-				<div class="container">
-					<div class="row project-content">
-						<div class="col-sm-6">
-							<h2>Lapica - Mobile Web Application</h2>
-							<p class="lead hidden-phone">Lapica is an app which helps users make better purchase decisions. The main concept is to let user send the picture of the item he wants to buy to friends, notify them and receive a feedback whether they think user should buy it or not
-								<br> I developed it with two other students. My role in the project focused on Front-end, using Ionic framework with AngularJS and Sass.</p><br>
-							<div class="container-fluid buttons">
-								<button class="btn">Ionic</button>
-								<button class="btn">Angular</button>
-								<button class="btn">SCSS</button>
-								<button class="btn">JavaScript</button>
-								<button class="btn">HTML</button>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1475248037/lapica_m0vfbj.png" alt="lapica image">
-						</div>
-					</div>
-					<!-- row end -->
-				</div>
-			</div>
-			<!-- slide end -->
-
-			<div class="mySlide slide">
-				<div class="container">
-					<div class="row project-content">
-						<div class="col-sm-6">
-							<a href="https://azur.ie" target="_blank">
-								<h2>Azure - Joomla Website</h2> </a>
-							<p class="lead hidden-phone">Design and development of a Joomla CMS website. This website is an online shop for Azur boutique. The website was built from the ground up with Joomla. The project involved regular meeting and presentations with the client.
-
-							</p><br>
-							<div class="container-fluid buttons">
-								<button class="btn">Joomla</button>
-								<button class="btn">CMS</button>
-								<button class="btn">HTML5</button>
-								<button class="btn">CSS</button>
-								<button class="btn">HTTP</button>
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<img class="img-responsive project-img" src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1513008209/shopping_fy7kvn.jpg">
-						</div>
-					</div>
-					<!-- row end -->
-				</div>
-			</div>
-			<!-- slide end -->
-
-		</div>
-		<!-- portfolio section end  -->
-
-
-		<div class="section fp-auto-height-responsive" id="contact-section">
-			<div class="container">
-				<h1 class="text-center contact h-highlight"><mark>Contact me</mark></h1>
-				<h3 class="text-center">calka.sylwia@gmail.com</h3>
-				</br>
-				<div class="row">
-					<div class=" col-md-12 col-sm-12 text-center">
-
-						<a class="btn btn-social-icon" href="mailto:calka.sylwia@gmail.com" anchor="">
-		         	<span class="fa fa-3x fa-envelope "></span>
-		        </a>
-
-						<a class="btn btn-social-icon btn-linkedin" href="https://ie.linkedin.com/in/sylwia-calka-08387069" anchor="" target="_blank">
-		         	<span class="fa fa-3x fa-linkedin "></span>
-		        </a>
-
-						<a class="btn btn-social-icon btn-github" href="https://github.com/scalka">
-		         	<span class="fa fa-3x fa-github"></span>
-		        </a>
-						<a class="btn btn-social-icon " href="http://jointrails.com">
-			         	<span class="fa fa-3x fa-wordpress"></span>
-			        </a>
-
-
-					</div>
-				</div>
-			</div>
-			<!-- row end -->
-		</div>
-		<!-- contact section end -->
-	</div>
-	<!-- fullpage end -->
-
+          <li class="project-item">
+            <div class="project-image"><img class="img-responsive"
+                src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1466845666/festapp1_hrj7qx.png"
+                alt="FestApp Mobile application for Android"></div>
+            <div>
+              <span class="h-sub small">Mobile Application Development</span>
+              <a href="https://github.com/scalka/FestAppTabs">
+                <h3 class="project-title">FestApp &#8212; Mobile application for Android</h3>
+              </a>
+            </div>
+            <div class="project-content">
+              <p>FestApp was designed and developed as a mobile application for Android. The main goal was to implement
+                the content I learned on my classes at HdM in Stuttgart: UI Design, UX Design class, Mobile Content and
+                Mobile App Development. This project was conducted in two stages. The first one was familiarization with
+                design principles, prototyping tools and evaluation process. The second stage was to develop an
+                application which I designed.</p>
+              <p>
+                FestApp helps user to search for music festivals around Europe, buy tickets and keep track of events.
+                The application is location-based so it is easy to find events nearby. To make usage easier, all the
+                festivals are divided into four music categories: electro, hip-hop, reggae and rock.
+              </p>
+            </div>
+            <ul class="project-tags">
+              <li class="tag project-tags-lang">Java</li>
+              <li class="tag project-tags-frame">Android</li>
+              <li class="tag project-tags-frame">SQL Database</li>
+              <li class="tag project-tags-frame">XML</li>
+              <li class="tag project-tags-frame">Proto.io</li>
+              <li class="tag project-tags-lang">Photoshop</li>
+            </ul>
+          </li>
+          <li class="project-item">
+            <div class="project-image"><img class="img-responsive"
+                src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1475246896/traveltune_ywwiii.png"
+                alt="TravelTune"></div>
+            <div>
+              <span class="h-sub small">User Experience Design </span>
+              <h3 class="project-title">TravelTune &#8212; UI functional prototype design</h3>
+            </div>
+            <div class="project-content">
+              <p>TravelTune is a location based music app, based on Spotify's music preferences. Travellers and Music
+                Lovers are able to see the events happening around them when travelling. It has a map incorporated,
+                calendar and pinboard where small ads could be left. This application was designed and evaluated as part
+                of UI Design module with a group of four students. From the sketch scribbles, through wireframes,
+                creating personas and low fidelity prototypes, we created and evaluated functional prototype with
+                Proto.io for out application.
+              </p>
+            </div>
+            <ul class="project-tags">
+              <li class="tag project-tags-lang">UI Design</li>
+              <li class="tag project-tags-frame">UX Design</li>
+              <li class="tag project-tags-frame">Prototyping</li>
+              <li class="tag project-tags-frame">Proto.io</li>
+              <li class="tag project-tags-frame">Eye tracking analysis</li>
+            </ul>
+          </li>
+          <li class="project-item">
+            <div class="project-image"><img class="img-responsive"
+                src="http://res.cloudinary.com/dr6bmrkow/image/upload/v1475248037/lapica_m0vfbj.png"
+                alt="Lapica - Mobile Web Application"></div>
+            <div>
+              <span class="h-sub small">Mobile Application Development</span>
+              <h3 class="project-title">Lapica - Mobile Web Application</h3>
+            </div>
+            <div class="project-content">
+              <p>
+                Lapica is an app which helps users make better purchase decisions. The main concept is to let user send
+                the picture of the item he wants to buy to friends, notify them and receive a feedback whether they
+                think user should buy it or not
+                I developed it with two other students. My role in the project focused on Front-end, using Ionic
+                framework with AngularJS and Sass.
+              </p>
+            </div>
+            <ul class="project-tags">
+              <li class="tag project-tags-lang">JavaScript</li>
+              <li class="tag project-tags-frame">AngularJS</li>
+              <li class="tag project-tags-frame">CSS3</li>
+              <li class="tag project-tags-frame">SASS</li>
+              <li class="tag project-tags-frame">HTML5</li>
+            </ul>
+          </li>
+          <li class="project-item">
+            <div class="project-image"><img class="img-responsive" src="images/azur.png"
+                alt="Multiplayer Flying Circles"></div>
+            <div>
+              <span class="h-sub small">CMS</span>
+              <a href="https://azur.ie/">
+                <h3 class="project-title">Azure - Joomla Website</h3>
+              </a>
+            </div>
+            <div class="project-content">
+              <p>
+                Design and development of a Joomla CMS website. This website is an online shop for Azur boutique. The
+                website was built from the ground up with Joomla. The project involved regular meeting and presentations
+                with the client.
+              </p>
+            </div>
+            <ul class="project-tags">
+              <li class="tag project-tags-lang">Joomla</li>
+              <li class="tag project-tags-frame">CMS</li>
+              <li class="tag project-tags-frame">CSS3</li>
+              <li class="tag project-tags-frame">HTML5</li>
+              <li class="tag project-tags-frame">HTTPS</li>
+            </ul>
+          </li>
+          <li class="project-item">
+            <div class="project-image"><img class="img-responsive" src="images/disabuse.png"
+                alt="Disabuse Drupal Website"></div>
+            <div>
+              <span class="h-sub small">Drupal website and React game</span>
+              <a href="http://www.disabuse.eu/home">
+                <h3 class="project-title">DisAbuse - Drupal Website</h3>
+              </a>
+            </div>
+            <div class="project-content">
+              <p>
+               Building an EU wide CMS platform with Drupal for sharing multimedia resources about cybersafety and
+               cyberbullying. Additionally I developed a React game based on Let’s Stop Bullying HTML prototype generated from Axure. The goal of this React
+               application was to re-engineer the code for efficiency to avoid duplication, making it scalable and publishing on DisAbuse website.
+              </p>
+            </div>
+            <ul class="project-tags">
+              <li class="tag project-tags-lang">Drupal</li>
+              <li class="tag project-tags-frame">CMS</li>
+              <li class="tag project-tags-frame">JavaScript</li>
+              <li class="tag project-tags-frame">React</li>
+            </ul>
+          </li>
+          <li class="project-item">
+            <div class="project-image"><img class="img-responsive" src="images/pinboard.png"
+                alt="PinBoard - React Web App"></div>
+            <div>
+              <span class="h-sub small">React Web App</span>
+              <a href="https://github.com/scalka/react-express">
+                <h3 class="project-title">PinBoard - React Web App</h3>
+              </a>
+            </div>
+            <div class="project-content">
+              <p>
+                Pin Board is an application developed as a part of Advanced JavaScript module. This application is built
+                with JavaScript (ES6). The client-side is built with React and styled with Bulma.io. The server-side
+                uses Express server running on Node.js. The Mongo database is hosted on mLab. The application is
+                deployed to Heroku. Pin Board allows users to search for items from Etsy.com and save them to boards.
+                Boards are collections that organise content.
+              </p>
+            </div>
+            <ul class="project-tags">
+              <li class="tag project-tags-frame">JavaScript</li>
+              <li class="tag project-tags-lang">React</li>
+              <li class="tag project-tags-frame">Express</li>
+              <li class="tag project-tags-frame">Node.js</li>
+              <li class="tag project-tags-frame">MongoDB</li>
+              <li class="tag project-tags-frame">Bulma.io</li>
+            </ul>
+          </li>
+        </ul>
+      </article>
+    </section>
+     <section id="skills-section">
+       <article>
+         <hr>
+         <h1><mark class="highlighted">Skills</mark></h1>
+          <div id="chartdiv"></div> 
+       </article>
+     </section>
+    <footer id="contact-section">
+      <h1><mark class="highlighted">Contact
+          <!--  <span class="definition h-sub small">noun</span> --></mark></h1>
+      <address property="email">
+        <h3>To get in touch, write to <a class="nav-anchor" onclick=copyEmailToClipboard()>calka.sylwia@gmail.com</a>
+          <span class="copied-msg"> &#8212; copied to your clipboard</span>
+        </h3>
+      </address>
+      <ul class="links-list">
+        <li class="links-list-item"><a href="https://ie.linkedin.com/in/sylwia-calka-08387069" target="_blank"><i
+              class="fab fa-linkedin"></i>LinkedIn</a></li>
+        <li class="links-list-item"><a href="https://github.com/scalka" target="_blank"><i
+              class="fab fa-github-square"></i>GitHub</a></li>
+      </ul>
+    </footer>
+  </main>
+  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+  <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+  <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+  <script src="script.min.js"></script>
 </body>
 
 </html>

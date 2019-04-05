@@ -1,0 +1,43 @@
+var data = {
+  "Programming and Web Languages": {
+    "JavaScript": 25,
+    "Java": 10,
+    "Python": 10,
+    "C#": 5,
+    "HTML5": 25,
+    "CSS3": 25,
+    "SQL": 10
+  },
+  "Frameworks and libraries": {
+    "Angular": 30,
+    "React": 20,
+    "Flask": 20,
+    "Node.js": 20,
+    "Express": 15,
+    "jQuery": 20,
+    "Android Development": 20,
+    "scikit-learn": 10,
+    ".NET": 10,
+    "Unity": 10,
+    "Jasmine": 5,
+    "Bootstrap": 10,
+    "Git": 20,
+    "Agile": 15,
+    "AmCharts": 20,
+    "SASS": 20,
+    "Lodash": 20
+  },
+  "Design": {
+    "UI Design": 30,
+    "UX Design": 30,
+    "Adobe XD": 30,
+    "Adobe Photoshop": 25,
+    "Adobe Lightroom": 25,
+  },
+  "Languages": {
+    "English": 30,
+    "Polish": 30,
+    "German": 15,
+    "Dutch": 10
+  }
+};
