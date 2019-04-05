@@ -41,7 +41,7 @@ hobbiesItems.forEach(key => {
 am4core.useTheme(am4themes_animated);
 let data = {
   "Programming and Web Languages": {
-    "JavaScript": 25,
+    "JavaScript": 35,
     "Java": 10,
     "Python": 10,
     "C#": 5,
@@ -77,7 +77,7 @@ let data = {
   },
   "Languages": {
     "English": 30,
-    "Polish": 30,
+    "Polish": 35,
     "German": 15,
     "Dutch": 10
   }
@@ -206,7 +206,9 @@ level0SeriesTemplate.columns.template.tooltipText = `{parentName}: [bold]{name}[
 level1SeriesTemplate.columns.template.tooltipText = "{parentName}: [bold]{name}[/]";
 level2SeriesTemplate.columns.template.tooltipText = "{parentName}: [bold]{name}[/]";
 chart.data = processData(data);
-
+chart.legend = new am4charts.Legend();
+chart.legend.position = "top";
+chart.legend.contentAlign = "right";
 function am4themes_myTheme(target) {
   if (target instanceof am4core.ColorSet) {
     target.list = [

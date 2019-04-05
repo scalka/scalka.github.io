@@ -19,16 +19,15 @@
   --font-decor: 'Dosis', sans-serif;
   --font-text: 'Crimson Text', serif;
 }
-
 /* TYPOGRAPHY */
 h1, h2, h3, h4, .lead {
   font-family: var(--font-decor);
   color: var(--font-color);
 }
-h1 {
+h1,h2 {
   font-size: 2em;
 }
-h1 span {
+h1 span, h2 span {
   font-size: 0.5em;
 }
 h3 {
@@ -141,7 +140,7 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-between;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-family: var(--font-decor);
 }
 
@@ -393,8 +392,8 @@ address {
 @media (max-width: 767px) {
   main {
     grid-template-rows: auto;
-    grid-template-columns: 1fr;
-    width: 87.5%;
+    grid-template-columns: 85vw;
+    width: 85vw;
     grid-template-areas: 'headerl'
       'nav'
       'front'

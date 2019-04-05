@@ -26,11 +26,13 @@ h4,
   color: var(--font-color)
 }
 
-h1 {
+h1,
+h2 {
   font-size: 2em
 }
 
-h1 span {
+h1 span,
+h2 span {
   font-size: .5em
 }
 
@@ -147,7 +149,7 @@ nav {
 nav ul {
   display: flex;
   justify-content: space-between;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-family: var(--font-decor)
 }
 
@@ -425,8 +427,8 @@ address {
 @media (max-width:767px) {
   main {
     grid-template-rows: auto;
-    grid-template-columns: 1fr;
-    width: 87.5%;
+    grid-template-columns: 85vw;
+    width: 85vw;
     grid-template-areas: 'headerl''nav''front''about''about-hobbies''experience''education''portfolio''skills''footer';
     grid-gap: 1em
   }
