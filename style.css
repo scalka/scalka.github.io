@@ -184,6 +184,7 @@ a:active {
 
 #front-section img {
   max-height: 400px;
+  width: 100%;
 }
 
 /* About Section */
@@ -243,6 +244,28 @@ a:active {
   grid-area: education;
 }
 
+#download-btn {
+    display: inline-block;
+    padding: 0.8em 1.5em;
+    color: white;
+    text-align: center;
+    font-size: 1.15rem;
+    border-radius: 0;
+    border: 1px solid #000;
+    cursor: pointer;
+    margin-top: 1rem;
+    background-color: #5F81A9;
+    border: 1px solid #5F81A9;
+    font-family: var(--font-decor);
+}
+#download-btn:hover {
+  background-color: #436894;
+  border: 1px solid #436894;
+  color: white;
+}
+#download-btn i {
+  margin-right: 0.5em;
+}
 /* Card */
 .card {
   display: grid;
@@ -392,22 +415,27 @@ address {
 @media (max-width: 767px) {
   main {
     grid-template-rows: auto;
-    grid-template-columns: 85vw;
+    grid-template-columns: 1fr 1fr;
     width: 85vw;
-    grid-template-areas: 'headerl'
-      'nav'
-      'front'
-      'about'
-      'about-hobbies'
-      'experience'
-      'education'
-      'portfolio'
-      'skills'
-      'footer';
+    grid-template-areas: 'nav headerl'
+      'front front'
+      'about about'
+      'about-hobbies about-hobbies'
+      'experience experience'
+      'education education'
+      'portfolio portfolio'
+      'skills skills'
+      'footer footer';
     grid-gap: 1em;
   } 
   nav ul {
     flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    margin-right: 0;
+    margin-left: auto;
   }
   #front-section,
   #about-section {

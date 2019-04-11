@@ -1,0 +1,221 @@
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,600,700|Dosis:300,400,500,600,700');
+
+:root {
+  --background-color: white;
+  --grey: #565555;
+  --accent-color: #008691;
+  --accent-color-light: #0086917d;
+  --accent-yellow: #FFD951;
+  /* #ffd53e; */
+  /*   #ffd53e;
+  #FAF076; */
+  --accent-orange: #F2A719;
+  --subtle-background: #dfe0e0;
+  --color-design: #008691;
+  --color-languages: #008691;
+  --color-frameworks: #008691;
+  --color-skills: #008691;
+  --font-color: #0D2836;
+  --font-decor: 'Dosis', sans-serif;
+  --font-text: 'Crimson Text', serif;
+}
+
+/* TYPOGRAPHY */
+h1,
+h2,
+h3,
+h4,
+.lead {
+  font-family: var(--font-decor);
+  color: var(--font-color);
+  margin: 0;
+}
+h1 {
+  font-size: 1.6em;
+}
+h2 {
+  font-size: 1.4em;
+  margin-bottom: 0.3em;
+  font-variant: all-small-caps;
+}
+
+h1 span,
+h2 span {
+  font-size: 0.5em;
+}
+
+h3 {
+  font-size: 1em;
+  
+}
+h3.inline {
+  display: inline;
+}
+
+h5 {
+  margin: 0;
+}
+
+p,
+li {
+  color: var(--font-color);
+  font-family: var(--font-text);
+  font-size: 1em;
+  line-height: 20px;
+}
+
+p {
+  margin-block-start: 0.2em;
+  margin-block-end: 1em;
+}
+
+.h-sub.small {
+  display: inline;
+  float: right;
+}
+
+.h-edu-sub,
+.h-sub {
+  font-size: 0.9em;
+  font-family: var(--font-decor);
+  font-weight: 500;
+  color: var(--grey);
+  line-height: 20px;
+}
+
+hr {
+  margin: 0.5rem 0 0.5rem 0;
+  height: 2px;
+  width: 50px;
+  border: none;
+  color: var(--font-color);
+  background-color: var(--font-color);
+}
+
+/* ELEMENTS */
+ul,
+ol {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  outline: none;
+  text-decoration: none;
+  color: var(--font-color);
+  font-weight: 500;
+}
+
+a:focus {
+  background-color: var(--accent-color-light);
+  font-weight: 600;
+  border-bottom: 1px solid;
+}
+
+a:hover {
+  background-color: var(--accent-color-light);
+  font-weight: 600;
+  border-bottom: 1px solid;
+}
+
+a:active {
+  font-weight: 600;
+  border-bottom: 1px solid;
+}
+
+/* HIGHLIGHTER */
+mark {
+  color: inherit;
+  background-color: transparent;
+  position: relative;
+  z-index: 0;
+}
+
+mark::after {
+  content: "";
+  position: absolute;
+  height: 19%;
+  bottom: 5%;
+  width: 101%;
+  background-position: 100% center;
+  left: -1%;
+  width: 29%;
+  z-index: -1;
+}
+
+mark.highlighted:after {
+  width: 100%;
+  background-color: var(--accent-yellow);
+}
+
+/* Sections */
+main {
+  display: grid;
+  width: 210mm;
+  padding: 1cm;
+  height: 297mm;
+  /* margin: 4mm; */
+  grid-template-rows: auto;
+  grid-template-columns: 4fr 2fr;
+  grid-template-areas: 'headerl .'
+    'education contact'
+    'experience contact'
+    'experience contact'
+    'projects contact'
+    'projects contact';
+  grid-gap: 1em 3em;
+  background-color: #f0f0f0;
+}
+header {
+  grid-area: headerl;
+}
+#front-section {
+  grid-area: front-section;
+}
+#education-section {
+  grid-area: education;
+}
+
+#experience-section {
+  grid-area: experience;
+}
+
+#volunteering-section {
+  grid-area: volunteering;
+}
+#projects-section {
+  grid-area: projects;
+}
+#contact-section {
+  grid-area: contact;
+}
+#contact-section h2:not(:first-child) {
+  margin-top: 1em;
+}
+.li-contact {
+  margin-bottom: 0.5em;
+}
+.li-contact i {
+  margin-right: 0.5em;
+  font-size: 1.2em;
+}
+.li-contact a {
+  display: flex;
+  align-items: center;
+}
+#skills-section {
+  grid-area: skills;
+}
+#skills {
+  display: grid;
+   grid-template-rows: auto;
+   grid-template-columns: 1fr 1fr;
+}
+#languages-section {
+  grid-area: languages;
+}
+#interests-section {
+  grid-area: interests;
+}
+
