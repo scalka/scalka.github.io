@@ -1,14 +1,17 @@
-{{ partial "header.html" . }}
-
-<article>
+<!DOCTYPE html>
+<html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
+<head>
+  {{ partial "head.html" . }}
+</head>
+<body>
   <header>
-    <!-- # comment this out for the home page. -->
-    <!--<h1 class="text-primary">{{ .Title }}</h1>-->
+    {{ partial "header.html" . }}
   </header>
-  <section>
-    Hoi
+  <main>
     {{ .Content }}
-  </section>
-</article>
-
-{{ partial "footer.html" . }}
+  </main>
+  <footer>
+    {{ partial "footer.html" . }}
+  </footer>
+</body>
+</html>
