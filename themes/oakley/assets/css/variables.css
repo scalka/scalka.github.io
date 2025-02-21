@@ -29,8 +29,8 @@
 
     /* Typography */
     --font-fallback: helvetica, arial, sans-serif;
-    --font-normal: 'Circular', var(--font-fallback);
-    --font-special: 'Garnett', var(--font-fallback);
+    --font-normal: 'Satoshi', var(--font-fallback);
+    --font-special: 'Plus Jakarta Sans', var(--font-fallback);
 
     --weight-normal: 400;
     --weight-medium: 500;
@@ -55,7 +55,7 @@
     --font-style-italic: italic;
 
     /* Colors */
-    --color-text: #222;
+    --color-text: #005dd8;
     --color-background: #fff;
     --color-primary: #0072ff;
     --color-primary-hover: #005dd8;

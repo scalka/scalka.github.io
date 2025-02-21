@@ -8,7 +8,7 @@ body {
   font-family: var(--font-normal);
   font-size: var(--font-size-s);
   line-height: var(--line-height-m);
-  color: var(--color-text);
+  color: red;
   background: var(--color-background);
   margin: var(--spacing-m);
   max-width: var(--screen-m);
