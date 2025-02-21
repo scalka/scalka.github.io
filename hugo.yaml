@@ -1,0 +1,26 @@
+baseURL: 'https://example.org/'
+languageCode: 'en-ie'
+title: 'Sylwia Creates'
+theme: 'paper'
+menus:
+  main:
+  - name: Home
+    pageRef: /
+    weight: 10
+  - name: Posts
+    pageRef: /posts
+    weight: 20
+  - name: About
+    pageRef: /about
+    weight: 30
+  - name: Contact
+    pageRef: /contact
+    weight: 40
+  - name: Sitemap
+    pageRef: /sitemap.xml
+    weight: 50
+sitemap:
+  changeFreq: ""
+  disable: false
+  filename: sitemap.xml
+  priority: -1
