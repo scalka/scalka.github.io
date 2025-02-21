@@ -1,9 +1,17 @@
-{{- with resources.Get "css/main.css" }}
-  {{- if eq hugo.Environment "development" }}
-    <link rel="stylesheet" href="{{ .RelPermalink }}">
-  {{- else }}
-    {{- with . | minify | fingerprint }}
-      <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
-    {{- end }}
+{{- /* Load individual CSS files */ -}}
+{{- $cssVariables := resources.Get "css/variables.css" }}
+{{- $cssUtilities := resources.Get "css/utilities.css" }}
+{{- $cssMain := resources.Get "css/main.css" }}
+
+{{- /* Combine all CSS files into one to reduce HTTP requests */ -}}
+{{- $styles := slice $cssVariables $cssUtilities $cssMain | resources.Concat "css/styles.css" }}
+
+{{- /* In development mode, serve the unminified CSS for easier debugging */ -}}
+{{- if eq hugo.Environment "development" }}
+  <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+{{- else }}
+  {{- /* In production, minify and fingerprint for performance and cache-busting */ -}}
+  {{- with $styles | minify | fingerprint }}
+    <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
   {{- end }}
 {{- end }}
