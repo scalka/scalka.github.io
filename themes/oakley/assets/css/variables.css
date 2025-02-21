@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Cormorant+Garamond:wght@400;500;700&display=swap');
+
 :root {
     /* Screen sizes */
     --screen-xs: 320px;
@@ -5,6 +7,7 @@
     --screen-m: 768px;
     --screen-l: 1024px;
     --screen-max: 1200px;
+    --max-width-content: 576px;
 
     /* Spacing */
     --spacing-xxxs: 0.125rem; /* 2px */
@@ -29,8 +32,8 @@
 
     /* Typography */
     --font-fallback: helvetica, arial, sans-serif;
-    --font-normal: 'Satoshi', var(--font-fallback);
-    --font-special: 'Plus Jakarta Sans', var(--font-fallback);
+    --font-normal: 'Figtree', var(--font-fallback);
+    --font-special: 'Figtree', var(--font-fallback);
 
     --weight-normal: 400;
     --weight-medium: 500;
@@ -54,11 +57,28 @@
     --font-style-normal: normal;
     --font-style-italic: italic;
 
-    /* Colors */
-    --color-text: #005dd8;
-    --color-background: #fff;
-    --color-primary: #0072ff;
-    --color-primary-hover: #005dd8;
-    --color-secondary: #555;
-    --color-border: #ddd;
+     /* Light Theme (Rosé Pine Dawn) */
+    --color-background: #faf4ed;
+    --color-surface: #fffaf3;
+    --color-text: #575279;
+    --color-text-light: #797593;
+    --color-primary: #eb6f92; /* Rosy Pink */
+    --color-secondary: #f6c177; /* Warm Gold */
+    --color-accent: #9ccfd8; /* Muted Teal */
+    --color-border: #dfdad9;
 }
+
+
+/* Dark Theme (Rosé Pine Moon) */
+@media (prefers-color-scheme: dark) {
+    :root {
+      --color-background: #232937;
+      --color-surface: #1f1d2e;
+      --color-text: #e0def4;
+      --color-text-light: #908caa;
+      --color-primary: #eb6f92; /* Rosy Pink */
+      --color-secondary: #f6c177; /* Warm Gold */
+      --color-accent: #9ccfd8; /* Muted Teal */
+      --color-border: #332e41;
+    }
+  }

@@ -1,0 +1,53 @@
+/* Remove default list styles */
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centers the nav items */
+    align-items: center;
+    gap: var(--spacing-xl); /* Space between links */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Remove default list item styles */
+  .nav li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Clean, inline links */
+  .nav-link {
+    font-size: var(--font-size-m);
+    font-family: var(--font-special);
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: var(--weight-medium);
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+  }
+  
+  /* Hover effect */
+  .nav-link:hover,
+  .nav-link:focus {
+    text-decoration: none;
+    color: var(--color-secondary);
+    opacity: 1;
+  }
+  
+  /* Active page styling */
+  [aria-current="page"] {
+    border-bottom: 0.125em solid var(--color-secondary);;
+    font-weight: var(--weight-bold);
+    opacity: 1;
+  }
+  
+  /* Responsive - Adjust spacing for small screens */
+  @media (max-width: 600px) {
+    .nav ul {
+      gap: var(--spacing-m);
+    }
+    .nav-link {
+      font-size: var(--font-size-s);
+    }
+  }
+  
