@@ -16,9 +16,6 @@ menus:
   - name: Contact
     pageRef: /contact
     weight: 40
-  - name: Sitemap
-    pageRef: /sitemap.xml
-    weight: 50
 sitemap:
   changeFreq: ""
   disable: false
