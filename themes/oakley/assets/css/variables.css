@@ -1,0 +1,64 @@
+:root {
+    /* Screen sizes */
+    --screen-xs: 320px;
+    --screen-s: 480px;
+    --screen-m: 768px;
+    --screen-l: 1024px;
+    --screen-max: 1200px;
+
+    /* Spacing */
+    --spacing-xxxs: 0.125rem; /* 2px */
+    --spacing-xxs: 0.25rem; /* 4px */
+    --spacing-xs: 0.5rem; /* 8px */
+    --spacing-s: 0.75rem; /* 12px */
+    --spacing-m: 1rem; /* 16px */
+    --spacing-l: 1.25rem; /* 20px */
+    --spacing-xl: 1.5rem; /* 24px */
+    --spacing-xxl: 1.75rem; /* 28px */
+    --spacing-xxxl: 2rem; /* 32px */
+    --spacing-xxxxl: 2.5rem; /* 40px */
+    --spacing-xxxxxl: 3rem; /* 48px */
+    --spacing-xxxxxxl: 3.5rem; /* 56px */
+
+    /* Border radius */
+    --radius-xs: 1px;
+    --radius-s: 2px;
+    --radius-m: 4px;
+    --radius-l: 8px;
+    --radius-round: 50%;
+
+    /* Typography */
+    --font-fallback: helvetica, arial, sans-serif;
+    --font-normal: 'Circular', var(--font-fallback);
+    --font-special: 'Garnett', var(--font-fallback);
+
+    --weight-normal: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
+
+    --line-height-s: 1.5rem;
+    --line-height-m: 1.75rem;
+    --line-height-l: 2rem;
+
+    --font-size-xxxxs: 0.5rem; /* 8px */
+    --font-size-xxxs: 0.625rem; /* 10px */
+    --font-size-xxs: 0.75rem; /* 12px */
+    --font-size-xs: 0.875rem; /* 14px */
+    --font-size-s: 1rem; /* 16px */
+    --font-size-m: 1.125rem; /* 18px */
+    --font-size-l: 1.25rem; /* 20px */
+    --font-size-xl: 1.5rem; /* 24px */
+    --font-size-xxl: 1.75rem; /* 28px */
+    --font-size-xxxl: 2rem; /* 32px */
+
+    --font-style-normal: normal;
+    --font-style-italic: italic;
+
+    /* Colors */
+    --color-text: #222;
+    --color-background: #fff;
+    --color-primary: #0072ff;
+    --color-primary-hover: #005dd8;
+    --color-secondary: #555;
+    --color-border: #ddd;
+}
