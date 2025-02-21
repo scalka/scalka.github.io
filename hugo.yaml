@@ -1,7 +1,7 @@
 baseURL: 'https://example.org/'
 languageCode: 'en-ie'
 title: 'Sylwia Creates'
-theme: 'paper'
+theme: 'oakley'
 menus:
   main:
   - name: Home

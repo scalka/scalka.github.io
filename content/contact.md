@@ -1,10 +1,8 @@
-+++
-title = "Contact"
-description = "Hugo, the world's fastest framework for building websites"
-date = "2019-02-28"
-aliases = ["about-us", "about-hugo", "contact"]
-author = "lee.so"
-+++
+---
+title: "Contact"
+description: "Feel free to reach out to me"
+date: "2025-02-21"
+author: "Sylwia Całka-Verhulst"
+---
 
-- [github.com/nanxiaobei](https://github.com/nanxiaobei)
-- [lee.so](https://lee.so)
+- [github.com/scalka](https://github.com/scalka)
