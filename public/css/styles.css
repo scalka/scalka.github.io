@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Cormorant+Garamond:wght@400;500;700&display=swap');
+
+:root {
+    /* Screen sizes */
+    --screen-xs: 320px;
+    --screen-s: 480px;
+    --screen-m: 768px;
+    --screen-l: 1024px;
+    --screen-max: 1200px;
+    --max-width-content: 576px;
+
+    /* Spacing */
+    --spacing-xxxs: 0.125rem; /* 2px */
+    --spacing-xxs: 0.25rem; /* 4px */
+    --spacing-xs: 0.5rem; /* 8px */
+    --spacing-s: 0.75rem; /* 12px */
+    --spacing-m: 1rem; /* 16px */
+    --spacing-l: 1.25rem; /* 20px */
+    --spacing-xl: 1.5rem; /* 24px */
+    --spacing-xxl: 1.75rem; /* 28px */
+    --spacing-xxxl: 2rem; /* 32px */
+    --spacing-xxxxl: 2.5rem; /* 40px */
+    --spacing-xxxxxl: 3rem; /* 48px */
+    --spacing-xxxxxxl: 3.5rem; /* 56px */
+
+    /* Border radius */
+    --radius-xs: 1px;
+    --radius-s: 2px;
+    --radius-m: 4px;
+    --radius-l: 8px;
+    --radius-round: 50%;
+
+    /* Typography */
+    --font-fallback: helvetica, arial, sans-serif;
+    --font-normal: 'Figtree', var(--font-fallback);
+    --font-special: 'Figtree', var(--font-fallback);
+
+    --weight-normal: 400;
+    --weight-medium: 500;
+    --weight-bold: 700;
+
+    --line-height-s: 1.5rem;
+    --line-height-m: 1.75rem;
+    --line-height-l: 2rem;
+
+    --font-size-xxxxs: 0.5rem; /* 8px */
+    --font-size-xxxs: 0.625rem; /* 10px */
+    --font-size-xxs: 0.75rem; /* 12px */
+    --font-size-xs: 0.875rem; /* 14px */
+    --font-size-s: 1rem; /* 16px */
+    --font-size-m: 1.125rem; /* 18px */
+    --font-size-l: 1.25rem; /* 20px */
+    --font-size-xl: 1.5rem; /* 24px */
+    --font-size-xxl: 1.75rem; /* 28px */
+    --font-size-xxxl: 2rem; /* 32px */
+
+    --font-style-normal: normal;
+    --font-style-italic: italic;
+
+     /* Light Theme (Rosé Pine Dawn) */
+    --color-background: #faf4ed;
+    --color-surface: #fffaf3;
+    --color-text: #575279;
+    --color-text-light: #797593;
+    --color-primary: #eb6f92; /* Rosy Pink */
+    --color-secondary: #f6c177; /* Warm Gold */
+    --color-accent: #9ccfd8; /* Muted Teal */
+    --color-border: #dfdad9;
+}
+
+
+/* Dark Theme (Rosé Pine Moon) */
+@media (prefers-color-scheme: dark) {
+    :root {
+      --color-background: #232937;
+      --color-surface: #1f1d2e;
+      --color-text: #e0def4;
+      --color-text-light: #908caa;
+      --color-primary: #eb6f92; /* Rosy Pink */
+      --color-secondary: #f6c177; /* Warm Gold */
+      --color-accent: #9ccfd8; /* Muted Teal */
+      --color-border: #332e41;
+    }
+  }
+.container {
+    max-width: var(--screen-max);
+    margin: 0 auto;
+    padding: var(--spacing-m);
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  /* Remove default list styles */
+.nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Centers the nav items */
+    align-items: center;
+    gap: var(--spacing-xl); /* Space between links */
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Remove default list item styles */
+  .nav li {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Clean, inline links */
+  .nav-link {
+    font-size: var(--font-size-m);
+    font-family: var(--font-special);
+    color: var(--color-text);
+    text-decoration: none;
+    font-weight: var(--weight-medium);
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.8;
+  }
+  
+  /* Hover effect */
+  .nav-link:hover,
+  .nav-link:focus {
+    text-decoration: none;
+    color: var(--color-secondary);
+    opacity: 1;
+  }
+  
+  /* Active page styling */
+  [aria-current="page"] {
+    border-bottom: 0.125em solid var(--color-secondary);;
+    font-weight: var(--weight-bold);
+    opacity: 1;
+  }
+  
+  /* Responsive - Adjust spacing for small screens */
+  @media (max-width: 600px) {
+    .nav ul {
+      gap: var(--spacing-m);
+    }
+    .nav-link {
+      font-size: var(--font-size-s);
+    }
+  }
+  * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh; /* Ensures full height */
+  background-color: var(--color-background);
+  font-family: var(--font-normal);
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-m);
+  color: var(--color-text);
+  background: var(--color-background);
+  margin: var(--spacing-m);
+  word-wrap: break-word;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: var(--max-width-content);
+  width: 90%; /* Keeps it responsive on small screens */
+  padding: var(--spacing-m);
+  text-align: left; /* Keeps text aligned left inside */
+}
+
+header {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--spacing-m);
+  margin-bottom: var(--spacing-m);
+}
+
+footer {
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-m);
+  margin-top: var(--spacing-m);
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-special);
+  margin-bottom: var(--spacing-xs);
+  font-weight: var(--weight-bold);
+}
+
+h1 { font-size: var(--font-size-xxxl); }
+h2 { font-size: var(--font-size-xxl); }
+h3 { font-size: var(--font-size-xl); }
+h4 { font-size: var(--font-size-l); }
+h5 { font-size: var(--font-size-m); }
+h6 { font-size: var(--font-size-s); }
+
+/* Paragraphs */
+p {
+  margin-bottom: var(--spacing-m);
+}
+
+/* Buttons */
+button, .button {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-m);
+  font-size: var(--font-size-s);
+  font-weight: var(--weight-medium);
+  color: #fff;
+  background: var(--color-primary);
+  border: none;
+  border-radius: var(--radius-m);
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover, .button:hover {
+  background: var(--color-primary-hover);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Forms */
+input, textarea, select {
+  width: 100%;
+  padding: var(--spacing-xs);
+  font-size: var(--font-size-s);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-m);
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* Lists */
+ul, ol {
+  padding-left: var(--spacing-l);
+  margin-bottom: var(--spacing-m);
+}
+
+li {
+  margin-bottom: var(--spacing-xxs);
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing-m);
+}
+
+th, td {
+  padding: var(--spacing-s);
+  border: 1px solid var(--color-border);
+}
+
+th {
+  background: var(--color-secondary);
+  color: #fff;
+  text-align: left;
+}
