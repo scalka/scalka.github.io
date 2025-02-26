@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Home on Flowing fragments by Sylwia Całka-Verhulst</title>
+    <title>Home on Flowing fragments</title>
     <link>http://localhost:1313/</link>
-    <description>Recent content in Home on Flowing fragments by Sylwia Całka-Verhulst</description>
+    <description>Recent content in Home on Flowing fragments</description>
     <generator>Hugo</generator>
     <language>en-ie</language>
-    <lastBuildDate>Fri, 21 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 26 Feb 2025 10:34:10 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Output</title>
@@ -14,6 +14,13 @@
       <pubDate>Thu, 19 Sep 2024 04:14:54 -0800</pubDate>
       <guid>http://localhost:1313/posts/output/</guid>
       <description>&lt;p&gt;I&amp;rsquo;m struggling to find focus for myself at work. In the recent years, the ratio of my content consumption is 9 to 10. I am reading, watching, listening in order to find inspiration for my creative or personal projects. What I noticed that it never brings me any closer to creating any of those creative things.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>My First Post</title>
+      <link>http://localhost:1313/posts/my-first-post/</link>
+      <pubDate>Wed, 26 Feb 2025 10:34:10 +0100</pubDate>
+      <guid>http://localhost:1313/posts/my-first-post/</guid>
+      <description></description>
     </item>
     <item>
       <title>Contact</title>
@@ -27,7 +34,7 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;h2 id=&#34;about-me&#34;&gt;About me&lt;/h2&gt;&#xA;&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
+      <description>&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
     </item>
     <item>
       <title>Markdown Syntax Guide</title>

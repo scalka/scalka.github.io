@@ -1,0 +1,5 @@
+{{- range .Site.Params.Hcard.Social -}}
+    <a class="u-url" rel="me" aria-label="{{ .platform }}" href="{{ (printf .url_pattern .identity) }}">
+       {{ .platform }}
+    </a>
+{{ end -}}

@@ -1,6 +1,6 @@
 baseURL: 'https://example.org/'
 languageCode: 'en-ie'
-title: 'Flowing fragments by Sylwia Całka-Verhulst'
+title: 'Flowing fragments'
 theme: 'oakley'
 menus:
   main:
@@ -21,3 +21,27 @@ sitemap:
   disable: false
   filename: sitemap.xml
   priority: -1
+params:
+  siteHeaderText: "Flowing Fragments"
+  siteFooterText: "Crafted with care and curiosity by Sylwia. Hosted on the web as a digital garden 🌿."
+  hcard:
+    avatar: "images/me_munich.jpg"
+    fullName: "Sylwia Całka-Verhulst"
+    showLocation: true
+#    pronouns = [ "she", "her" ]
+#    city: "Berkel en Rodenrijs"
+#    region: "South Holland"
+    country: "The Netherlands"
+    social:
+      - platform: "e-mail"
+        identity: "calka.sylwia@gmail.com"
+        url_pattern: "mailto:%s"
+      - platform: "github"
+        identity: "scalka"
+        url_pattern: "https://github.com/scalka"
+      - platform: "linkedin"
+        identity: "sylwia-calka"
+        url_pattern: "https://www.linkedin.com/in/sylwia-calka/"
+      - platform: "website"
+        identity: "flowingfragments"
+        url_pattern: "https://flowingfragments.com"
