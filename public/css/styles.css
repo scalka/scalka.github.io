@@ -82,7 +82,7 @@
       --color-border: #332e41;
     }
   }
-.container {
+.main {
     max-width: var(--screen-max);
     margin: 0 auto;
     padding: var(--spacing-m);
@@ -165,7 +165,14 @@ body {
   word-wrap: break-word;
 }
 
-.container {
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main {
+  flex: 1;
   margin: 0 auto;
   max-width: var(--max-width-content);
   width: 90%; /* Keeps it responsive on small screens */
