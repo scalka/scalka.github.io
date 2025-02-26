@@ -73,6 +73,10 @@ p {
   margin-bottom: var(--spacing-m);
 }
 
+.text-small {
+  font-size: var(--font-size-xs);
+}
+
 /* Buttons */
 button, .button {
   display: inline-block;
@@ -114,10 +118,14 @@ input:focus, textarea:focus, select:focus {
 ul, ol {
  /*  padding-left: var(--spacing-l);
   margin-bottom: var(--spacing-m); */
+  list-style-position: inside;
   margin: 0;
   padding: 0;
 }
 
+ul {
+  list-style-type: "—";
+}
 li {
   margin: 0;
 }
