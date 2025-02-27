@@ -1,22 +1,19 @@
-+++
-author = "lee.so"
-title = "Markdown Syntax Guide"
-date = "2019-03-11"
-description = "Sample article showcasing basic Markdown syntax and formatting for HTML elements."
-tags = [
+---
+title: "Markdown Syntax Guide"
+draft: false
+date: "2025-02-02"
+tags: [
     "markdown",
     "css",
     "html",
 ]
-categories = [
+categories: [
     "themes",
     "syntax",
 ]
-series = ["Themes Guide"]
-aliases = ["migrate-from-jekyl"]
-+++
+---
 
-This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.
+This article is a cheat-sheet for me to see how markdown is rendered with my custom Hugo theme called Oakley (after my dog).
 
 <!--more-->
 
@@ -24,17 +21,12 @@ This article offers a sample of basic Markdown syntax that can be used in Hugo c
 
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
-# H1
-
-## H2
-
-### H3
-
-#### H4
-
-##### H5
-
-###### H6
+# Heading 1
+## Heading 2
+### Heading 3
+#### Heading 4
+##### Heading 5
+###### Heading 6
 
 ## Paragraph
 
@@ -52,15 +44,15 @@ The blockquote element represents content that is quoted from another source, op
 
 #### Blockquote without attribution
 
-> Tiam, ad mint andaepu dandae nostion secatur sequo quae.
+> If a shortcut, was a shortcut it would have been called a route.
 > **Note** that you can use _Markdown syntax_ within a blockquote.
 
 #### Blockquote with attribution
 
-> Don't communicate by sharing memory, share memory by communicating.<br>
-> — <cite>Rob Pike[^1]</cite>
+> "Life is really simple, but we insist on making it complicated."<br>
+> — <cite>Confucius[^1]</cite>
 
-[^1]: The above quote is excerpted from Rob Pike's [talk](https://www.youtube.com/watch?v=PAAkCSZUG1c) during Gopherfest, November 18, 2015.
+[^1]: This quote is often attributed to Confucius. For more context, see [Wikipedia](https://en.wikipedia.org/wiki/Confucius) or related philosophy references.
 
 ## Tables
 
@@ -68,8 +60,8 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 | Name  | Age |
 | ----- | --- |
-| Bob   | 27  |
-| Alice | 23  |
+| Bob the Spider  | 2  |
+| Bob Big Spider | 8  |
 
 #### Inline Markdown within tables
 
