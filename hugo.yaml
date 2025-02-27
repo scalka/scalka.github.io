@@ -7,6 +7,9 @@ menus:
   - name: Home
     pageRef: /
     weight: 10
+  - name: Work
+    pageRef: /work
+    weight: 15
   - name: Posts
     pageRef: /posts
     weight: 20

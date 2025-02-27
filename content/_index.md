@@ -26,10 +26,3 @@ The topics that keep coming back to me:
 - Yoga, sup and other activites
 
 {{< homepage-gallery images="/images/me_munich.jpg,/images/me-computer-1.webp,/images/me-computer-2.webp,/images/me-makerspace-3.webp" >}}
-
-## Work
-Driven by a passion for crafting digital products and experiences, I have a solid foundation in frontend development and deep technical expertise in modern web technologies like JavaScript, React, Next.js, HTML, CSS, Web Components and TypeScript.
-
-I thrive at the intersection of technology, design, and data, combining my technical skills with a strong understanding of design principles to create solutions that are not only functional but also inclusive and intuitive.
-
-I care deeply about making the web more sustainable and accessible, creating digital experiences that reach and resonate with a wide range of users. I believe in learning and growing alongside my team, fostering a collaborative environment where we push each other towards excellence and innovation.

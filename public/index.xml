@@ -30,6 +30,13 @@
       <description>&lt;ul&gt;&#xA;&lt;li&gt;&lt;a href=&#34;https://github.com/scalka&#34;&gt;github.com/scalka&lt;/a&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
+      <title>Work</title>
+      <link>http://localhost:1313/work/</link>
+      <pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/work/</guid>
+      <description>&lt;p&gt;Driven by a passion for crafting digital products and experiences, I have a solid foundation in frontend development and deep technical expertise in modern web technologies like JavaScript, React, Next.js, HTML, CSS, Web Components and TypeScript.&lt;/p&gt;&#xA;&lt;p&gt;I thrive at the intersection of technology, design, and data, combining my technical skills with a strong understanding of design principles to create solutions that are not only functional but also inclusive and intuitive.&lt;/p&gt;</description>
+    </item>
+    <item>
       <title>About me</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
