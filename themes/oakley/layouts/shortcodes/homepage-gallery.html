@@ -1,6 +1,6 @@
 {{ $styles := resources.Get "css/shortcodes/homepage-gallery.css" | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
-<div class="homepage-gallery">
+<div class="homepage-gallery mt-m mb-m">
     {{ $images := split (.Get "images") "," }}
     
     {{ with index $images 0 }}

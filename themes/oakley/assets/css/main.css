@@ -118,16 +118,23 @@ input:focus, textarea:focus, select:focus {
 ul, ol {
  /*  padding-left: var(--spacing-l);
   margin-bottom: var(--spacing-m); */
-  list-style-position: inside;
   margin: 0;
   padding: 0;
 }
 
 ul {
-  list-style-type: "—";
+  list-style-type: none;
+  list-style-position: inside;
 }
+
+ul li:before {
+  content: '\2014';
+  position: absolute;
+  margin-left: -30px;
+}
+
 li {
-  margin: 0;
+  margin-left: 34px;
 }
 
 /* Tables */
