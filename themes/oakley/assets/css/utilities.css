@@ -24,3 +24,101 @@
 .mb-m { margin-bottom: var(--spacing-m); }
 .mb-l { margin-bottom: var(--spacing-l); }
 .mb-xl { margin-bottom: var(--spacing-xl); }
+
+/* Flex */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-align-start {
+  align-items: start;
+}
+
+.flex-align-center {
+  align-items: center;
+}
+
+.flex-align-end {
+  align-items: end;
+}
+
+.flex-align-baseline {
+  align-items: baseline;
+}
+
+.flex-align-self-start {
+  align-self: start;
+}
+
+.flex-align-self-center {
+  align-self: center;
+}
+
+.flex-align-self-end {
+  align-self: end;
+}
+
+.flex-justify-start {
+  justify-content: start;
+}
+
+.flex-justify-center {
+  justify-content: center;
+}
+
+.flex-justify-end {
+  justify-content: end;
+}
+
+.flex-justify-self-center {
+  justify-self: center;
+}
+
+.flex-justify-self-end {
+  justify-self: flex-end;
+}
+
+.flex-around {
+  justify-content: space-around;
+}
+
+.flex-between {
+  justify-content: space-between;
+}
+
+.flex-grow-children > * {
+  display: flex;
+  flex-grow: 1;
+}
+
+.flex-equal-children > * {
+  flex: 1 1 0;
+}
+
+.flex-grow {
+  flex-grow: 1;
+}
+
+.gap-s {
+  gap: var(--spacing-s);
+}
+
+.gap-m {
+  gap: var(--spacing-m);
+}
+
+.gap-l {
+  gap: var(--spacing-l);
+}
+
+.gap-xxxxxxl {
+  gap: var(--spacing-xxxxxxl);
+}

@@ -26,7 +26,7 @@ sitemap:
   priority: -1
 params:
   siteHeaderText: "Flowing Fragments"
-  siteFooterText: "Crafted with care and curiosity by Sylwia. Hosted on the web as a digital garden 🌿."
+  siteFooterText: "Crafted with curiosity by Sylwia. Hosted on the web as a digital garden 🌿."
   hcard:
     avatar: "images/me_munich.jpg"
     fullName: "Sylwia Całka-Verhulst"

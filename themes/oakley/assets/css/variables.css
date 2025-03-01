@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Dosis:wght@200..800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;700&family=Cormorant+Garamond:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Dosis:wght@200..800&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
 
 :root {
     /* Screen sizes */
@@ -37,7 +36,7 @@
     --font-special: 'Figtree', var(--font-fallback);
 
     --weight-normal: 400;
-    --weight-medium: 500;
+    --weight-medium: 600;
     --weight-bold: 700;
 
     --line-height-s: 1.5rem;
@@ -71,15 +70,17 @@
 
 
 /* Dark Theme (Rosé Pine Moon) */
+/* 
 @media (prefers-color-scheme: dark) {
     :root {
       --color-background: #232937;
       --color-surface: #1f1d2e;
       --color-text: #e0def4;
       --color-text-light: #908caa;
-      --color-primary: #eb6f92; /* Rosy Pink */
-      --color-secondary: #f6c177; /* Warm Gold */
-      --color-accent: #9ccfd8; /* Muted Teal */
+      --color-primary: #eb6f92;
+      --color-secondary: #f6c177; 
+      --color-accent: #9ccfd8;
       --color-border: #332e41;
     }
   }
+*/

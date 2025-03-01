@@ -1,17 +1,23 @@
+{{ $js := resources.Get "js/main.js" | resources.Minify | resources.Fingerprint }}
+<script src="{{ $js.RelPermalink }}"></script>
+
 <footer role="contentinfo">
-    <div class="footer-container">
-        <div class="h-card bio">
-            {{- partial "hcard.html" . -}}
+      <address class="h3" property="email">
+        To get in touch, write to <a class="nav-anchor" id="copy-email" onclick=copyEmailToClipboard()>calka.sylwia@gmail.com</a>
+          <span id="copied-email-msg" class="copied-email-tooltip" role="status"> &#8212; copied to your clipboard</span>
+      </address>
+
+    <div class="footer-container flex gap-xxxxxxl">
+        <div class="h-card social">
+            {{ partial "social.html" . -}}
         </div>
         {{- with .Site.Params.SiteFooterText -}}
-        <div class="footer-text footer-right">
+        <div class="footer-text">
             <p>
                 {{ . | markdownify }}
             </p>
         </div>
         {{- end -}}
     </div>
-    <div class="h-card social">
-        {{ partial "social.html" . -}}
-    </div>
+   
 </footer>

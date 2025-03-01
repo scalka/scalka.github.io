@@ -84,7 +84,7 @@ button, .button {
   font-size: var(--font-size-s);
   font-weight: var(--weight-medium);
   color: #fff;
-  background: var(--color-primary);
+  background: var(--color-text-light);
   border: none;
   border-radius: var(--radius-m);
   cursor: pointer;
@@ -169,4 +169,18 @@ img.u-photo {
   vertical-align: bottom;
   height: 1.5em;
   border-radius: var(--radius-l);
+}
+
+/* Copy e-mail */
+address {
+  font-style: normal;
+  font-weight: var(--weight-medium);
+}
+
+.copied-email-tooltip {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.copied-email-tooltip.visible {
+  opacity: 1;
 }

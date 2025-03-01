@@ -1,4 +1,5 @@
 <!-- Default h-card -->
+ <div class="h-card bio">
 <p>
     <a class="u-url" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
     by {{ with .Site.Params.Hcard.Avatar }}<img class="u-photo" alt="" src="{{ . | absURL }}"> {{ end }}<span class="p-name" rel="me">{{ .Site.Params.Hcard.FullName }}</span>
@@ -25,3 +26,4 @@
 {{ with .Site.Params.Hcard.Biography }}<p>
     <span class="p-note">{{ . | markdownify }}</span>
 </p>{{ end }}
+</div>
