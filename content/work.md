@@ -14,3 +14,7 @@ Driven by a passion for crafting digital products and experiences, I have a soli
 I thrive at the intersection of technology, design, and data, combining my technical skills with a strong understanding of design principles to create solutions that are not only functional but also inclusive and intuitive.
 
 I care deeply about making the web more sustainable and accessible, creating digital experiences that reach and resonate with a wide range of users. I believe in learning and growing alongside my team, fostering a collaborative environment where we push each other towards excellence and innovation.
+
+My passion for coding and design is complemented by a curiosity for understanding the broader context and strategy behind the solutions I build.
+
+Feel free to check out [[The user guide for working with Sylwia]]

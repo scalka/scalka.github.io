@@ -48,7 +48,7 @@
       <link>http://localhost:1313/about/</link>
       <pubDate>Sun, 14 Jan 2024 07:07:07 +0100</pubDate>
       <guid>http://localhost:1313/about/</guid>
-      <description>&lt;p&gt;This is &lt;strong&gt;bold&lt;/strong&gt; text, and this is &lt;em&gt;emphasized&lt;/em&gt; text.&lt;/p&gt;&#xA;&lt;p&gt;Visit the &lt;a href=&#34;https://gohugo.io&#34;&gt;Hugo&lt;/a&gt; website!&lt;/p&gt;</description>
+      <description>&lt;h2 id=&#34;what-do-you-enjoy-doing-in-your-free-time&#34;&gt;What do you enjoy doing in your free time?&lt;/h2&gt;&#xA;&lt;p&gt;In my free time, I enjoy walking and training with my dog Oakley. My hobbies include exploring my local area through walking, cycling and supping. I am practicing yoga for years, it gives me clarity and helps me stay present. It also teaches me that every day is different, so I try to approach each practice with a fresh mindset. At the same time, yoga is showing me that comparison, whether to others or even to my past self is not helpful, as progress looks different for everyone.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

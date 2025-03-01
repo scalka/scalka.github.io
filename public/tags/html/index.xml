@@ -6,14 +6,14 @@
     <description>Recent content in Html on Flowing fragments</description>
     <generator>Hugo</generator>
     <language>en-ie</language>
-    <lastBuildDate>Mon, 11 Mar 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/html/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Markdown Syntax Guide</title>
       <link>http://localhost:1313/posts/markdown-syntax/</link>
-      <pubDate>Mon, 11 Mar 2019 00:00:00 +0000</pubDate>
+      <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/posts/markdown-syntax/</guid>
-      <description>&lt;p&gt;This article offers a sample of basic Markdown syntax that can be used in Hugo content files, also it shows whether basic HTML elements are decorated with CSS in a Hugo theme.&lt;/p&gt;</description>
+      <description>&lt;p&gt;This article is a cheat-sheet for me to see how markdown is rendered with my custom Hugo theme called Oakley (after my dog).&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>
