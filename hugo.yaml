@@ -9,9 +9,9 @@ menus:
     weight: 10
   - name: Work
     pageRef: /work
-    weight: 15
-  - name: Posts
-    pageRef: /posts
+    weight: 25
+  - name: Notes
+    pageRef: /notes
     weight: 20
   - name: About
     pageRef: /about

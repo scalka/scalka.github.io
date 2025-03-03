@@ -153,5 +153,5 @@ Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and ot
 
 ## Linking notes
 
-To link another note use [See my Output post]({{< relref "posts/output.md" >}}) for using relative URLs. You can also link to specifiv URL [See my Output post](/posts/output/).
+To link another note use [See my Output post]({{< relref "notes/output.md" >}}) for using relative URLs. You can also link to specifiv URL [See my Output post](/notes/output/).
 
