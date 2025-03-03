@@ -130,13 +130,13 @@ ul {
 }
 
 /* TODO: see if this solution is good enough or I need to work with classes*/
-main ul li:before {
+.dash-list li:before {
   content: '\2014';
   position: absolute;
   margin-left: -30px;
 }
 
-main ul li {
+.dash-list li {
   margin-left: 34px;
 }
 

@@ -2,6 +2,7 @@
 title: "Home"
 date: "2025-02-21"
 author: "Sylwia Całka-Verhulst"
+menu: "main"
 images:
   - "/images/me_munich.jpg"
   - "/images/me-computer-1.webp"
