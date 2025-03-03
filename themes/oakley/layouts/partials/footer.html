@@ -7,10 +7,8 @@
           <span id="copied-email-msg" class="copied-email-tooltip" role="status"> &#8212; copied to your clipboard</span>
       </address>
 
-    <div class="footer-container flex gap-xxxxxxl">
-        <div class="h-card social">
-            {{ partial "social.html" . -}}
-        </div>
+    <div class="footer-container flex flex-between gap-xxxxxxl">
+       
         {{- with .Site.Params.SiteFooterText -}}
         <div class="footer-text">
             <p>
@@ -18,6 +16,9 @@
             </p>
         </div>
         {{- end -}}
+         <div class="h-card social">
+            {{ partial "social.html" . -}}
+        </div>
     </div>
    
 </footer>

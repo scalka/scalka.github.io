@@ -36,6 +36,14 @@ params:
 #    region: "South Holland"
     country: "The Netherlands"
     social:
+     # codepen, 
+      - platform: "github"
+        identity: "scalka"
+        url_pattern: "https://github.com/scalka"
+      - platform: "linkedin"
+        identity: "sylwia-calka"
+        url_pattern: "https://www.linkedin.com/in/sylwia-calka/"
+    contact:
       - platform: "e-mail"
         identity: "calka.sylwia@gmail.com"
         url_pattern: "mailto:%s"

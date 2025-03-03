@@ -38,6 +38,8 @@ header {
 }
 
 footer {
+  margin: 0 auto;
+  max-width: var(--max-width-content);
   border-top: 1px solid var(--color-border);
   padding-top: var(--spacing-m);
   margin-top: var(--spacing-m);
