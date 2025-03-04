@@ -1,14 +1,14 @@
 ---
-title: "Work"
-date: "2025-02-21"
-author: "Sylwia Całka-Verhulst"
-menu: "main"
-layout: "single"
+title: 'Work'
+date: '2025-02-21'
+author: 'Sylwia Całka-Verhulst'
+menu: 'main'
+layout: 'single'
 images:
-  - "/images/me_munich.jpg"
-  - "/images/me-computer-1.webp"
-  - "/images/me-computer-2.webp"
-  - "/images/me-makerspace-3.webp"
+  - '/images/me_munich.jpg'
+  - '/images/me-computer-1.webp'
+  - '/images/me-computer-2.webp'
+  - '/images/me-makerspace-3.webp'
 ---
 
 Driven by a passion for crafting digital products and experiences, I have a solid foundation in frontend development and deep technical expertise in modern web technologies like JavaScript, React, Next.js, HTML, CSS, Web Components and TypeScript.

@@ -1,34 +1,34 @@
 projects:
-- title: "App Improvement & User Experience Enhancement"
-  subtitle: "UX & Development Project"
-  year: "202X"
-  image: "/images/projects-archive/app-improvement.jpg"
-  link: ""  # Add relevant project link if available
-  description: "This project focused on improving user experience, engagement, and app ratings by leveraging data-driven insights and implementing design changes. The goal was to understand user behavior, address critical UX issues, and enhance overall app performance."
-  addition: "I was involved in the design and development of multiple user touchpoints, including mobile applications, a customer portal, and a website. My role encompassed user research, data analysis, design improvements, and stakeholder communication to ensure successful implementation."
-  challenge: "The client needed a deeper understanding of user behavior to enhance app functionality and achieve higher ratings. The app had a low satisfaction rating, with critical UX and performance issues affecting engagement."
-  approach:
-    - "Data Collection: Used Google Analytics to track user behavior and identify pain points."
-    - "Research & Analysis: Leveraged HotJar and Typeform to gather insights into user frustrations and interactions."
-    - "Design Improvements: Worked closely with designers to enhance user journeys based on research findings."
-    - "Collaboration: Partnered with cross-functional teams, including engineers and backend developers, to implement improvements."
-    - "Workflow Enhancements: Introduced efficient team communication methods, streamlined Jira boards, and improved release cycles."
-    - "Decisions: Advocated for an iOS app rating reset, leading to a significant score improvement. Additionally, suggested a more user-friendly rating prompt, increasing positive reviews."
-  solution: "The project successfully improved app ratings, achieved KPIs, and enhanced user experience. Additionally, communication with clients and internal teams was strengthened, and team motivation increased. I took on leadership responsibilities, mentored the team, and optimized workflows."
-  success: "Playing a key role in the app's transformation, influencing strategic decisions, and mentoring the team."
-  tags: 
-    - { name: "User Experience", category: "skill" }
-    - { name: "Data Analysis", category: "skill" }
-    - { name: "Google Analytics", category: "tool" }
-    - { name: "HotJar", category: "tool" }
-    - { name: "Jira", category: "tool" }
-    - { name: "Collaboration", category: "skill" }
-    - { name: "Stakeholder Management", category: "skill" }
-    - { name: "Leadership", category: "skill" }
-    - { name: "Mobile Development", category: "skill" }
-  images:
-    - "/images/projects-archive/zz-presentation.jpg"
-    - "/images/projects-archive/zz-screens.webp"
-    - "/images/projects-archive/zz-kpi.jpg"
-    - "/images/projects-archive/zz-mapping.png"
-    - "/images/projects-archive/zz-screens.jpg"
+  - title: 'App Improvement & User Experience Enhancement'
+    subtitle: 'UX & Development Project'
+    year: '202X'
+    image: '/images/projects-archive/app-improvement.jpg'
+    link: '' # Add relevant project link if available
+    description: 'This project focused on improving user experience, engagement, and app ratings by leveraging data-driven insights and implementing design changes. The goal was to understand user behavior, address critical UX issues, and enhance overall app performance.'
+    addition: 'I was involved in the design and development of multiple user touchpoints, including mobile applications, a customer portal, and a website. My role encompassed user research, data analysis, design improvements, and stakeholder communication to ensure successful implementation.'
+    challenge: 'The client needed a deeper understanding of user behavior to enhance app functionality and achieve higher ratings. The app had a low satisfaction rating, with critical UX and performance issues affecting engagement.'
+    approach:
+      - 'Data Collection: Used Google Analytics to track user behavior and identify pain points.'
+      - 'Research & Analysis: Leveraged HotJar and Typeform to gather insights into user frustrations and interactions.'
+      - 'Design Improvements: Worked closely with designers to enhance user journeys based on research findings.'
+      - 'Collaboration: Partnered with cross-functional teams, including engineers and backend developers, to implement improvements.'
+      - 'Workflow Enhancements: Introduced efficient team communication methods, streamlined Jira boards, and improved release cycles.'
+      - 'Decisions: Advocated for an iOS app rating reset, leading to a significant score improvement. Additionally, suggested a more user-friendly rating prompt, increasing positive reviews.'
+    solution: 'The project successfully improved app ratings, achieved KPIs, and enhanced user experience. Additionally, communication with clients and internal teams was strengthened, and team motivation increased. I took on leadership responsibilities, mentored the team, and optimized workflows.'
+    success: "Playing a key role in the app's transformation, influencing strategic decisions, and mentoring the team."
+    tags:
+      - { name: 'User Experience', category: 'skill' }
+      - { name: 'Data Analysis', category: 'skill' }
+      - { name: 'Google Analytics', category: 'tool' }
+      - { name: 'HotJar', category: 'tool' }
+      - { name: 'Jira', category: 'tool' }
+      - { name: 'Collaboration', category: 'skill' }
+      - { name: 'Stakeholder Management', category: 'skill' }
+      - { name: 'Leadership', category: 'skill' }
+      - { name: 'Mobile Development', category: 'skill' }
+    images:
+      - '/images/projects-archive/zz-presentation.jpg'
+      - '/images/projects-archive/zz-screens.webp'
+      - '/images/projects-archive/zz-kpi.jpg'
+      - '/images/projects-archive/zz-mapping.png'
+      - '/images/projects-archive/zz-screens.jpg'

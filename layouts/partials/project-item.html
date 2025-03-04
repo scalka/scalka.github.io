@@ -1,63 +1,57 @@
 <li class="project-item">
   <div class="project-image">
-    <img class="img-responsive" src="{{ .image }}" alt="{{ .title }}">
+    <img class="img-responsive" src="{{ .image }}" alt="{{ .title }}" />
   </div>
   <div>
-    <span class="h-sub small">{{ .subtitle }} - <time datetime="{{ .year }}">{{ .year }}</time></span>
+    <span class="h-sub small"
+      >{{ .subtitle }} - <time datetime="{{ .year }}">{{ .year }}</time></span
+    >
 
     {{ if .link }}
-      <a href="{{ .link }}">
-        <h3 class="project-title project-link">{{ .title }}</h3>
-      </a>
+    <a href="{{ .link }}">
+      <h3 class="project-title project-link">{{ .title }}</h3>
+    </a>
     {{ else }}
-      <h3 class="project-title">{{ .title }}</h3>
+    <h3 class="project-title">{{ .title }}</h3>
     {{ end }}
   </div>
-  
+
   <div class="project-content">
     <p>{{ .description }}</p>
 
     {{ if .addition }}
-      <h3>Additional Info</h3>
-      <p>{{ .addition }}</p>
-    {{ end }}
-
-    {{ if .challenge }}
-      <h3>Challenge</h3>
-      <p>{{ .challenge }}</p>
-    {{ end }}
-
-    {{ if .approach }}
-      <h3>Approach</h3>
-      <ul class="dash-list">
-        {{ range .approach }}
-          <li>{{ . }}</li>
-        {{ end }}
-      </ul>
-    {{ end }}
-
-    {{ if .solution }}
-      <h3>Solution</h3>
-      <p>{{ .solution }}</p>
-    {{ end }}
-
-    {{ if .success }}
-      <h3>What I'm Proud Of</h3>
-      <p>{{ .success }}</p>
+    <h3>Additional Info</h3>
+    <p>{{ .addition }}</p>
+    {{ end }} {{ if .challenge }}
+    <h3>Challenge</h3>
+    <p>{{ .challenge }}</p>
+    {{ end }} {{ if .approach }}
+    <h3>Approach</h3>
+    <ul class="dash-list">
+      {{ range .approach }}
+      <li>{{ . }}</li>
+      {{ end }}
+    </ul>
+    {{ end }} {{ if .solution }}
+    <h3>Solution</h3>
+    <p>{{ .solution }}</p>
+    {{ end }} {{ if .success }}
+    <h3>What I'm Proud Of</h3>
+    <p>{{ .success }}</p>
     {{ end }}
   </div>
 
   <ul class="project-tags">
     {{ range .tags }}
-      <li class="tag project-tags-{{ .category }}">{{ .name }}</li>
+    <li class="tag project-tags-{{ .category }}">{{ .name }}</li>
     {{ end }}
   </ul>
 
   {{ if .images }}
-    <div class="project-gallery">
-      {{ range .images }}
-        <img class="img-responsive project-image" src="{{ . }}" alt="Project Image">
-      {{ end }}
-    </div>
+  <div class="project-gallery">
+    {{ range .images }}
+    <img class="img-responsive project-image" src="{{ . }}" alt="Project Image" />
+    {{ end }}
+  </div>
   {{ end }}
 </li>

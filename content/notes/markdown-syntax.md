@@ -1,16 +1,9 @@
 ---
-title: "Markdown Syntax Guide"
+title: 'Markdown Syntax Guide'
 draft: false
-date: "2025-02-02"
-tags: [
-    "markdown",
-    "css",
-    "html",
-]
-categories: [
-    "themes",
-    "syntax",
-]
+date: '2025-02-02'
+tags: ['markdown', 'css', 'html']
+categories: ['themes', 'syntax']
 ---
 
 This article is a cheat-sheet for me to see how markdown is rendered with my custom Hugo theme called Oakley (after my dog).
@@ -22,10 +15,15 @@ This article is a cheat-sheet for me to see how markdown is rendered with my cus
 The following HTML `<h1>`—`<h6>` elements represent six levels of section headings. `<h1>` is the highest section level while `<h6>` is the lowest.
 
 # Heading 1
+
 ## Heading 2
+
 ### Heading 3
+
 #### Heading 4
+
 ##### Heading 5
+
 ###### Heading 6
 
 ## Paragraph
@@ -34,7 +32,6 @@ Wlazł kotek na płotek i mruga.
 Piękna to piosenka, niedługa.
 Niedługa, nie krótka, lecz w sam raz,
 Zaśpiewaj, koteczku, jeszcze raz.
-
 
 ~~Strikethrough~~
 
@@ -58,10 +55,10 @@ The blockquote element represents content that is quoted from another source, op
 
 Tables aren't part of the core Markdown spec, but Hugo supports supports them out-of-the-box.
 
-| Name  | Age |
-| ----- | --- |
-| Bob the Spider  | 2  |
-| Bob Big Spider | 8  |
+| Name           | Age |
+| -------------- | --- |
+| Bob the Spider | 2   |
+| Bob Big Spider | 8   |
 
 #### Inline Markdown within tables
 
@@ -154,4 +151,3 @@ Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and ot
 ## Linking notes
 
 To link another note use [See my Output post]({{< relref "notes/output.md" >}}) for using relative URLs. You can also link to specifiv URL [See my Output post](/notes/output/).
-
