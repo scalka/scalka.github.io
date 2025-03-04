@@ -1,4 +1,5 @@
 {{ define "main" }}
+<div class="main-container">
   <h1>{{ .Title }}</h1>
   {{ .Content }}
   <!-- Template for  list pages, like blog homepage or category pages.-->
@@ -21,4 +22,5 @@
       <a href="{{ .Permalink }}"><img alt="RSS feed icon" src="{{ "icons/rss.png" | absURL }}"></a>
   </p>
   {{ end }}
+  </div>
 {{ end }}

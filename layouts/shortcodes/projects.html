@@ -1,0 +1,18 @@
+{{ $styles := resources.Get "css/projects.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+
+<section class="projects-section">
+   <article class="{{ if eq .Page.File.BaseFileName "projects-archive" }}projects-archive{{ else }}projects{{ end }}">
+    <ul class="project-list">
+      {{ if eq .Page.File.BaseFileName "projects-archive" }}
+        {{ range site.Data.projectsarchive.projects }}
+          {{ partial "project-item.html" . }}
+        {{ end }}
+      {{ else }}
+        {{ range site.Data.projects.projects }}
+          {{ partial "project-item.html" . }}
+        {{ end }}
+      {{ end }}
+    </ul>
+  </article>
+</section>

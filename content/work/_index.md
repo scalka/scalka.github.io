@@ -21,4 +21,6 @@ My passion for coding and design is complemented by a curiosity for understandin
 
 Feel free to check out [[The user guide for working with Sylwia]]
 
-[Projects archive]({{< relref "work/projects-archive.md" >}})
+[Projects 2019-2025]({{< relref "work/projects.md" >}})
+
+[Projects 2015-2018]({{< relref "work/projects-archive.md" >}})

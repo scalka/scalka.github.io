@@ -70,17 +70,16 @@
 
 
 /* Dark Theme (Rosé Pine Moon) */
-/* 
+
 @media (prefers-color-scheme: dark) {
     :root {
-      --color-background: #232937;
-      --color-surface: #1f1d2e;
-      --color-text: #e0def4;
-      --color-text-light: #908caa;
-      --color-primary: #eb6f92;
-      --color-secondary: #f6c177; 
-      --color-accent: #9ccfd8;
-      --color-border: #332e41;
-    }
+    --color-background: #232937;
+    --color-surface: #1f1d2e;
+    --color-text: #e0def4;
+    --color-text-light: #908caa;
+    --color-primary: #eb6f92;
+    --color-secondary: #f6c177; 
+    --color-accent: #9ccfd8;
+    --color-border: #332e41;
   }
-*/
+}
