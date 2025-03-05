@@ -15,3 +15,4 @@ This website is my digital garden where I intend to publish all my fleeting thou
 ## Good resources
 
 - https://fabform.io/a/how-to-create-a-hugo-theme/
+- https://indieweb.org/
