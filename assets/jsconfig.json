@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "baseUrl": "https://scalka.github.io/flowingfragments.github.io",
+    "baseUrl": "https://flowingfragments.com",
     "paths": {
       "*": ["../themes/hugo-theme-monochrome/assets/*"]
     }
