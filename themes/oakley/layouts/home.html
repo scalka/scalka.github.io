@@ -1,10 +1,6 @@
 {{ define "main" }}
-  <div class="main-container">
-  <!-- Template for home page -->
-    {{ .Content }}
-    {{ range site.RegularPages }}
-      <h2><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></h2>
-      {{ .Summary }}
-    {{ end }}
-  </div>
+{{ $content := .Content | replaceRE "<ul>" "<ul class='dash-list'>" }}
+<div class="main-container">
+  {{ $content | safeHTML }}
+</div>
 {{ end }}

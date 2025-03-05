@@ -1,14 +1,17 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="{{ site.Language.LanguageCode }}" dir="{{ or site.Language.LanguageDirection `ltr` }}">
   <head>
     {{ partial "head.html" . }}
   </head>
   <body>
-    <div  class="wrapper">
-      <header>
-        {{ partial "header.html" . }}
-      </header>
+    <div class="wrapper">
+      <header>{{ partial "header.html" . }}</header>
       <main>
+        <div class="sash-wrapper">
+          <div class="sash flex flex-justify-center">
+            <span>WORK IN PROGRESS</span>
+          </div>
+        </div>
         {{ block "main" . }}{{ end }}
       </main>
       {{ partial "footer.html" . }}

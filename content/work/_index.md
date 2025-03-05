@@ -19,8 +19,6 @@ I care deeply about making the web more sustainable and accessible, creating dig
 
 My passion for coding and design is complemented by a curiosity for understanding the broader context and strategy behind the solutions I build.
 
-Feel free to check out [[The user guide for working with Sylwia]]
-
 [Projects 2019-2025]({{< relref "work/projects.md" >}})
 
 [Projects 2015-2018]({{< relref "work/projects-archive.md" >}})

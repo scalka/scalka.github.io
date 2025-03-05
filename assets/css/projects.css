@@ -1,74 +1,74 @@
+.projects-section {
+  margin-top: var(--spacing-xxl)
+}
 
-  .projects-section {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  
-  /* Project */
-  .project-list {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  
-  .project-item {
-    width: 305px;
-    padding-bottom: 30px;
-  }
-  
-  .project-item:not(:last-child) {
-    padding-right: 16px;
-  }
-  
-  .img-responsive {
-    display: block;
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .project-title {
-    margin: 0;
-  }
-  
-  .project-link:hover {
-    background-color: var(--accent-color-light);
-    border-bottom: 1px solid;
-  }
-  
-  .project-tags {
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-  }
-  
-  .tag {
-    font-family: var(--font-decor);
-    margin: 2px;
-    width: fit-content;
-    font-size: 0.9em;
-    padding: 4px 6px;
-    background-color: #00869133;
-    border-radius: 5px;
-  }
-  
-  .project-tags-design {
-    color: var(--color-design);
-  }
-  
-  .project-tags-lang {
-    color: var(--color-languages);
-  }
-  
-  .project-tags-frame {
-    color: var(--color-frameworks);
-  }
-  
-  .project-tags-skill {
-    color: var(--color-skills);
-  }
-  
+/* Project */
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xxxxxxl);
+/*   margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap; */
+}
+
+.project-item {
+  // width: 305px;
+  // padding-bottom: 30px;
+}
+
+.project-item:not(:last-child) {
+  padding-right: 16px;
+}
+
+.img-responsive {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.project-title {
+  margin: 0;
+}
+
+.project-link:hover {
+  background-color: var(--accent-color-light);
+  border-bottom: 1px solid;
+}
+
+.project-tags {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.tag {
+  font-family: var(--font-decor);
+  margin: 2px;
+  width: fit-content;
+  font-size: 0.9em;
+  padding: 4px 6px;
+  background-color: #00869133;
+  border-radius: 5px;
+}
+
+.project-tags-design {
+  color: var(--color-design);
+}
+
+.project-tags-lang {
+  color: var(--color-languages);
+}
+
+.project-tags-frame {
+  color: var(--color-frameworks);
+}
+
+.project-tags-skill {
+  color: var(--color-skills);
+}
