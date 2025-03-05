@@ -1,10 +1,16 @@
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width">
-<meta name="keywords" content="digital garden, portfolio, frontend development, ux engineer">
-<meta name="author" content="Sylwia Całka-Verhulst">
-<meta name="robots" content="index, follow">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<meta name="keywords" content="digital garden, portfolio, frontend development, ux engineer" />
+<meta name="author" content="Sylwia Całka-Verhulst" />
+<meta name="robots" content="index, follow" />
 
-<title>{{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}</title>
-{{ partialCached "head/css.html" . }}
-{{ partialCached "head/js.html" . }}
+<title>
+  {{ if .IsHome }}{{ site.Title }}{{ else }}{{ printf "%s | %s" .Title site.Title }}{{ end }}
+</title>
+{{ partialCached "head/css.html" . }} {{ partialCached "head/js.html" . }}
 <script src="https://kit.fontawesome.com/faf93a09f3.js" crossorigin="anonymous"></script>
+<script
+  data-goatcounter="https://flowingfragments.goatcounter.com/count"
+  async
+  src="//gc.zgo.at/count.js"
+></script>

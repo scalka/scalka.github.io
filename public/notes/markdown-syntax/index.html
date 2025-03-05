@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en-ie" dir="ltr">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<meta name="keywords" content="digital garden, portfolio, frontend development, ux engineer">
+<meta name="author" content="Sylwia Całka-Verhulst">
+<meta name="robots" content="index, follow">
+
+<title>Markdown Syntax Guide | Flowing fragments</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+
+
+      <script src="/js/main.js"></script>
+
+<script src="https://kit.fontawesome.com/faf93a09f3.js" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+  <nav class="nav">
+    <ul>
+    <li>
+        <a class="nav-link" href="/">Home</a>
+    </li>
+    <li>
+        <a class="nav-link" aria-current="true" class="ancestor" href="/notes/">Notes</a>
+    </li>
+    <li>
+        <a class="nav-link" href="/work/">Work</a>
+    </li>
+    <li>
+        <a class="nav-link" href="/about/">About</a>
+    </li>
+    <li>
+        <a class="nav-link" href="/contact/">Contact</a>
+    </li>
+    </ul>
+  </nav>
+
+</header>
+      <main>
+        <div class="sash-wrapper">
+          <div class="sash flex flex-justify-center">
+            <span>WORK IN PROGRESS</span>
+          </div>
+        </div>
+        
+<div class="main-container">
+
+  <h1>Markdown Syntax Guide</h1>
+
+  <p>This article is a cheat-sheet for me to see how markdown is rendered with my custom Hugo theme called Oakley (after my dog).</p>
+<h2 id="headings">Headings</h2>
+<p>The following HTML <code>&lt;h1&gt;</code>—<code>&lt;h6&gt;</code> elements represent six levels of section headings. <code>&lt;h1&gt;</code> is the highest section level while <code>&lt;h6&gt;</code> is the lowest.</p>
+<h1 id="heading-1">Heading 1</h1>
+<h2 id="heading-2">Heading 2</h2>
+<h3 id="heading-3">Heading 3</h3>
+<h4 id="heading-4">Heading 4</h4>
+<h5 id="heading-5">Heading 5</h5>
+<h6 id="heading-6">Heading 6</h6>
+<h2 id="paragraph">Paragraph</h2>
+<p>Wlazł kotek na płotek i mruga.
+Piękna to piosenka, niedługa.
+Niedługa, nie krótka, lecz w sam raz,
+Zaśpiewaj, koteczku, jeszcze raz.</p>
+<p><del>Strikethrough</del></p>
+<h2 id="blockquotes">Blockquotes</h2>
+<p>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a <code>footer</code> or <code>cite</code> element, and optionally with in-line changes such as annotations and abbreviations.</p>
+<h4 id="blockquote-without-attribution">Blockquote without attribution</h4>
+<blockquote>
+<p>If a shortcut, was a shortcut it would have been called a route.
+<strong>Note</strong> that you can use <em>Markdown syntax</em> within a blockquote.</p></blockquote>
+<h4 id="blockquote-with-attribution">Blockquote with attribution</h4>
+<blockquote>
+<p>&ldquo;Life is really simple, but we insist on making it complicated.&quot;<!-- raw HTML omitted -->
+— <!-- raw HTML omitted -->Confucius<sup id="fnref:1"><a href="#fn:1" class="footnote-ref" role="doc-noteref">1</a></sup><!-- raw HTML omitted --></p></blockquote>
+<h2 id="tables">Tables</h2>
+<p>Tables aren&rsquo;t part of the core Markdown spec, but Hugo supports supports them out-of-the-box.</p>
+<table>
+  <thead>
+      <tr>
+          <th>Name</th>
+          <th>Age</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td>Bob the Spider</td>
+          <td>2</td>
+      </tr>
+      <tr>
+          <td>Bob Big Spider</td>
+          <td>8</td>
+      </tr>
+  </tbody>
+</table>
+<h4 id="inline-markdown-within-tables">Inline Markdown within tables</h4>
+<table>
+  <thead>
+      <tr>
+          <th>Italics</th>
+          <th>Bold</th>
+          <th>Code</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><em>italics</em></td>
+          <td><strong>bold</strong></td>
+          <td><code>code</code></td>
+      </tr>
+  </tbody>
+</table>
+<h2 id="code-blocks">Code Blocks</h2>
+<h4 id="code-block-with-backticks">Code block with backticks</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!doctype html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span> /&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">title</span>&gt;Example HTML5 Document&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>    &lt;<span style="color:#f92672">p</span>&gt;Test&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;
+</span></span></code></pre></div><h4 id="code-block-indented-with-four-spaces">Code block indented with four spaces</h4>
+<pre><code>&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+  &lt;meta charset=&quot;utf-8&quot;&gt;
+  &lt;title&gt;Example HTML5 Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;p&gt;Test&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<h4 id="code-block-with-hugos-internal-highlight-shortcode">Code block with Hugo&rsquo;s internal highlight shortcode</h4>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-html" data-lang="html"><span style="display:flex;"><span><span style="color:#75715e">&lt;!doctype html&gt;</span>
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">title</span>&gt;Example HTML5 Document&lt;/<span style="color:#f92672">title</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">head</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>  &lt;<span style="color:#f92672">p</span>&gt;Test&lt;/<span style="color:#f92672">p</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">body</span>&gt;
+</span></span><span style="display:flex;"><span>&lt;/<span style="color:#f92672">html</span>&gt;</span></span></code></pre></div>
+<h2 id="list-types">List Types</h2>
+<h4 id="ordered-list">Ordered List</h4>
+<ol>
+<li>First item</li>
+<li>Second item</li>
+<li>Third item</li>
+</ol>
+<h4 id="unordered-list">Unordered List</h4>
+<ul>
+<li>List item</li>
+<li>Another item</li>
+<li>And another item</li>
+</ul>
+<h4 id="nested-list">Nested list</h4>
+<ul>
+<li>Fruit
+<ul>
+<li>Apple</li>
+<li>Orange</li>
+<li>Banana</li>
+</ul>
+</li>
+<li>Dairy
+<ul>
+<li>Milk</li>
+<li>Cheese</li>
+</ul>
+</li>
+</ul>
+<h2 id="other-elements--abbr-sub-sup-kbd-mark">Other Elements — abbr, sub, sup, kbd, mark</h2>
+<p><!-- raw HTML omitted -->GIF<!-- raw HTML omitted --> is a bitmap image format.</p>
+<p>H<!-- raw HTML omitted -->2<!-- raw HTML omitted -->O</p>
+<p>X<!-- raw HTML omitted -->n<!-- raw HTML omitted --> + Y<!-- raw HTML omitted -->n<!-- raw HTML omitted --> = Z<!-- raw HTML omitted -->n<!-- raw HTML omitted --></p>
+<p>Press <!-- raw HTML omitted --><!-- raw HTML omitted -->CTRL<!-- raw HTML omitted -->+<!-- raw HTML omitted -->ALT<!-- raw HTML omitted -->+<!-- raw HTML omitted -->Delete<!-- raw HTML omitted --><!-- raw HTML omitted --> to end the session.</p>
+<p>Most <!-- raw HTML omitted -->salamanders<!-- raw HTML omitted --> are nocturnal, and hunt for insects, worms, and other small creatures.</p>
+<h2 id="linking-notes">Linking notes</h2>
+<p>To link another note use <a href="/notes/output/">See my Output post</a> for using relative URLs. You can also link to specifiv URL <a href="/notes/output/">See my Output post</a>.</p>
+<div class="footnotes" role="doc-endnotes">
+<hr>
+<ol>
+<li id="fn:1">
+<p>This quote is often attributed to Confucius. For more context, see <a href="https://en.wikipedia.org/wiki/Confucius">Wikipedia</a> or related philosophy references.&#160;<a href="#fnref:1" class="footnote-backref" role="doc-backlink">&#x21a9;&#xfe0e;</a></p>
+</li>
+</ol>
+</div>
+  
+  <div>
+    <div>Tags:</div>
+    <ul>
+        <li><a href="/tags/markdown/">Markdown</a></li>
+        <li><a href="/tags/css/">Css</a></li>
+        <li><a href="/tags/html/">Html</a></li>
+    </ul>
+  </div>
+
+  </div>
+
+      </main>
+      
+<script src="/js/main.min.6883bc93fb375b49bbf3ce27432adb1b4b587bdd07a7326f72314c19867fb35a.js"></script>
+
+<footer role="contentinfo">
+      <address class="h3" property="email">
+        To get in touch, write to <a class="nav-anchor" id="copy-email" onclick=copyEmailToClipboard()>calka.sylwia@gmail.com</a>
+          <span id="copied-email-msg" class="copied-email-tooltip" role="status"> &#8212; copied to your clipboard</span>
+      </address>
+
+    <div class="footer-container flex flex-between gap-xxxxxxl"><div class="footer-text">
+            <p>
+                Crafted with curiosity by Sylwia. Hosted on the web as a digital garden 🌿.
+            </p>
+        </div><div class="h-card social">
+            <ul class="links-list"><li>
+        <a class="u-url" rel="me" aria-label="github" href="https://github.com/scalka%25!%28EXTRA%20string=scalka%29">
+            <i class="fa-brands fa-github"></i>
+        </a>
+    </li>
+  <li>
+        <a class="u-url" rel="me" aria-label="linkedin" href="https://www.linkedin.com/in/sylwia-calka/%25!%28EXTRA%20string=sylwia-calka%29">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+    </li>
+  </ul>
+</div>
+    </div>
+   
+</footer>
+
+    </div>
+  </body>
+</html>

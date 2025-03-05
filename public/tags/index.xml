@@ -6,15 +6,8 @@
     <description>Recent content in Tags on Flowing fragments</description>
     <generator>Hugo</generator>
     <language>en-ie</language>
-    <lastBuildDate>Wed, 26 Feb 2025 10:34:10 +0100</lastBuildDate>
+    <lastBuildDate>Sun, 02 Feb 2025 00:00:00 +0000</lastBuildDate>
     <atom:link href="http://localhost:1313/tags/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Index</title>
-      <link>http://localhost:1313/tags/index/</link>
-      <pubDate>Wed, 26 Feb 2025 10:34:10 +0100</pubDate>
-      <guid>http://localhost:1313/tags/index/</guid>
-      <description></description>
-    </item>
     <item>
       <title>Css</title>
       <link>http://localhost:1313/tags/css/</link>
@@ -34,6 +27,13 @@
       <link>http://localhost:1313/tags/markdown/</link>
       <pubDate>Sun, 02 Feb 2025 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/tags/markdown/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Index</title>
+      <link>http://localhost:1313/tags/index/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/tags/index/</guid>
       <description></description>
     </item>
   </channel>

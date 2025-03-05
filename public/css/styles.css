@@ -70,20 +70,20 @@
 
 
 /* Dark Theme (Rosé Pine Moon) */
-/* 
+
 @media (prefers-color-scheme: dark) {
     :root {
-      --color-background: #232937;
-      --color-surface: #1f1d2e;
-      --color-text: #e0def4;
-      --color-text-light: #908caa;
-      --color-primary: #eb6f92;
-      --color-secondary: #f6c177; 
-      --color-accent: #9ccfd8;
-      --color-border: #332e41;
-    }
+    --color-background: #232937;
+    --color-surface: #1f1d2e;
+    --color-text: #e0def4;
+    --color-text-light: #908caa;
+    --color-primary: #eb6f92;
+    --color-secondary: #f6c177; 
+    --color-accent: #9ccfd8;
+    --color-border: #332e41;
   }
-*/.main {
+}
+.main {
     max-width: var(--screen-max);
     margin: 0 auto;
     padding: var(--spacing-m);
@@ -282,9 +282,22 @@ body {
   min-height: 100vh;
 }
 
-.main {
+.sash {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-secondary);
+  color: var(--color-border);
+  padding: var(--spacing-xs) var(--spacing-m);
+  border-radius: var(--radius-l);
+  transform: rotate(30deg);
+  transform-origin: 152px -90px 0px;
+  width: 260px;
+}
+
+.main-container {
   flex: 1;
-  margin: 0 auto;
+  margin: 0 auto 10rem auto;
   max-width: var(--max-width-content);
   width: 90%; /* Keeps it responsive on small screens */
   padding: var(--spacing-m);
@@ -298,6 +311,8 @@ header {
 }
 
 footer {
+  margin: 0 auto;
+  max-width: var(--max-width-content);
   border-top: 1px solid var(--color-border);
   padding-top: var(--spacing-m);
   margin-top: var(--spacing-m);
@@ -315,18 +330,41 @@ a:hover {
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-special);
   margin-bottom: var(--spacing-xs);
   font-weight: var(--weight-bold);
 }
 
-h1, .h1 { font-size: var(--font-size-xxxl); }
-h2, .h2 { font-size: var(--font-size-l); }
-h3, .h3 { font-size: var(--font-size-m); }
-h4, .h4 { font-size: var(--font-size-s); }
-h5, .h5 { font-size: var(--font-size-s); }
-h6, .h6 { font-size: var(--font-size-s); }
+h1,
+.h1 {
+  font-size: var(--font-size-xxxl);
+}
+h2,
+.h2 {
+  font-size: var(--font-size-l);
+}
+h3,
+.h3 {
+  font-size: var(--font-size-m);
+}
+h4,
+.h4 {
+  font-size: var(--font-size-s);
+}
+h5,
+.h5 {
+  font-size: var(--font-size-s);
+}
+h6,
+.h6 {
+  font-size: var(--font-size-s);
+}
 
 /* Paragraphs */
 p {
@@ -338,7 +376,8 @@ p {
 }
 
 /* Buttons */
-button, .button {
+button,
+.button {
   display: inline-block;
   padding: var(--spacing-xs) var(--spacing-m);
   font-size: var(--font-size-s);
@@ -351,7 +390,8 @@ button, .button {
   transition: background 0.2s ease-in-out;
 }
 
-button:hover, .button:hover {
+button:hover,
+.button:hover {
   background: var(--color-primary-hover);
 }
 
@@ -361,7 +401,9 @@ button:disabled {
 }
 
 /* Forms */
-input, textarea, select {
+input,
+textarea,
+select {
   width: 100%;
   padding: var(--spacing-xs);
   font-size: var(--font-size-s);
@@ -369,14 +411,17 @@ input, textarea, select {
   border-radius: var(--radius-m);
 }
 
-input:focus, textarea:focus, select:focus {
+input:focus,
+textarea:focus,
+select:focus {
   outline: none;
   border-color: var(--color-primary);
 }
 
 /* Lists */
-ul, ol {
- /*  padding-left: var(--spacing-l);
+ul,
+ol {
+  /*  padding-left: var(--spacing-l);
   margin-bottom: var(--spacing-m); */
   margin: 0;
   padding: 0;
@@ -388,13 +433,13 @@ ul {
 }
 
 /* TODO: see if this solution is good enough or I need to work with classes*/
-main ul li:before {
+.dash-list li:before {
   content: '\2014';
   position: absolute;
   margin-left: -30px;
 }
 
-main ul li {
+.dash-list li {
   margin-left: 34px;
 }
 
@@ -405,7 +450,8 @@ table {
   margin-bottom: var(--spacing-m);
 }
 
-th, td {
+th,
+td {
   padding: var(--spacing-s);
   border: 1px solid var(--color-border);
 }

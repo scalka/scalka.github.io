@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Work on Flowing fragments</title>
+    <link>http://localhost:1313/work/</link>
+    <description>Recent content in Work on Flowing fragments</description>
+    <generator>Hugo</generator>
+    <language>en-ie</language>
+    <lastBuildDate>Fri, 21 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/work/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Projects</title>
+      <link>http://localhost:1313/work/projects/</link>
+      <pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/work/projects/</guid>
+      <description>&lt;p&gt;COMING SOON&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Projects archive</title>
+      <link>http://localhost:1313/work/projects-archive/</link>
+      <pubDate>Fri, 21 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/work/projects-archive/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;http://localhost:1313/css/projects.4e44abb959bfebce4195c38a55e4fa2b8457d5ba5aa8ad4af0a81bf76ff0f643.css&#34;&gt;&#xA;&#xA;&lt;section class=&#34;projects-section&#34;&gt;&#xA;   &lt;article class=&#34;projects-archive&#34;&gt;&#xA;    &lt;ul class=&#34;project-list&#34;&gt;&#xA;      &#xA;        &#xA;          &lt;li class=&#34;project-item&#34;&gt;&#xA;  &lt;div class=&#34;project-image&#34;&gt;&#xA;    &lt;img class=&#34;img-responsive&#34; src=&#34;http://localhost:1313/images/projects-archive/recipy1.jpg&#34; alt=&#34;ReciPy - Recipe Recommender System&#34; /&gt;&#xA;  &lt;/div&gt;&#xA;  &lt;div&gt;&#xA;    &lt;span class=&#34;h-sub small&#34;&#xA;      &gt;Graduation Project - &lt;time datetime=&#34;2018&#34;&gt;2018&lt;/time&gt;&lt;/span&#xA;    &gt;&#xA;&#xA;    &#xA;    &lt;a href=&#34;http://gradshow.iadt.ie/student/N00146095.html&#34;&gt;&#xA;      &lt;h3 class=&#34;project-title project-link&#34;&gt;ReciPy - Recipe Recommender System&lt;/h3&gt;&#xA;    &lt;/a&gt;&#xA;    &#xA;  &lt;/div&gt;&#xA;&#xA;  &lt;div class=&#34;project-content&#34;&gt;&#xA;    &lt;p&gt;ReciPy is a recipe recommendation system developed as a part of my Graduation Project. The goal of this project was to utilise machine learning techniques to develop a recommender system which can suggest new recipes based on user&amp;#39;s historical behaviour. Besides development, my work included background research, concept development and project management.&lt;/p&gt;&#xA;&#xA;    &#xA;    &lt;h3&gt;Additional Info&lt;/h3&gt;&#xA;    &lt;p&gt;The user can create an account, after login the user can look for cooking inspiration and recipes. Each recipe can be rated. The rating system is essential for the machine learning model to learn about user’s preferences. The application is designed for users who look for recipes online on a daily basis.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
