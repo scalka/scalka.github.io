@@ -23,11 +23,12 @@ body {
 }
 
 .sash {
+  z-index: 10;
   position: fixed;
   bottom: 0;
   left: 0;
   background-color: var(--color-secondary);
-  color: var(--color-border);
+  color: var(--color-secondary-text);
   padding: var(--spacing-xs) var(--spacing-m);
   border-radius: var(--radius-l);
   transform: rotate(30deg);
