@@ -1,3 +1,9 @@
+# Flowing Fragments
+
+This website is my digital garden where I intend to publish all my fleeting thoughts I collect every day. I've been taking notes -> bullet journaling -> zettlekasten-ing in Obsidian for years. I had many moments when I wanted to share those notes with others and now is the time.
+
+## How to run this project
+
 - `hugo` - publish
 - `hugo server` - develop and test
 - `hugo server --buildDrafts`
