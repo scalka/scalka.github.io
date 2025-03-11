@@ -1,10 +1,7 @@
 ---
 date: 2025-03-11T07:55:35+01:00
-draft: true
+draft: false
 title: Jesmonite
-images:
-  - '/images/notes/jesmonite-example.jpg'
-  - '/images/notes/jesmonite-result.jpg'
 ---
 A few weeks ago, I was looking for an incense holder and found one I really liked. After ordering it, my husband took a look and asked if it was made of Jesmonite. He told me about a YouTuber he follows who creates amazing things with this material. That got me curious, and I immediately wanted to try it myself.
 
