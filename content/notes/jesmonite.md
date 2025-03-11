@@ -15,7 +15,7 @@ Before the drying process begins, tap the mold on the sides to get rid of air bu
 
 Once it’s firm, remove it from the mold, admire your creation, and let it rest for the next 24 hours.
 
-
+## Color and marbling combinations + our creations
 {{< image-gallery-markdown >}}
   {{< image-markdown src="images/notes/jesmonite-example.jpg" alt="Examples Jesmonite color combinations and marbling effect" width="600x" >}}
   {{< image-markdown src="images/notes/jesmonite-result.jpeg" alt="Eight finished Jesmonite creations, each showing our unique personalities" width="600x" >}}

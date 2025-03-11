@@ -1,22 +1,21 @@
 {{ $styles := resources.Get "css/shortcodes/images.css" | resources.Fingerprint }}
 <link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+
 {{ $src := .Get "src" }}
 {{ $alt := .Get "alt" | default "Image" }}
 {{ $class := .Get "class" | default "responsive-image" }}
-{{ $width := .Get "width" | default "1000x" }}
+{{ $width := .Get "width" | default "2000x" }}  <!-- Increased resolution for better quality -->
 
 {{ $image := resources.Get $src }}
 
 {{ if $image }}
-  {{ $format := cond (eq $image.MediaType.SubType "png") "png" "webp" }}
-  
-  {{ with $image.Exif }}
-    {{ if .Tags.Orientation }}
-      {{ $image = $image.Process "r0" }} <!-- Reset rotation -->
-    {{ end }}
+  {{ $format := $image.MediaType.SubType }}  <!-- Preserve original format -->
+  {{ if or (eq $format "jpeg") (eq $format "jpg") }}  
+    {{ $format = "jpg" }}  <!-- Ensure proper format naming -->
   {{ end }}
+
+  {{ $processed := $image.Process (printf "resize %s %s q100 Lanczos" $width $format) }}
   
-  {{ $processed := $image.Process (printf "resize %s %s q95 Lanczos" $width $format) }}
   <img src="{{ $processed.RelPermalink }}" width="{{ $processed.Width }}" height="{{ $processed.Height }}" alt="{{ $alt }}" class="{{ $class }}">
 {{ else }}
   <img src="{{ $src }}" alt="{{ $alt }}" class="{{ $class }}">
