@@ -2,7 +2,6 @@
 date: 2024-09-19T04:14:54-08:00
 draft: false
 title: Output
-weight: 10
 ---
 
 I'm struggling to find focus for myself at work. In the recent years, the ratio of my content consumption is 9 to 10. I am reading, watching, listening in order to find inspiration for my creative or personal projects. What I noticed that it never brings me any closer to creating any of those creative things.

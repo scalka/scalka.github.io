@@ -151,3 +151,12 @@ Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and ot
 ## Linking notes
 
 To link another note use [See my Output post]({{< relref "notes/output.md" >}}) for using relative URLs. You can also link to specifiv URL [See my Output post](/notes/output/).
+
+## Images
+
+{{< image-gallery-markdown class="content-gallery" >}}
+  {{< image-markdown src="images/notes/jesmonite-example.jpg" alt="Examples Jesmonite color combinations and marbling effect" width="600x" >}}
+  {{< image-markdown src="images/notes/jesmonite-result.jpeg" alt="Eight finished Jesmonite creations, each showing our unique personalities" width="600x" >}}
+{{< /image-gallery-markdown >}}
+
+{{< image-markdown src="images/notes/jesmonite-example.jpg" alt="Examples Jesmonite color combinations and marbling effect" class="featured-image" >}}

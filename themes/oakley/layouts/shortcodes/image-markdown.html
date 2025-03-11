@@ -1,0 +1,23 @@
+{{ $styles := resources.Get "css/shortcodes/images.css" | resources.Fingerprint }}
+<link rel="stylesheet" href="{{ $styles.RelPermalink }}" />
+{{ $src := .Get "src" }}
+{{ $alt := .Get "alt" | default "Image" }}
+{{ $class := .Get "class" | default "responsive-image" }}
+{{ $width := .Get "width" | default "1000x" }}
+
+{{ $image := resources.Get $src }}
+
+{{ if $image }}
+  {{ $format := cond (eq $image.MediaType.SubType "png") "png" "webp" }}
+  
+  {{ with $image.Exif }}
+    {{ if .Tags.Orientation }}
+      {{ $image = $image.Process "r0" }} <!-- Reset rotation -->
+    {{ end }}
+  {{ end }}
+  
+  {{ $processed := $image.Process (printf "resize %s %s q95 Lanczos" $width $format) }}
+  <img src="{{ $processed.RelPermalink }}" width="{{ $processed.Width }}" height="{{ $processed.Height }}" alt="{{ $alt }}" class="{{ $class }}">
+{{ else }}
+  <img src="{{ $src }}" alt="{{ $alt }}" class="{{ $class }}">
+{{ end }}
