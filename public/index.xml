@@ -6,8 +6,29 @@
     <description>Recent content in Home on Flowing fragments</description>
     <generator>Hugo</generator>
     <language>en-ie</language>
-    <lastBuildDate>Tue, 11 Mar 2025 07:55:35 +0100</lastBuildDate>
+    <lastBuildDate>Fri, 21 Mar 2025 11:13:20 +0100</lastBuildDate>
     <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Digital Garden</title>
+      <link>http://localhost:1313/notes/digital-garden/</link>
+      <pubDate>Fri, 21 Mar 2025 11:13:20 +0100</pubDate>
+      <guid>http://localhost:1313/notes/digital-garden/</guid>
+      <description>&lt;p&gt;It’s a digital place, full of ideas, sharing and slow cultivation.&lt;/p&gt;&#xA;&lt;p&gt;A blog, but private and personal.&#xA;A notebook, but public and open.&#xA;A thought, but finally put on digital paper.&lt;/p&gt;&#xA;&lt;p&gt;It’s a space for learning in public.&#xA;A place to follow curiosity.&#xA;A place to get to know me.&lt;/p&gt;&#xA;&lt;p&gt;It’s a collection of &lt;a href=&#34;http://localhost:1313/notes/&#34;&gt;Flowing Fragments&lt;/a&gt;: unfinished, unpolished and always in motion.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Kintsugi</title>
+      <link>http://localhost:1313/notes/kintsugi/</link>
+      <pubDate>Fri, 21 Mar 2025 10:52:00 +0100</pubDate>
+      <guid>http://localhost:1313/notes/kintsugi/</guid>
+      <description>&lt;p&gt;&lt;!-- raw HTML omitted --&gt;&lt;em&gt;Kintsugi&lt;/em&gt;&lt;!-- raw HTML omitted --&gt; is the traditional Japanese art of repairing broken pottery. Rather than hiding or discarding what’s broken, the artist highlights the cracks with lacquer mixed with gold, silver, or platinum, highlighting the pottery’s history. The beauty lies in imperfection, the passage of time and impermanence. It’s a metaphor for embracing change and healing from accidental breaks, showing how transformation can lead to something even more beautiful.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Stuckness and fonts</title>
+      <link>http://localhost:1313/notes/stuckness-and-fonts/</link>
+      <pubDate>Wed, 19 Mar 2025 08:44:55 +0100</pubDate>
+      <guid>http://localhost:1313/notes/stuckness-and-fonts/</guid>
+      <description>&lt;p&gt;Sometimes, progress is delayed not by major roadblocks, but by small moments of hesitation. These small stumbling blocks don’t seem significant in isolation, yet they quietly disrupt progress. An example could be a personal website project: the notes are written, the technical skills are there and the design foundation exists. Still, seemingly minor decisions, like whether to &lt;a href=&#34;http://localhost:1313/notes/digital-garden/&#34;&gt;study in public&lt;/a&gt; or commit to a specific direction, can create unexpected pauses. Even something as specific as choosing typography can become a stopping point, overshadowing broader goals and delaying what could otherwise be a flowing progress.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Jesmonite</title>
       <link>http://localhost:1313/notes/jesmonite/</link>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Dosis:wght@200..800&family=Figtree:ital,wght@0,300..900;1,300..900&family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
 
 :root {
   /* Screen sizes */
@@ -31,17 +31,20 @@
   --radius-round: 50%;
 
   /* Typography */
-  --font-fallback: helvetica, arial, sans-serif;
-  --font-normal: 'Crimson Text', var(--font-fallback);
-  --font-special: 'Figtree', var(--font-fallback);
+  --font-fallback-sans: helvetica, arial, sans-serif;
+  --font-fallback-serif: georgia, times, serif;
+  --font-normal: 'Inclusive Sans', var(--font-fallback-sans);
+  --font-special: 'Inclusive Sans', var(--font-fallback-sans);
 
   --weight-normal: 400;
+  --weight-headings: 500;
   --weight-medium: 600;
   --weight-bold: 700;
 
-  --line-height-s: 1.5rem;
-  --line-height-m: 1.75rem;
-  --line-height-l: 2rem;
+  --line-height-xs: 1.3;
+  --line-height-s: 1.5;
+  --line-height-m: 1.75;
+  --line-height-l: 2;
 
   --font-size-xxxxs: 0.5rem; /* 8px */
   --font-size-xxxs: 0.625rem; /* 10px */

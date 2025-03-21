@@ -8,8 +8,9 @@ body {
   min-height: 100vh; /* Ensures full height */
   background-color: var(--color-background);
   font-family: var(--font-normal);
+  font-weight: var(--weight-normal);
   font-size: var(--font-size-s);
-  line-height: var(--line-height-m);
+  line-height: var(--line-height-s);
   color: var(--color-text);
   background: var(--color-background);
   margin: var(--spacing-m);
@@ -78,33 +79,45 @@ h4,
 h5,
 h6 {
   font-family: var(--font-special);
-  margin-bottom: var(--spacing-xs);
-  font-weight: var(--weight-bold);
+  font-weight: var(--weight-headings);
 }
 
 h1,
 .h1 {
+  line-height: var(--line-height-l);
   font-size: var(--font-size-xxxl);
+  font-weight: var(--weight-headings);
+  font-variation-settings: 'wdth' 115;
 }
 h2,
 .h2 {
+  line-height: var(--line-height-m);
   font-size: var(--font-size-l);
+  font-weight: var(--weight-headings);
 }
 h3,
 .h3 {
+  line-height: var(--line-height-xs);
   font-size: var(--font-size-m);
+  font-weight: var(--weight-headings);
 }
 h4,
 .h4 {
+  line-height: var(--line-height-s);
   font-size: var(--font-size-s);
+  font-weight: var(--weight-headings);
 }
 h5,
 .h5 {
+  line-height: var(--line-height-s);
   font-size: var(--font-size-s);
+  font-weight: var(--weight-headings);
 }
 h6,
 .h6 {
+  line-height: var(--line-height-s);
   font-size: var(--font-size-s);
+  font-weight: var(--weight-headings);
 }
 
 /* Paragraphs */
