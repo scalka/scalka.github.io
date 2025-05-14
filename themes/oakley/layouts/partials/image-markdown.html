@@ -1,0 +1,16 @@
+{{ $src := .src }} {{ $alt := cond (isset . "alt") .alt "Image" }} {{ $class := cond (isset .
+"class") .class "responsive-image" }} {{ $width := cond (isset . "width") .width "2000x" }} {{
+$image := resources.Get $src }} {{ if $image }} {{ $format := $image.MediaType.SubType }} {{ if or
+(eq $format "jpeg") (eq $format "jpg") }} {{ $format = "jpg" }} {{ end }} {{ $processed :=
+$image.Process (printf "resize %s %s q100 Lanczos" $width $format) }}
+<img
+  src="{{ $processed.RelPermalink }}"
+  width="{{ $processed.Width }}"
+  height="{{ $processed.Height }}"
+  alt="{{ $alt }}"
+  class="{{ $class }}"
+  loading="lazy"
+/>
+{{ else }}
+<img src="{{ $src }}" alt="{{ $alt }}" class="{{ $class }}" />
+{{ end }}

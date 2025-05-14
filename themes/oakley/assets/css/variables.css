@@ -73,7 +73,7 @@
 }
 
 /* Dark Theme (Rosé Pine Moon) */
-
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: #232937;
@@ -86,3 +86,4 @@
     --color-border: #332e41;
   }
 }
+ */

@@ -1,3 +1,35 @@
+
 <div class="{{ .Get "class" | default "gallery" }}">
-  {{ .Inner }}
+  {{ if .Inner }}
+    {{ .Inner }}
+  {{ else }}
+    {{ $dir := .Get "dir" }}
+    {{ $prefix := .Get "prefix" | default "" }}
+    {{ $suffix := .Get "suffix" | default ".jpeg" }}
+    {{ $start := .Get "start" | default "1" | int }}
+    {{ $end := .Get "end" | default "1" | int }}
+    {{ $alt := .Get "alt" | default "Image" }}
+    {{ $width := .Get "width" | default "600" }}
+    {{ range seq $start $end }}
+      <img src="/{{ $dir }}/{{ $prefix }}{{ . }}{{ $suffix }}" alt="{{ $alt }} {{ . }}" width="{{ $width }}">
+    {{ end }}
+  {{ end }}
+</div>
+<div class="{{ .Get "class" | default "fun-gallery" }}">
+  {{ $dir := .Get "dir" }}
+  {{ $prefix := .Get "prefix" | default "" }}
+  {{ $suffix := .Get "suffix" | default ".jpeg" }}
+  {{ $start := .Get "start" | default "1" | int }}
+  {{ $end := .Get "end" | default "1" | int }}
+  {{ $alt := .Get "alt" | default "Image" }}
+  {{ $width := .Get "width" | default "600x" }}
+
+  {{ range seq $start $end }}
+    {{ partial "image-markdown.html" (dict
+      "src" (printf "%s/%s%d%s" $dir $prefix . $suffix)
+      "alt" (printf "%s %d" $alt .)
+      "width" $width
+      "class" "gallery-image"
+    ) }}
+  {{ end }}
 </div>
