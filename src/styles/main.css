@@ -51,6 +51,9 @@ footer {
   border-top: 1px solid var(--color-border);
   padding-top: var(--spacing-m);
   margin-top: var(--spacing-m);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-l);
 }
 
 /* Links */

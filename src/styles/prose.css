@@ -3,6 +3,11 @@ Style markdown content by targeting .prose class added to the main content conta
 */
 
 /* Lists */
+.prose ol,
+.prose ul {
+  margin-block-end: var(--spacing-m);
+}
+
 .prose ul li:before {
   content: "\2014";
   position: absolute;
