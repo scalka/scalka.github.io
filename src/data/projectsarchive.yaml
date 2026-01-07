@@ -1,0 +1,161 @@
+projects:
+  - title: 'ReciPy - Recipe Recommender System'
+    subtitle: 'Graduation Project'
+    year: '2018'
+    image: '/images/projects-archive/recipy1.jpg'
+    link: 'http://gradshow.iadt.ie/student/N00146095.html'
+    description:
+      "ReciPy is a recipe recommendation system developed as a part of my Graduation Project. The goal of this
+      project was to utilise machine learning techniques to develop a recommender system which can suggest new
+      recipes based on user's historical behaviour. Besides development, my work included background research,
+      concept development and project management."
+    addition:
+      'The user can create an account, after login the user can look for cooking inspiration and recipes. Each
+      recipe can be rated. The rating system is essential for the machine learning model to learn about user’s
+      preferences. The application is designed for users who look for recipes online on a daily basis.'
+    tags:
+      - { name: 'Python', category: 'lang' }
+      - { name: 'Flask', category: 'frame' }
+      - { name: 'Machine Learning', category: 'skill' }
+      - { name: 'Scikit-learn', category: 'frame' }
+      - { name: 'Recommender System', category: 'skill' }
+      - { name: 'Pandas', category: 'frame' }
+      - { name: 'Jinja', category: 'frame' }
+      - { name: 'NumPy', category: 'frame' }
+      - { name: 'HTML5', category: 'lang' }
+      - { name: 'Bootstrap', category: 'frame' }
+
+  - title: 'RtR - Travel Planner'
+    subtitle: 'Third Year Graduation Project'
+    year: '2017'
+    image: 'http://res.cloudinary.com/dr6bmrkow/image/upload/v1513007582/N00146095_ProjectImage_1-2_fxtcdf.jpg'
+    link: 'http://showcase.iadt.ie/assets/MM3/Poster/N00146095_Poster.pdf'
+    description:
+      'Rtr was developed as a part of the third year of B.Sc. in Creative Computing at the IADT. The primary
+      goal of this project was to design and implement a web application. This project consists of a number of
+      interim progress reports, presentations, source code of the application and a dissertation.'
+    addition:
+      'Rtr is a travelling planner which the user can use to prepare for a trip. This application lets the
+      users search for interesting sights including points of interest on the way to their destination.
+      Personalising the route according to the user’s preferences is possible. Moreover, it provides the user
+      with sufficient information about the points of interest on the way to his destination. This information
+      includes a short description, rating from other users of the system and reviews. The application then
+      plots the exact route from point A to B including the selected stops and provide real-time navigation.'
+    tags:
+      - { name: 'JavaScript', category: 'lang' }
+      - { name: 'HTML', category: 'frame' }
+      - { name: 'CSS3', category: 'frame' }
+      - { name: 'SASS', category: 'frame' }
+      - { name: 'Google Maps API', category: 'frame' }
+
+  - title: 'Multiplayer Flying Circles'
+    subtitle: 'Advanced JavaScript Module'
+    year: '2017'
+    image: 'http://res.cloudinary.com/dr6bmrkow/image/upload/v1519378633/circles_znzbgj.png'
+    link: 'https://github.com/scalka/mongo-node-express-game'
+    description:
+      'Flying Circle is a game developed as a part of the Advanced JavaScript module. This project is a
+      multiplayer game built with pure JavaScript (ES6). The client-side was built with ES6 and the P5.js
+      library together with HTML and CSS. The server-side was built with Express server running on Node.js,
+      Socket.io as a web socket and Mongo database. The game runs in a browser.'
+    addition:
+      'The aim of the game is to eat all the opponents’ circles on the canvas. The trick is to eat only smaller
+      circles than the player. The player can move on the screen with keyboard arrows.'
+    tags:
+      - { name: 'JavaScript ES6', category: 'lang' }
+      - { name: 'Express', category: 'frame' }
+      - { name: 'Node.js', category: 'frame' }
+      - { name: 'Socket.io', category: 'frame' }
+      - { name: 'MongoDB', category: 'frame' }
+      - { name: 'CSS', category: 'lang' }
+      - { name: 'HTML', category: 'lang' }
+      - { name: 'P5.js', category: 'frame' }
+
+  - title: 'FestApp - Mobile Application for Android'
+    subtitle: 'Mobile Application Development'
+    year: '2016'
+    image: 'http://res.cloudinary.com/dr6bmrkow/image/upload/v1466845666/festapp1_hrj7qx.png'
+    link: 'https://github.com/scalka/FestAppTabs'
+    description:
+      'FestApp was designed and developed as a mobile application for Android. The main goal was to implement
+      the content I learned on my classes at HdM in Stuttgart: UI Design, UX Design class, Mobile Content and
+      Mobile App Development. This project was conducted in two stages. The first one was familiarization with
+      design principles, prototyping tools and evaluation process. The second stage was to develop an
+      application which I designed.'
+    addition:
+      'FestApp helps user to search for music festivals around Europe, buy tickets and keep track of events.
+      The application is location-based so it is easy to find events nearby. To make usage easier, all the
+      festivals are divided into four music categories: electro, hip-hop, reggae and rock.'
+    tags:
+      - { name: 'Java', category: 'lang' }
+      - { name: 'Android', category: 'frame' }
+      - { name: 'SQL Database', category: 'frame' }
+      - { name: 'XML', category: 'frame' }
+      - { name: 'Proto.io', category: 'frame' }
+      - { name: 'Photoshop', category: 'lang' }
+
+  - title: 'TravelTune - UI Functional Prototype Design'
+    subtitle: 'User Experience Design'
+    year: '2016'
+    image: 'http://res.cloudinary.com/dr6bmrkow/image/upload/v1475246896/traveltune_ywwiii.png'
+    link: ''
+    description: "TravelTune is a location-based music app, based on Spotify's music preferences. Travellers and music lovers are able to see the events happening around them when travelling. It has a map incorporated, calendar and pinboard where small ads could be left. This application was designed and evaluated as part of the UI Design module with a group of four students."
+    addition: 'From the sketch scribbles, through wireframes, creating personas and low fidelity prototypes, we created and evaluated a functional prototype with Proto.io for our application.'
+    tags:
+      - { name: 'UI Design', category: 'lang' }
+      - { name: 'UX Design', category: 'frame' }
+      - { name: 'Prototyping', category: 'frame' }
+      - { name: 'Proto.io', category: 'frame' }
+      - { name: 'Eye tracking analysis', category: 'frame' }
+
+  - title: 'Lapica - Mobile Web Application'
+    subtitle: 'Mobile Application Development'
+    year: '2017'
+    image: 'http://res.cloudinary.com/dr6bmrkow/image/upload/v1475248037/lapica_m0vfbj.png'
+    description: 'Lapica is an app which helps users make better purchase decisions. The main concept is to let user send the picture of the item he wants to buy to friends, notify them and receive a feedback whether they think user should buy it or not. I developed it with two other students. My role in the project focused on Front-end, using Ionic framework with AngularJS and Sass.'
+    tags:
+      - { name: 'JavaScript', category: 'lang' }
+      - { name: 'AngularJS', category: 'frame' }
+      - { name: 'CSS3', category: 'frame' }
+      - { name: 'SASS', category: 'frame' }
+      - { name: 'HTML5', category: 'frame' }
+
+  - title: 'Azur - Joomla Website'
+    subtitle: 'CMS'
+    year: '2018'
+    image: '/images/projects-archive/azur.png'
+    link: 'https://azur.ie/'
+    description: 'Designed and developed a responsive e-commerce website for a boutique, gathering requirements, conducting competitor analysis, and implementing a payment system.'
+    addition:
+    tags:
+      - { name: 'Joomla', category: 'lang' }
+      - { name: 'CMS', category: 'frame' }
+      - { name: 'CSS3', category: 'frame' }
+      - { name: 'HTML5', category: 'frame' }
+      - { name: 'HTTPS', category: 'frame' }
+
+  - title: 'DisAbuse - Drupal Website'
+    subtitle: 'Drupal website and React game'
+    year: '2018'
+    image: '/images/projects-archive/disabuse.png'
+    link: 'http://www.disabuse.eu/home'
+    description: 'Built an EU-wide CMS platform with Drupal for sharing multimedia resources about cybersafety and cyberbullying. Developed a React game based on an Axure prototype.'
+    tags:
+      - { name: 'Drupal', category: 'lang' }
+      - { name: 'CMS', category: 'frame' }
+      - { name: 'JavaScript', category: 'frame' }
+      - { name: 'React', category: 'frame' }
+
+  - title: 'PinBoard - React Web App'
+    subtitle: 'React Web App'
+    year: '2017'
+    image: '/images/projects-archive/pinboard.png'
+    link: 'https://github.com/scalka/react-express'
+    description: 'PinBoard is a React-based application that allows users to search and save Etsy.com items to collections. It features an Express server, MongoDB backend, and is deployed to Heroku.'
+    tags:
+      - { name: 'JavaScript', category: 'frame' }
+      - { name: 'React', category: 'lang' }
+      - { name: 'Express', category: 'frame' }
+      - { name: 'Node.js', category: 'frame' }
+      - { name: 'MongoDB', category: 'frame' }
+      - { name: 'Bulma.io', category: 'frame' }
