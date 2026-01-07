@@ -1,0 +1,110 @@
+---
+import Base from "../../layouts/Base.astro";
+import { site } from "../../data/site";
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+
+const notes = await getCollection("notes");
+const indexEntry = notes.find((entry) => entry.slug === "index");
+const pageTitle = indexEntry?.data.title ?? "My photo gallery";
+
+// ✅ Glob all images under src/assets/images/photos/**
+// Adjust extensions if needed
+const photos = import.meta.glob(
+  "../../assets/images/photos/**/*.{jpg,jpeg,png,webp,avif,gif,JPG,JPEG,PNG,WEBP,AVIF,GIF}",
+  { eager: true }
+);
+
+// photos shape: { "path/to/file.jpg": module }
+// module default is ImageMetadata for supported formats
+const entries = Object.entries(photos)
+  .map(([path, mod]) => {
+    const src = (mod as any).default; // ImageMetadata
+    return { path, src };
+  })
+  .filter((x) => x.src); // safety
+
+// Group by the immediate folder under /photos/ (e.g. "2025", "2024")
+function getGroupName(path: string) {
+  // Example path: "../../assets/images/photos/2025/trip/a.jpg"
+  const parts = path.split("/images/photos/")[1]?.split("/") ?? [];
+  return parts[0] ?? "Photos";
+}
+
+function getFileName(path: string) {
+  return path.split("/").pop() ?? "photo";
+}
+
+const groups = new Map<string, { path: string; src: any }[]>();
+for (const item of entries) {
+  const group = getGroupName(item.path);
+  if (!groups.has(group)) groups.set(group, []);
+  groups.get(group)!.push(item);
+}
+
+// Optional: sort groups (newest first if they are years)
+const sortedGroupNames = Array.from(groups.keys()).sort((a, b) =>
+  b.localeCompare(a)
+);
+
+// Optional: sort photos inside each group by filename
+for (const name of sortedGroupNames) {
+  groups
+    .get(name)!
+    .sort((a, b) => getFileName(a.path).localeCompare(getFileName(b.path)));
+}
+---
+
+<Base
+  title={pageTitle}
+  siteTitle={site.title}
+  lang={site.language}
+  footerText={site.footerText}
+  socialLinks={site.hcard.social}
+>
+  <div class="prose">
+    <h1>{pageTitle}</h1>
+
+    {
+      sortedGroupNames.map((groupName) => (
+        <section class="photo-group">
+          <h2>{groupName}</h2>
+
+          <div class="photo-gallery-grid">
+            {groups.get(groupName)!.map(({ path, src }) => (
+              <Image
+                class="gallery-photo"
+                src={src}
+                alt={getFileName(path)}
+                loading="lazy"
+                widths={[480, 800, 1200, 1600]}
+                sizes="(max-width: 768px) 100vw, 360px"
+              />
+            ))}
+          </div>
+        </section>
+      ))
+    }
+  </div>
+</Base>
+<style>
+  .photo-group {
+    margin-block: 2rem;
+  }
+
+  .photo-gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 0.75rem;
+  }
+
+  .gallery-photo {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-m);
+  }
+
+  /* If you want consistent tiles: */
+  /* .gallery-photo { aspect-ratio: 4 / 3; object-fit: cover; } */
+</style>

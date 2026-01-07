@@ -8,14 +8,18 @@
 }
 
 /* Responsive gallery layout */
-.gallery {
+
+.gallery,
+.photo-gallery-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: var(--spacing-s);
 }
 
-.gallery img {
+
+.gallery img,
+.photo-gallery-grid img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
