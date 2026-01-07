@@ -1,6 +1,0 @@
-{{ define "main" }}
-{{ $content := .Content | replaceRE "<ul>" "<ul class='dash-list'>" }}
-<div class="main-container">
-  {{ $content | safeHTML }}
-</div>
-{{ end }}

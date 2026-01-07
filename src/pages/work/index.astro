@@ -1,0 +1,28 @@
+---
+import Base from "../../layouts/Base.astro";
+import { site } from "../../data/site";
+import { getCollection } from "astro:content";
+
+const workEntries = await getCollection("work");
+const indexEntry = workEntries.find((entry) => entry.slug === "index");
+
+if (!indexEntry) {
+  throw new Error("Missing work index content.");
+}
+
+const { Content } = await indexEntry.render();
+const pageTitle = indexEntry.data.title ?? "Work";
+---
+
+<Base
+  title={pageTitle}
+  siteTitle={site.title}
+  lang={site.language}
+  footerText={site.footerText}
+  socialLinks={site.hcard.social}
+>
+  <div class="main-container prose">
+    <h1>{pageTitle}</h1>
+    <Content />
+  </div>
+</Base>

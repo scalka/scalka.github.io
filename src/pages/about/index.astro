@@ -1,0 +1,22 @@
+---
+import Base from "../../layouts/Base.astro";
+import { site } from "../../data/site";
+// Import both the content component and frontmatter from the markdown file
+import AboutContent, {
+  frontmatter as aboutFrontmatter,
+} from "../../content/pages/about.md";
+
+const pageTitle = aboutFrontmatter?.title ?? "About";
+---
+
+<Base
+  title={pageTitle}
+  siteTitle={site.title}
+  lang={site.language}
+  footerText={site.footerText}
+  socialLinks={site.hcard.social}
+>
+  <div class="main-container prose">
+    <AboutContent />
+  </div>
+</Base>

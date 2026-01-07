@@ -1,9 +1,0 @@
-<ul class="links-list">
-  {{- range .Site.Params.Hcard.Social -}}
-    <li>
-        <a class="u-url" rel="me" aria-label="{{ .platform }}" href="{{ (printf .url_pattern .identity) }}">
-            <i class="fa-brands fa-{{ .platform }}"></i>
-        </a>
-    </li>
-  {{ end -}}
-</ul>

@@ -1,8 +1,0 @@
-{
-  "compilerOptions": {
-    "baseUrl": "https://flowingfragments.com",
-    "paths": {
-      "*": ["../themes/hugo-theme-monochrome/assets/*"]
-    }
-  }
-}

@@ -1,0 +1,21 @@
+---
+import { site } from "../data/site";
+import HomeContent, {
+  frontmatter as homeFrontmatter,
+} from "../content/pages/home.mdx";
+import Base from "../layouts/Base.astro";
+
+const pageTitle = homeFrontmatter?.title ?? site.title;
+---
+
+<Base
+  title={pageTitle}
+  siteTitle={site.title}
+  lang={site.language}
+  footerText={site.footerText}
+  socialLinks={site.hcard.social}
+>
+  <div class="main-container prose">
+    <HomeContent />
+  </div>
+</Base>

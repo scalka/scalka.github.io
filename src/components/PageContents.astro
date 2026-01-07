@@ -1,0 +1,83 @@
+---
+type TocItem = {
+  id: string;
+  label: string;
+};
+
+type PageContentsProps = {
+  title?: string;
+  items: TocItem[];
+  className?: string;
+};
+
+const {
+  title = "Page contents",
+  items,
+  className = "",
+} = Astro.props as PageContentsProps;
+---
+
+<nav class={`page-contents ${className}`} aria-label={title}>
+  <h2 class="page-contents-title">{title}</h2>
+  <ol>
+    {
+      items.map((item) => (
+        <li>
+          <a href={`#${item.id}`}>{item.label}</a>
+        </li>
+      ))
+    }
+  </ol>
+</nav>
+
+<style>
+  .page-contents {
+    position: sticky;
+    top: var(--spacing-l);
+    align-self: start;
+    padding: var(--spacing-m);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-m);
+    background: var(--background);
+  }
+
+  .page-contents-title {
+    margin-top: 0;
+    margin-bottom: var(--spacing-s);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+  }
+
+  .page-contents ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: grid;
+    gap: 0.35rem;
+  }
+
+  .page-contents a {
+    text-decoration: none;
+  }
+
+  .page-contents a:hover,
+  .page-contents a:focus-visible {
+    text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    .page-contents {
+      position: static;
+      padding: 0;
+      border: none;
+      background: transparent;
+    }
+
+    .page-contents ol {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem 1rem;
+    }
+  }
+</style>

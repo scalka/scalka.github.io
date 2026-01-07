@@ -1,0 +1,109 @@
+---
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import "../styles/main.css";
+
+type SocialLink = {
+  platform: string;
+  identity?: string;
+  urlPattern?: string;
+  url?: string;
+};
+
+type BaseProps = {
+  title?: string;
+  siteTitle: string;
+  lang?: string;
+  dir?: string;
+  footerText?: string;
+  socialLinks?: SocialLink[];
+  contentMaxWidth?: string;
+};
+
+const {
+  title,
+  siteTitle,
+  lang = "en",
+  dir = "ltr",
+  footerText,
+  socialLinks = [],
+  contentMaxWidth,
+} = Astro.props as BaseProps;
+
+const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+const hasAside = Astro.slots.has("aside");
+---
+
+<!doctype html>
+<html lang={lang} dir={dir}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <meta
+      name="keywords"
+      content="digital garden, portfolio, frontend development, ux engineer"
+    />
+    <meta name="author" content="Sylwia Całka-Verhulst" />
+    <meta name="robots" content="index, follow" />
+    <title>{pageTitle}</title>
+    <slot name="head" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <Header />
+      </header>
+      <main>
+        <div class="sash-wrapper">
+          <div class="sash flex flex-justify-center">
+            <span>WORK IN PROGRESS</span>
+          </div>
+        </div>
+        <div class:list={{ "page-layout": true, "has-aside": hasAside }}>
+          {
+            hasAside && (
+              <aside class="page-aside">
+                <slot name="aside" />
+              </aside>
+            )
+          }
+          <slot />
+        </div>
+      </main>
+    </div>
+    <Footer footerText={footerText} socialLinks={socialLinks} />
+  </body>
+</html>
+
+<style>
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .sash {
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-text);
+    padding: var(--spacing-xs) var(--spacing-m);
+    border-radius: var(--radius-l);
+    transform: rotate(30deg);
+    transform-origin: 152px -90px 0px;
+    width: 260px;
+  }
+
+  .page-layout.has-aside {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .page-layout.has-aside {
+      grid-template-columns: auto 1fr auto;
+    }
+  }
+</style>

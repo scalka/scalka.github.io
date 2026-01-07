@@ -1,25 +1,16 @@
 {
-  "name": "flowingfragments",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "flowing-fragments",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "precommit": "lint-staged"
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "lint-staged": {
-    "*.md": [
-      "prettier --parser markdown --write",
-      "git add"
-    ]
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "husky": "^9.1.7",
-    "lint-staged": "^15.4.3",
-    "prettier": "^3.5.3",
-    "prettier-plugin-go-template": "^0.0.15",
-    "prettier-plugin-toml": "^2.0.2"
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.13",
+    "@astrojs/sitemap": "^3.6.0",
+    "astro": "^5.16.6"
   }
 }

@@ -1,0 +1,32 @@
+---
+import { mainMenu } from "../data/menu";
+
+const { currentPath } = Astro.props;
+const pathname = currentPath ?? Astro.url.pathname;
+
+const isActive = (href: string) => {
+  if (href === "/") {
+    return pathname === "/";
+  }
+  return pathname === href || pathname.startsWith(`${href}/`);
+};
+---
+
+<nav class="nav">
+  <ul>
+    {mainMenu.map((item) => {
+      const active = isActive(item.href);
+      return (
+        <li>
+          <a
+            class={`nav-link${active ? " active" : ""}`}
+            href={item.href}
+            aria-current={active ? "page" : undefined}
+          >
+            {item.name}
+          </a>
+        </li>
+      );
+    })}
+  </ul>
+</nav>

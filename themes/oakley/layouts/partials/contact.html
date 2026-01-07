@@ -1,9 +1,0 @@
-<ul class="dash-list links-list">
-{{- range .Site.Params.Hcard.Contact -}}
-    <li>
-        <a class="u-url" rel="me" aria-label="{{ .platform }}" href="{{ (printf .url_pattern .identity) }}">
-       {{ .platform }}
-        </a>
-    </li>
-{{ end -}}
-</ul>

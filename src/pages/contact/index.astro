@@ -1,0 +1,36 @@
+---
+import Base from "../../layouts/Base.astro";
+import { site } from "../../data/site";
+import ContactContent, {
+  frontmatter as contactFrontmatter,
+} from "../../content/pages/contact.md";
+import HCard from "../../components/HCard.astro";
+import ContactLinks from "../../components/ContactLinks.astro";
+
+const pageTitle = contactFrontmatter?.title ?? "Contact";
+---
+
+<Base
+  title={pageTitle}
+  siteTitle={site.title}
+  lang={site.language}
+  footerText={site.footerText}
+  socialLinks={site.hcard.social}
+>
+  <div class="main-container prose">
+    <ContactContent />
+    <HCard
+      siteTitle={site.title}
+      baseUrl={site.baseUrl}
+      avatar={site.hcard.avatar}
+      fullName={site.hcard.fullName}
+      nickname={site.hcard.nickname}
+      pronouns={site.hcard.pronouns}
+      showLocation={site.hcard.showLocation}
+      city={site.hcard.city}
+      region={site.hcard.region}
+      country={site.hcard.country}
+    />
+    <ContactLinks links={site.hcard.contact} />
+  </div>
+</Base>

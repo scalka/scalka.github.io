@@ -1,0 +1,128 @@
+---
+export type HCardProps = {
+  siteTitle: string;
+  baseUrl: string;
+  avatar?: string;
+  fullName: string;
+  pronouns?: string[];
+  nickname?: string;
+  showLocation?: boolean;
+  city?: string;
+  region?: string;
+  country?: string;
+  biography?: string;
+};
+
+const {
+  siteTitle,
+  baseUrl,
+  avatar,
+  fullName,
+  pronouns = [],
+  nickname,
+  showLocation = false,
+  city,
+  region,
+  country,
+  biography,
+} = Astro.props as HCardProps;
+
+const locationParts = [city, region, country].filter(Boolean);
+const location = locationParts.join(", ");
+---
+
+<section class="h-card contact-card">
+  {
+    avatar ? (
+      <img
+        class="u-photo"
+        src={avatar}
+        alt={`Portrait of ${fullName}`}
+        loading="lazy"
+      />
+    ) : null
+  }
+
+  <div class="contact-card__body">
+    <h1 class="contact-card__name p-name">{fullName}</h1>
+
+    <p class="contact-card__meta">
+      <a class="u-url" href={baseUrl}>
+        {siteTitle}
+      </a>
+
+      {
+        pronouns.length ? (
+          <>
+            {" "}
+            · <span class="u-pronoun">{pronouns.join(" / ")}</span>
+          </>
+        ) : null
+      }
+
+      {
+        nickname ? (
+          <>
+            {" "}
+            · <span class="p-nickname">{nickname}</span>
+          </>
+        ) : null
+      }
+
+      {
+        showLocation && location ? (
+          <>
+            {" "}
+            ·{" "}
+            <span class="p-adr">
+              <span class="p-locality">{city}</span>,
+              {region ? (
+                <>
+                  {" "}
+                  <span class="p-region">{region}</span>
+                </>
+              ) : null}
+              ,
+              {country ? (
+                <>
+                  {" "}
+                  <span class="p-country-name">{country}</span>
+                </>
+              ) : null}
+            </span>
+          </>
+        ) : null
+      }
+    </p>
+
+    {biography ? <p class="p-note">{biography}</p> : null}
+  </div>
+</section>
+<style>
+  .contact-card {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .contact-card .u-photo {
+    width: 96px;
+    height: 96px;
+    border-radius: 999px;
+    object-fit: cover;
+  }
+
+  .contact-card__name {
+    margin: 0;
+  }
+
+  .contact-card__meta {
+    margin: 0.25rem 0 0;
+    opacity: 0.85;
+  }
+
+  .contact-card__meta a {
+    text-decoration: underline;
+  }
+</style>
