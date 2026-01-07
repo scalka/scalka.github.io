@@ -1,14 +1,12 @@
 ---
-title: 'Markdown Syntax Guide'
+title: "Markdown Syntax Guide"
 draft: false
-date: '2025-02-02'
-tags: ['markdown', 'css', 'html']
-categories: ['themes', 'syntax']
+date: 2025-02-02
+tags: ["markdown", "css", "html"]
+categories: ["themes", "syntax"]
 ---
 
 This article is a cheat-sheet for me to see how markdown is rendered with my custom Hugo theme called Oakley (after my dog).
-
-<!--more-->
 
 ## Headings
 
@@ -46,7 +44,7 @@ The blockquote element represents content that is quoted from another source, op
 
 #### Blockquote with attribution
 
-> "Life is really simple, but we insist on making it complicated."<br>
+> "Life is really simple, but we insist on making it complicated."<br/>
 > — <cite>Confucius[^1]</cite>
 
 [^1]: This quote is often attributed to Confucius. For more context, see [Wikipedia](https://en.wikipedia.org/wiki/Confucius) or related philosophy references.
@@ -71,7 +69,7 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 #### Code block with backticks
 
 ```html
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -85,32 +83,33 @@ Tables aren't part of the core Markdown spec, but Hugo supports supports them ou
 
 #### Code block indented with four spaces
 
-    <!doctype html>
-    <html lang="en">
-    <head>
-      <meta charset="utf-8">
-      <title>Example HTML5 Document</title>
-    </head>
-    <body>
-      <p>Test</p>
-    </body>
-    </html>
+```html
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Example HTML5 Document</title>
+  </head>
+  <body>
+    <p>Test</p>
+  </body>
+</html>
+```
 
 #### Code block with Hugo's internal highlight shortcode
 
-{{< highlight html >}}
-
-<!doctype html>
+```html
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Example HTML5 Document</title>
-</head>
-<body>
-  <p>Test</p>
-</body>
+  <head>
+    <meta charset="utf-8" />
+    <title>Example HTML5 Document</title>
+  </head>
+  <body>
+    <p>Test</p>
+  </body>
 </html>
-{{< /highlight >}}
+```
 
 ## List Types
 
@@ -150,13 +149,25 @@ Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and ot
 
 ## Linking notes
 
-To link another note use [See my Output post]({{< relref "notes/output.md" >}}) for using relative URLs. You can also link to specifiv URL [See my Output post](/notes/output/).
+To link another note use [See my Output post](/notes/output/) for using relative URLs. You can also link to specifiv URL [See my Output post](/notes/output/).
 
 ## Images
 
-{{< image-gallery-markdown class="content-gallery" >}}
-  {{< image-markdown src="images/notes/jesmonite-example.jpg" alt="Examples Jesmonite color combinations and marbling effect" width="600x" >}}
-  {{< image-markdown src="images/notes/jesmonite-result.jpeg" alt="Eight finished Jesmonite creations, each showing our unique personalities" width="600x" >}}
-{{< /image-gallery-markdown >}}
+<div class="gallery content-gallery">
+  <img
+    class="responsive-image"
+    src="/images/notes/jesmonite-example.jpg"
+    alt="Examples Jesmonite color combinations and marbling effect"
+  />
+  <img
+    class="responsive-image"
+    src="/images/notes/jesmonite-result.jpeg"
+    alt="Eight finished Jesmonite creations, each showing our unique personalities"
+  />
+</div>
 
-{{< image-markdown src="images/notes/jesmonite-example.jpg" alt="Examples Jesmonite color combinations and marbling effect" class="featured-image" >}}
+<img
+  class="featured-image"
+  src="/images/notes/jesmonite-example.jpg"
+  alt="Examples Jesmonite color combinations and marbling effect"
+/>

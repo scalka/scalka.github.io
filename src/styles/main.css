@@ -1,0 +1,251 @@
+@import "./variables.css";
+@import "./utilities.css";
+@import "./navigation.css";
+@import "./images.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh; /* Ensures full height */
+  background-color: var(--color-background);
+  font-family: var(--font-normal);
+  font-weight: var(--weight-normal);
+  font-size: var(--font-size-s);
+  line-height: var(--line-height-s);
+  color: var(--color-text);
+  background: var(--color-background);
+  margin: var(--spacing-m);
+  word-wrap: break-word;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.sash {
+  z-index: 10;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-secondary);
+  color: var(--color-secondary-text);
+  padding: var(--spacing-xs) var(--spacing-m);
+  border-radius: var(--radius-l);
+  transform: rotate(30deg);
+  transform-origin: 152px -90px 0px;
+  width: 260px;
+}
+
+.main-container {
+  flex: 1;
+  margin: 0 auto 10rem auto;
+  max-width: var(--max-width-content);
+  width: 90%; /* Keeps it responsive on small screens */
+  padding: var(--spacing-m);
+  text-align: left; /* Keeps text aligned left inside */
+}
+
+header {
+  border-bottom: 1px solid var(--color-border);
+  padding-bottom: var(--spacing-m);
+  margin-bottom: var(--spacing-m);
+}
+
+footer {
+  margin: 0 auto;
+  max-width: var(--max-width-content);
+  border-top: 1px solid var(--color-border);
+  padding-top: var(--spacing-m);
+  margin-top: var(--spacing-m);
+}
+
+/* Links */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color-primary-hover);
+  text-decoration: underline;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font-special);
+  font-weight: var(--weight-headings);
+}
+
+h1,
+.h1 {
+  line-height: var(--line-height-l);
+  font-size: var(--font-size-xxxl);
+  font-weight: var(--weight-headings);
+  font-variation-settings: "wdth" 115;
+}
+h2,
+.h2 {
+  line-height: var(--line-height-m);
+  font-size: var(--font-size-l);
+  font-weight: var(--weight-headings);
+}
+h3,
+.h3 {
+  line-height: var(--line-height-xs);
+  font-size: var(--font-size-m);
+  font-weight: var(--weight-headings);
+}
+h4,
+.h4 {
+  line-height: var(--line-height-s);
+  font-size: var(--font-size-s);
+  font-weight: var(--weight-headings);
+}
+h5,
+.h5 {
+  line-height: var(--line-height-s);
+  font-size: var(--font-size-s);
+  font-weight: var(--weight-headings);
+}
+h6,
+.h6 {
+  line-height: var(--line-height-s);
+  font-size: var(--font-size-s);
+  font-weight: var(--weight-headings);
+}
+
+/* Paragraphs */
+p {
+  margin-bottom: var(--spacing-m);
+}
+
+.text-small {
+  font-size: var(--font-size-xs);
+}
+
+/* Buttons */
+button,
+.button {
+  display: inline-block;
+  padding: var(--spacing-xs) var(--spacing-m);
+  font-size: var(--font-size-s);
+  font-weight: var(--weight-medium);
+  color: #fff;
+  background: var(--color-text-light);
+  border: none;
+  border-radius: var(--radius-m);
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+button:hover,
+.button:hover {
+  background: var(--color-primary-hover);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Forms */
+input,
+textarea,
+select {
+  width: 100%;
+  padding: var(--spacing-xs);
+  font-size: var(--font-size-s);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-m);
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+/* Lists */
+ul,
+ol {
+  /*  padding-left: var(--spacing-l);
+  margin-bottom: var(--spacing-m); */
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  list-style-position: inside;
+}
+
+/* TODO: see if this solution is good enough or I need to work with classes*/
+.dash-list li:before {
+  content: "\2014";
+  position: absolute;
+  margin-left: -30px;
+}
+
+.dash-list li {
+  margin-left: 34px;
+}
+
+/* Tables */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: var(--spacing-m);
+}
+
+th,
+td {
+  padding: var(--spacing-s);
+  border: 1px solid var(--color-border);
+}
+
+th {
+  background: var(--color-secondary);
+  color: #fff;
+  text-align: left;
+}
+
+/* List template */
+.t-list-ol {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s);
+}
+
+/* h-card */
+img.u-photo {
+  vertical-align: bottom;
+  height: 1.5em;
+  border-radius: var(--radius-l);
+}
+
+/* Copy e-mail */
+address {
+  font-style: normal;
+  font-weight: var(--weight-medium);
+}
+
+.copied-email-tooltip {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.copied-email-tooltip.visible {
+  opacity: 1;
+}

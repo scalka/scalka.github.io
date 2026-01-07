@@ -1,0 +1,74 @@
+---
+type HCardProps = {
+  siteTitle: string;
+  baseUrl: string;
+  avatar?: string;
+  fullName: string;
+  pronouns?: string[];
+  nickname?: string;
+  showLocation?: boolean;
+  city?: string;
+  region?: string;
+  country?: string;
+  biography?: string;
+};
+
+const {
+  siteTitle,
+  baseUrl,
+  avatar,
+  fullName,
+  pronouns,
+  nickname,
+  showLocation,
+  city,
+  region,
+  country,
+  biography,
+} = Astro.props as HCardProps;
+---
+
+<div class="h-card bio">
+  <p>
+    <a class="u-url" href={baseUrl}>{siteTitle}</a>
+    {" "}by{" "}
+    {avatar ? <img class="u-photo" alt="" src={avatar} /> : null}
+    <span class="p-name" rel="me">{fullName}</span>
+    {pronouns?.length ? (
+      <>
+        {" "}
+        (
+        {pronouns.map((pronoun, index) => (
+          <>
+            <span class="u-pronoun">{pronoun}</span>
+            {index < pronouns.length - 1 ? " / " : ""}
+          </>
+        ))}
+        {" "}pronouns)
+      </>
+    ) : null}
+    {nickname ? (
+      <>
+        {pronouns?.length ? ", " : " ("}
+        also known as <span class="p-nickname">{nickname}</span>
+        )
+      </>
+    ) : null}
+    {showLocation ? (
+      <>
+        {" "}in{" "}
+        {city ? <span class="p-locality">{city}</span> : null}
+        {region ? <>{" "}<span class="p-region">{region}</span></> : null}
+        {country ? <>{" "}<span class="p-country-name">{country}</span></> : null}
+        .
+      </>
+    ) : (
+      "."
+    )}
+  </p>
+  {biography ? (
+    <p>
+      <span class="p-note">{biography}</span>
+    </p>
+  ) : null}
+</div>

@@ -1,0 +1,35 @@
+---
+type ContactLink = {
+  platform: string;
+  identity?: string;
+  urlPattern?: string;
+  url?: string;
+};
+
+const { links = [] } = Astro.props as { links?: ContactLink[] };
+
+const resolveUrl = (link: ContactLink) => {
+  if (link.url) {
+    return link.url;
+  }
+  if (link.urlPattern && link.identity) {
+    return link.urlPattern.replace("%s", link.identity);
+  }
+  return "#";
+};
+---
+
+<ul class="dash-list links-list">
+  {links.map((link) => (
+    <li>
+      <a
+        class="u-url"
+        rel="me"
+        aria-label={link.platform}
+        href={resolveUrl(link)}
+      >
+        {link.platform}
+      </a>
+    </li>
+  ))}
+</ul>

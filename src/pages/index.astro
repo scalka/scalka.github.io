@@ -1,11 +1,21 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+import { site } from "../data/site";
+import HomeContent, {
+  frontmatter as homeFrontmatter,
+} from "../content/pages/home.mdx";
+import Base from "../layouts/Base.astro";
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const pageTitle = homeFrontmatter?.title ?? site.title;
 ---
 
-<Layout>
-	<Welcome />
-</Layout>
+<Base
+  title={pageTitle}
+  siteTitle={site.title}
+  lang={site.language}
+  footerText={site.footerText}
+  socialLinks={site.hcard.social}
+>
+  <div class="main-container">
+    <HomeContent />
+  </div>
+</Base>

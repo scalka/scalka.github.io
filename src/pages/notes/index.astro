@@ -1,0 +1,54 @@
+---
+import Base from "../../layouts/Base.astro";
+import { site } from "../../data/site";
+import { getCollection } from "astro:content";
+
+const notes = await getCollection("notes");
+const indexEntry = notes.find((entry) => entry.slug === "index");
+const listEntries = notes
+  .filter((entry) => entry.slug !== "index")
+  .sort((a, b) => {
+    const aTime = a.data.date ? a.data.date.getTime() : 0;
+    const bTime = b.data.date ? b.data.date.getTime() : 0;
+    return bTime - aTime;
+  });
+
+const IndexContent = indexEntry ? (await indexEntry.render()).Content : null;
+const pageTitle = indexEntry?.data.title ?? "Notes";
+const dateFormatter = new Intl.DateTimeFormat("en-IE", { dateStyle: "medium" });
+---
+
+<Base
+  title={pageTitle}
+  siteTitle={site.title}
+  lang={site.language}
+  footerText={site.footerText}
+  socialLinks={site.hcard.social}
+>
+  <div class="main-container">
+    <h1>{pageTitle}</h1>
+    {IndexContent ? <IndexContent /> : null}
+    <ol class="t-list-ol">
+      {
+        listEntries.map((entry) => (
+          <li>
+            <span class="post-date">
+              {entry.data.date ? (
+                <time
+                  class="dt-published"
+                  datetime={entry.data.date.toISOString()}
+                >
+                  {dateFormatter.format(entry.data.date)}
+                </time>
+              ) : null}
+            </span>
+            <br />
+            <h2 class="h4">
+              <a href={`/notes/${entry.slug}/`}>{entry.data.title}</a>
+            </h2>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</Base>

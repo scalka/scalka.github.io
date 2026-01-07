@@ -1,0 +1,38 @@
+---
+import Social from "./Social.astro";
+
+type SocialLink = {
+  platform: string;
+  identity?: string;
+  urlPattern?: string;
+  url?: string;
+};
+
+const { footerText, socialLinks = [] } = Astro.props as {
+  footerText?: string;
+  socialLinks?: SocialLink[];
+};
+---
+
+<footer role="contentinfo">
+  <address class="h3" property="email">
+    To get in touch, write to{" "}
+    <a class="nav-anchor" id="copy-email" onclick="copyEmailToClipboard()">
+      calka.sylwia@gmail.com
+    </a>
+    <span id="copied-email-msg" class="copied-email-tooltip" role="status">
+      {" "}&#8212; copied to your clipboard
+    </span>
+  </address>
+
+  <div class="footer-container flex flex-between gap-xxxxxxl">
+    {footerText ? (
+      <div class="footer-text">
+        <p>{footerText}</p>
+      </div>
+    ) : null}
+    <div class="h-card social">
+      <Social links={socialLinks} />
+    </div>
+  </div>
+</footer>

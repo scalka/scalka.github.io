@@ -1,0 +1,28 @@
+---
+import Base from "../../layouts/Base.astro";
+import { site } from "../../data/site";
+import { getCollection } from "astro:content";
+
+const workEntries = await getCollection("work");
+const projectsEntry = workEntries.find((entry) => entry.slug === "projects");
+
+if (!projectsEntry) {
+  throw new Error("Missing projects content.");
+}
+
+const { Content } = await projectsEntry.render();
+const pageTitle = projectsEntry.data.title ?? "Projects";
+---
+
+<Base
+  title={pageTitle}
+  siteTitle={site.title}
+  lang={site.language}
+  footerText={site.footerText}
+  socialLinks={site.hcard.social}
+>
+  <div class="main-container">
+    <h1>{pageTitle}</h1>
+    <Content />
+  </div>
+</Base>

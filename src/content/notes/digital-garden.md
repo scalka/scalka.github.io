@@ -1,13 +1,14 @@
 ---
-date: '2025-03-21T11:13:20+01:00'
+date: 2025-03-21T11:13:20+01:00
 draft: false
-title: 'Digital Garden'
+title: "Digital Garden"
 ---
+
 It’s a digital place, full of ideas, sharing and slow cultivation.
 
-A blog, but private and personal. 
-A notebook, but public and open. 
-A thought, but finally put on digital paper. 
+A blog, but private and personal.
+A notebook, but public and open.
+A thought, but finally put on digital paper.
 
 It’s a space for learning in public.
 A place to follow curiosity.

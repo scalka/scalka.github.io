@@ -1,0 +1,19 @@
+---
+import Base from "../../layouts/Base.astro";
+import { site } from "../../data/site";
+import AboutContent from "../../content/pages/about.md";
+
+const pageTitle = AboutContent.frontmatter?.title ?? "About";
+---
+
+<Base
+  title={pageTitle}
+  siteTitle={site.title}
+  lang={site.language}
+  footerText={site.footerText}
+  socialLinks={site.hcard.social}
+>
+  <div class="main-container">
+    <AboutContent />
+  </div>
+</Base>
