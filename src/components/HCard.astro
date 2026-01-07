@@ -1,5 +1,5 @@
 ---
-type HCardProps = {
+export type HCardProps = {
   siteTitle: string;
   baseUrl: string;
   avatar?: string;
@@ -18,57 +18,111 @@ const {
   baseUrl,
   avatar,
   fullName,
-  pronouns,
+  pronouns = [],
   nickname,
-  showLocation,
+  showLocation = false,
   city,
   region,
   country,
   biography,
 } = Astro.props as HCardProps;
+
+const locationParts = [city, region, country].filter(Boolean);
+const location = locationParts.join(", ");
 ---
 
-<div class="h-card bio">
-  <p>
-    <a class="u-url" href={baseUrl}>{siteTitle}</a>
-    {" "}by{" "}
-    {avatar ? <img class="u-photo" alt="" src={avatar} /> : null}
-    <span class="p-name" rel="me">{fullName}</span>
-    {pronouns?.length ? (
-      <>
-        {" "}
-        (
-        {pronouns.map((pronoun, index) => (
+<section class="h-card contact-card">
+  {
+    avatar ? (
+      <img
+        class="u-photo"
+        src={avatar}
+        alt={`Portrait of ${fullName}`}
+        loading="lazy"
+      />
+    ) : null
+  }
+
+  <div class="contact-card__body">
+    <h1 class="contact-card__name p-name">{fullName}</h1>
+
+    <p class="contact-card__meta">
+      <a class="u-url" href={baseUrl}>
+        {siteTitle}
+      </a>
+
+      {
+        pronouns.length ? (
           <>
-            <span class="u-pronoun">{pronoun}</span>
-            {index < pronouns.length - 1 ? " / " : ""}
+            {" "}
+            · <span class="u-pronoun">{pronouns.join(" / ")}</span>
           </>
-        ))}
-        {" "}pronouns)
-      </>
-    ) : null}
-    {nickname ? (
-      <>
-        {pronouns?.length ? ", " : " ("}
-        also known as <span class="p-nickname">{nickname}</span>
-        )
-      </>
-    ) : null}
-    {showLocation ? (
-      <>
-        {" "}in{" "}
-        {city ? <span class="p-locality">{city}</span> : null}
-        {region ? <>{" "}<span class="p-region">{region}</span></> : null}
-        {country ? <>{" "}<span class="p-country-name">{country}</span></> : null}
-        .
-      </>
-    ) : (
-      "."
-    )}
-  </p>
-  {biography ? (
-    <p>
-      <span class="p-note">{biography}</span>
+        ) : null
+      }
+
+      {
+        nickname ? (
+          <>
+            {" "}
+            · <span class="p-nickname">{nickname}</span>
+          </>
+        ) : null
+      }
+
+      {
+        showLocation && location ? (
+          <>
+            {" "}
+            ·{" "}
+            <span class="p-adr">
+              <span class="p-locality">{city}</span>,
+              {region ? (
+                <>
+                  {" "}
+                  <span class="p-region">{region}</span>
+                </>
+              ) : null}
+              ,
+              {country ? (
+                <>
+                  {" "}
+                  <span class="p-country-name">{country}</span>
+                </>
+              ) : null}
+            </span>
+          </>
+        ) : null
+      }
     </p>
-  ) : null}
-</div>
+
+    {biography ? <p class="p-note">{biography}</p> : null}
+  </div>
+</section>
+<style>
+  .contact-card {
+    display: grid;
+    grid-template-columns: 96px 1fr;
+    gap: 1rem;
+    align-items: start;
+  }
+
+  .contact-card .u-photo {
+    width: 96px;
+    height: 96px;
+    border-radius: 999px;
+    object-fit: cover;
+  }
+
+  .contact-card__name {
+    margin: 0;
+  }
+
+  .contact-card__meta {
+    margin: 0.25rem 0 0;
+    opacity: 0.85;
+  }
+
+  .contact-card__meta a {
+    text-decoration: underline;
+  }
+</style>

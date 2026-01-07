@@ -5,10 +5,14 @@ export const site = {
   footerText:
     "Crafted with curiosity by Sylwia. Hosted on the web as a digital garden 🌿.",
   hcard: {
-    avatar: "/images/me_munich.jpg",
+    avatar: "src/assets/images/me_munich.jpg",
     fullName: "Sylwia Całka-Verhulst",
     showLocation: true,
     country: "The Netherlands",
+    nickname: "Szysza | scalka",
+    city: "Berkel en Rodenrijs",
+    region: "South Holland",
+    pronouns: ["she", "her"],
     social: [
       {
         platform: "github",
