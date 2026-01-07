@@ -6,6 +6,10 @@ tags: ["markdown", "css", "html"]
 categories: ["themes", "syntax"]
 ---
 
+import MdxImage from "../../components/MdxImage.astro";
+import jesmoniteExample from "../../assets/images/notes/jesmonite-example.jpg";
+import jesmoniteResult from "../../assets/images/notes/jesmonite-result.jpeg";
+
 This article is a cheat-sheet for me to see how markdown is rendered with my custom Hugo theme called Oakley (after my dog).
 
 ## Headings
@@ -26,9 +30,9 @@ The following HTML `<h1>`—`<h6>` elements represent six levels of section head
 
 ## Paragraph
 
-Wlazł kotek na płotek i mruga.
-Piękna to piosenka, niedługa.
-Niedługa, nie krótka, lecz w sam raz,
+Wlazł kotek na płotek i mruga.  
+Piękna to piosenka, niedługa.  
+Niedługa, nie krótka, lecz w sam raz,  
 Zaśpiewaj, koteczku, jeszcze raz.
 
 ~~Strikethrough~~
@@ -44,14 +48,14 @@ The blockquote element represents content that is quoted from another source, op
 
 #### Blockquote with attribution
 
-> "Life is really simple, but we insist on making it complicated."<br/>
+> "Life is really simple, but we insist on making it complicated."<br />
 > — <cite>Confucius[^1]</cite>
 
 [^1]: This quote is often attributed to Confucius. For more context, see [Wikipedia](https://en.wikipedia.org/wiki/Confucius) or related philosophy references.
 
 ## Tables
 
-Tables aren't part of the core Markdown spec, but Hugo supports supports them out-of-the-box.
+Tables aren't part of the core Markdown spec, but Hugo supports them out-of-the-box.
 
 | Name           | Age |
 | -------------- | --- |
@@ -149,25 +153,25 @@ Most <mark>salamanders</mark> are nocturnal, and hunt for insects, worms, and ot
 
 ## Linking notes
 
-To link another note use [See my Output post](/notes/output/) for using relative URLs. You can also link to specifiv URL [See my Output post](/notes/output/).
+To link another note use [See my Output post](/notes/output/) for using relative URLs. You can also link to specific URLs like [See my Output post](/notes/output/).
 
 ## Images
 
-<div class="gallery content-gallery">
-  <img
+<div class="gallery">
+  <MdxImage
     class="responsive-image"
-    src="/images/notes/jesmonite-example.jpg"
+    src={jesmoniteExample}
     alt="Examples Jesmonite color combinations and marbling effect"
   />
-  <img
+  <MdxImage
     class="responsive-image"
-    src="/images/notes/jesmonite-result.jpeg"
+    src={jesmoniteResult}
     alt="Eight finished Jesmonite creations, each showing our unique personalities"
   />
 </div>
 
-<img
-  class="featured-image"
-  src="/images/notes/jesmonite-example.jpg"
+<MdxImage
+  class="responsive-image"
+  src={jesmoniteExample}
   alt="Examples Jesmonite color combinations and marbling effect"
 />

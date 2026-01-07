@@ -4,7 +4,9 @@ import { site } from "../../data/site";
 import { getCollection } from "astro:content";
 
 const workEntries = await getCollection("work");
-const archiveEntry = workEntries.find((entry) => entry.slug === "projects-archive");
+const archiveEntry = workEntries.find(
+  (entry) => entry.slug === "projects-archive"
+);
 
 if (!archiveEntry) {
   throw new Error("Missing projects archive content.");
@@ -21,7 +23,7 @@ const pageTitle = archiveEntry.data.title ?? "Projects Archive";
   footerText={site.footerText}
   socialLinks={site.hcard.social}
 >
-  <div class="main-container">
+  <div class="main-container prose">
     <h1>{pageTitle}</h1>
     <Content />
   </div>

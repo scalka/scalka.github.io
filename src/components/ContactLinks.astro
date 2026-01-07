@@ -19,17 +19,19 @@ const resolveUrl = (link: ContactLink) => {
 };
 ---
 
-<ul class="dash-list links-list">
-  {links.map((link) => (
-    <li>
-      <a
-        class="u-url"
-        rel="me"
-        aria-label={link.platform}
-        href={resolveUrl(link)}
-      >
-        {link.platform}
-      </a>
-    </li>
-  ))}
+<ul class="links-list">
+  {
+    links.map((link) => (
+      <li>
+        <a
+          class="u-url"
+          rel="me"
+          aria-label={link.platform}
+          href={resolveUrl(link)}
+        >
+          {link.platform}
+        </a>
+      </li>
+    ))
+  }
 </ul>

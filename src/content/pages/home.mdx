@@ -3,11 +3,6 @@ title: "Home"
 date: 2025-02-21
 author: "Sylwia Całka-Verhulst"
 menu: "main"
-images:
-  - "/images/me_munich.jpg"
-  - "/images/me-computer-1.webp"
-  - "/images/me-computer-2.webp"
-  - "/images/me-makerspace-3.webp"
 ---
 
 # Hej
@@ -24,7 +19,15 @@ The topics that keep coming back to me:
 - Dog training
 - Yoga, sup and other activites
 
-![Sylwia in Munich](/images/me_munich.jpg)
-![Sylwia at computer](/images/me-computer-1.webp)
-![Sylwia at computer](/images/me-computer-2.webp)
-![Sylwia at makerspace](/images/me-makerspace-3.webp)
+import MdxImage from "../../components/MdxImage.astro";
+import meMunich from "../../assets/images/me_munich.jpg";
+import meComputer1 from "../../assets/images/me-computer-1.webp";
+import meComputer2 from "../../assets/images/me-computer-2.webp";
+import meMakerspace3 from "../../assets/images/me-makerspace-3.webp";
+
+<div class="gallery">
+  <MdxImage src={meMunich} alt="Sylwia in Munich" />
+  <MdxImage src={meComputer1} alt="Sylwia at computer" />
+  <MdxImage src={meComputer2} alt="Sylwia at computer" />
+  <MdxImage src={meMakerspace3} alt="Sylwia at makerspace" />
+</div>

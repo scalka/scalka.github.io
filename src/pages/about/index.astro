@@ -1,9 +1,12 @@
 ---
 import Base from "../../layouts/Base.astro";
 import { site } from "../../data/site";
-import AboutContent from "../../content/pages/about.md";
+// Import both the content component and frontmatter from the markdown file
+import AboutContent, {
+  frontmatter as aboutFrontmatter,
+} from "../../content/pages/about.md";
 
-const pageTitle = AboutContent.frontmatter?.title ?? "About";
+const pageTitle = aboutFrontmatter?.title ?? "About";
 ---
 
 <Base
@@ -13,7 +16,7 @@ const pageTitle = AboutContent.frontmatter?.title ?? "About";
   footerText={site.footerText}
   socialLinks={site.hcard.social}
 >
-  <div class="main-container">
+  <div class="main-container prose">
     <AboutContent />
   </div>
 </Base>

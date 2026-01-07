@@ -2,6 +2,7 @@
 @import "./utilities.css";
 @import "./navigation.css";
 @import "./images.css";
+@import "./prose.css";
 
 * {
   box-sizing: border-box;
@@ -11,13 +12,12 @@
 
 body {
   min-height: 100vh; /* Ensures full height */
-  background-color: var(--color-background);
   font-family: var(--font-normal);
   font-weight: var(--weight-normal);
   font-size: var(--font-size-s);
   line-height: var(--line-height-s);
   color: var(--color-text);
-  background: var(--color-background);
+  background-color: var(--color-background);
   margin: var(--spacing-m);
   word-wrap: break-word;
 }
@@ -180,8 +180,6 @@ select:focus {
 /* Lists */
 ul,
 ol {
-  /*  padding-left: var(--spacing-l);
-  margin-bottom: var(--spacing-m); */
   margin: 0;
   padding: 0;
 }
@@ -189,17 +187,6 @@ ol {
 ul {
   list-style-type: none;
   list-style-position: inside;
-}
-
-/* TODO: see if this solution is good enough or I need to work with classes*/
-.dash-list li:before {
-  content: "\2014";
-  position: absolute;
-  margin-left: -30px;
-}
-
-.dash-list li {
-  margin-left: 34px;
 }
 
 /* Tables */
@@ -217,7 +204,7 @@ td {
 
 th {
   background: var(--color-secondary);
-  color: #fff;
+  color: var(--color-secondary-text);
   text-align: left;
 }
 

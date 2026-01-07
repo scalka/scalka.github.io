@@ -15,22 +15,24 @@ const { footerText, socialLinks = [] } = Astro.props as {
 ---
 
 <footer role="contentinfo">
-  <address class="h3" property="email">
-    To get in touch, write to{" "}
-    <a class="nav-anchor" id="copy-email" onclick="copyEmailToClipboard()">
-      calka.sylwia@gmail.com
-    </a>
-    <span id="copied-email-msg" class="copied-email-tooltip" role="status">
-      {" "}&#8212; copied to your clipboard
-    </span>
-  </address>
+  <section>
+    <h3>Contact</h3>
+    <address>
+      To get in touch, write to <a
+        href="mailto:calka.sylwia@gmail.com"
+        class="u-email">calka.sylwia@gmail.com</a
+      >
+    </address>
+  </section>
 
   <div class="footer-container flex flex-between gap-xxxxxxl">
-    {footerText ? (
-      <div class="footer-text">
-        <p>{footerText}</p>
-      </div>
-    ) : null}
+    {
+      footerText && (
+        <div>
+          <p>{footerText}</p>
+        </div>
+      )
+    }
     <div class="h-card social">
       <Social links={socialLinks} />
     </div>

@@ -1,0 +1,48 @@
+/*
+Style markdown content by targeting .prose class added to the main content container
+*/
+
+/* Lists */
+.prose ul li:before {
+  content: "\2014";
+  position: absolute;
+  margin-left: -30px;
+}
+
+.prose ol li,
+.prose ul li {
+  margin-left: 34px;
+}
+
+.prose blockquote {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border-left: 4px solid var(--accent, currentColor);
+  color: var(--text-muted, inherit);
+  font-style: italic;
+}
+
+/* Paragraphs */
+.prose blockquote p {
+  margin: 0;
+}
+
+.prose blockquote p + p {
+  margin-top: 0.75rem;
+}
+
+.prose blockquote cite {
+  display: block;
+  margin-top: 0.75rem;
+  font-style: normal;
+  font-size: 0.9em;
+}
+
+.prose .astro-code {
+  padding: var(--spacing-s);
+}
+.prose code {
+  border-radius: var(--radius-s);
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+}

@@ -25,25 +25,29 @@ const dateFormatter = new Intl.DateTimeFormat("en-IE", { dateStyle: "long" });
   footerText={site.footerText}
   socialLinks={site.hcard.social}
 >
-  <div class="main-container">
+  <div class="main-container prose">
     <h1>{entry.data.title}</h1>
-    {entry.data.date ? (
-      <time datetime={entry.data.date.toISOString()}>
-        {dateFormatter.format(entry.data.date)}
-      </time>
-    ) : null}
+    {
+      entry.data.date ? (
+        <time datetime={entry.data.date.toISOString()}>
+          {dateFormatter.format(entry.data.date)}
+        </time>
+      ) : null
+    }
     <Content />
-    {entry.data.tags?.length ? (
-      <div>
-        <div>Tags:</div>
-        <ul>
-          {entry.data.tags.map((tag) => (
-            <li>
-              <a href={`/tags/${tag}/`}>{tag}</a>
-            </li>
-          ))}
-        </ul>
-      </div>
-    ) : null}
+    {
+      entry.data.tags?.length ? (
+        <div>
+          <div>Tags:</div>
+          <ul>
+            {entry.data.tags.map((tag) => (
+              <li>
+                <a href={`/tags/${tag}/`}>{tag}</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ) : null
+    }
   </div>
 </Base>
