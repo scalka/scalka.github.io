@@ -22,30 +22,18 @@ body {
   word-wrap: break-word;
 }
 
-.wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.sash {
-  z-index: 10;
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  background-color: var(--color-secondary);
-  color: var(--color-secondary-text);
-  padding: var(--spacing-xs) var(--spacing-m);
-  border-radius: var(--radius-l);
-  transform: rotate(30deg);
-  transform-origin: 152px -90px 0px;
-  width: 260px;
-}
-
 .main-container {
   flex: 1;
   margin: 0 auto 10rem auto;
   max-width: var(--max-width-content);
+  width: 90%; /* Keeps it responsive on small screens */
+  padding: var(--spacing-m);
+  text-align: left; /* Keeps text aligned left inside */
+}
+.photo-container {
+  flex: 1;
+  margin: 0 auto 4rem auto;
+  max-width: var(--max-width-photos);
   width: 90%; /* Keeps it responsive on small screens */
   padding: var(--spacing-m);
   text-align: left; /* Keeps text aligned left inside */

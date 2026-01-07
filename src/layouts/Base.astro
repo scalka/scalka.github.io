@@ -17,6 +17,7 @@ type BaseProps = {
   dir?: string;
   footerText?: string;
   socialLinks?: SocialLink[];
+  contentMaxWidth?: string;
 };
 
 const {
@@ -26,9 +27,11 @@ const {
   dir = "ltr",
   footerText,
   socialLinks = [],
+  contentMaxWidth,
 } = Astro.props as BaseProps;
 
 const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
+const hasAside = Astro.slots.has("aside");
 ---
 
 <!doctype html>
@@ -56,9 +59,51 @@ const pageTitle = title ? `${title} | ${siteTitle}` : siteTitle;
             <span>WORK IN PROGRESS</span>
           </div>
         </div>
-        <slot />
+        <div class:list={{ "page-layout": true, "has-aside": hasAside }}>
+          {
+            hasAside && (
+              <aside class="page-aside">
+                <slot name="aside" />
+              </aside>
+            )
+          }
+          <slot />
+        </div>
       </main>
-      <Footer footerText={footerText} socialLinks={socialLinks} />
     </div>
+    <Footer footerText={footerText} socialLinks={socialLinks} />
   </body>
 </html>
+
+<style>
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+
+  .sash {
+    z-index: 10;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-text);
+    padding: var(--spacing-xs) var(--spacing-m);
+    border-radius: var(--radius-l);
+    transform: rotate(30deg);
+    transform-origin: 152px -90px 0px;
+    width: 260px;
+  }
+
+  .page-layout.has-aside {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  @media (min-width: 768px) {
+    .page-layout.has-aside {
+      grid-template-columns: auto 1fr auto;
+    }
+  }
+</style>

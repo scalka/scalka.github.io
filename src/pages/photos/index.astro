@@ -3,6 +3,7 @@ import Base from "../../layouts/Base.astro";
 import { site } from "../../data/site";
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
+import PageContents from "../../components/PageContents.astro";
 
 const notes = await getCollection("notes");
 const indexEntry = notes.find((entry) => entry.slug === "index");
@@ -17,12 +18,17 @@ const photos = import.meta.glob(
 
 // photos shape: { "path/to/file.jpg": module }
 // module default is ImageMetadata for supported formats
+
 const entries = Object.entries(photos)
   .map(([path, mod]) => {
     const src = (mod as any).default; // ImageMetadata
-    return { path, src };
+    const width = src.width || 0;
+    const height = src.height || 0;
+    const orientation =
+      width > height ? "landscape" : width < height ? "portrait" : "square";
+    return { path, src, orientation };
   })
-  .filter((x) => x.src); // safety
+  .filter((x) => x.src);
 
 // Group by the immediate folder under /photos/ (e.g. "2025", "2024")
 function getGroupName(path: string) {
@@ -33,6 +39,14 @@ function getGroupName(path: string) {
 
 function getFileName(path: string) {
   return path.split("/").pop() ?? "photo";
+}
+
+function slugify(text: string) {
+  return text
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/(^-|-$)/g, "");
 }
 
 const groups = new Map<string, { path: string; src: any }[]>();
@@ -53,6 +67,11 @@ for (const name of sortedGroupNames) {
     .get(name)!
     .sort((a, b) => getFileName(a.path).localeCompare(getFileName(b.path)));
 }
+
+const tocItems = sortedGroupNames.map((groupName) => ({
+  id: slugify(groupName),
+  label: groupName,
+}));
 ---
 
 <Base
@@ -61,30 +80,31 @@ for (const name of sortedGroupNames) {
   lang={site.language}
   footerText={site.footerText}
   socialLinks={site.hcard.social}
+  contentMaxWidth="var(--max-width-photos)"
 >
-  <div class="prose">
+  <PageContents slot="aside" items={tocItems} />
+
+  <div class="photo-container prose">
     <h1>{pageTitle}</h1>
 
-    {
-      sortedGroupNames.map((groupName) => (
-        <section class="photo-group">
-          <h2>{groupName}</h2>
+    {sortedGroupNames.map((groupName) => (
+      <section class="photo-group" id={slugify(groupName)}>
+        <h2>{groupName}</h2>
 
-          <div class="photo-gallery-grid">
-            {groups.get(groupName)!.map(({ path, src }) => (
-              <Image
-                class="gallery-photo"
-                src={src}
-                alt={getFileName(path)}
-                loading="lazy"
-                widths={[480, 800, 1200, 1600]}
-                sizes="(max-width: 768px) 100vw, 360px"
-              />
-            ))}
-          </div>
-        </section>
-      ))
-    }
+        <div class="photo-gallery-grid">
+          {groups.get(groupName)!.map(({ path, src, orientation }) => (
+            <Image
+              class={`gallery-photo ${orientation}`}
+              src={src}
+              alt={getFileName(path)}
+              loading="lazy"
+              widths={[480, 800, 1200, 1600]}
+              sizes="(max-width: 768px) 100vw, 360px"
+            />
+          ))}
+        </div>
+      </section>
+    ))}
   </div>
 </Base>
 <style>
@@ -93,18 +113,36 @@ for (const name of sortedGroupNames) {
   }
 
   .photo-gallery-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 0.75rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-s);
   }
 
   .gallery-photo {
-    width: 100%;
-    height: auto;
+    height: clamp(240px, 34vw, 360px);
+    width: auto;
+    object-fit: cover;
     display: block;
     border-radius: var(--radius-m);
   }
 
-  /* If you want consistent tiles: */
-  /* .gallery-photo { aspect-ratio: 4 / 3; object-fit: cover; } */
+  .landscape {
+    aspect-ratio: 4 / 3;
+  }
+  .portrait {
+    aspect-ratio: 3 / 4;
+  }
+  .square {
+    aspect-ratio: 1 / 1;
+  }
+
+  @media (max-width: 768px) {
+    .photo-gallery-grid {
+      justify-content: center;
+    }
+
+    .gallery-photo {
+      height: clamp(180px, 46vw, 240px);
+    }
+  }
 </style>

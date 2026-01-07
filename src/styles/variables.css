@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inclusive+Sans:ital,wght@0,300..700;1,300..700&display=swap");
 
 :root {
   /* Screen sizes */
@@ -8,6 +8,7 @@
   --screen-l: 1024px;
   --screen-max: 1200px;
   --max-width-content: 576px;
+  --max-width-photos: 1340px;
 
   /* Spacing */
   --spacing-xxxs: 0.125rem; /* 2px */
@@ -33,8 +34,8 @@
   /* Typography */
   --font-fallback-sans: helvetica, arial, sans-serif;
   --font-fallback-serif: georgia, times, serif;
-  --font-normal: 'Inclusive Sans', var(--font-fallback-sans);
-  --font-special: 'Inclusive Sans', var(--font-fallback-sans);
+  --font-normal: "Inclusive Sans", var(--font-fallback-sans);
+  --font-special: "Inclusive Sans", var(--font-fallback-sans);
 
   --weight-normal: 400;
   --weight-headings: 500;

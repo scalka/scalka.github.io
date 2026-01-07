@@ -16,8 +16,6 @@
   justify-content: center;
   gap: var(--spacing-s);
 }
-
-
 .gallery img,
 .photo-gallery-grid img {
   max-width: 100%;
