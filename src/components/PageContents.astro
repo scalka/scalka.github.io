@@ -10,18 +10,23 @@ type PageContentsProps = {
   className?: string;
 };
 
-const { title = "Page contents", items, className = "" } =
-  Astro.props as PageContentsProps;
+const {
+  title = "Page contents",
+  items,
+  className = "",
+} = Astro.props as PageContentsProps;
 ---
 
 <nav class={`page-contents ${className}`} aria-label={title}>
   <h2 class="page-contents-title">{title}</h2>
   <ol>
-    {items.map((item) => (
-      <li>
-        <a href={`#${item.id}`}>{item.label}</a>
-      </li>
-    ))}
+    {
+      items.map((item) => (
+        <li>
+          <a href={`#${item.id}`}>{item.label}</a>
+        </li>
+      ))
+    }
   </ol>
 </nav>
 
