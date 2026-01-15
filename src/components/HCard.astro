@@ -1,8 +1,11 @@
 ---
+import { Image } from "astro:assets";
+import type { ImageMetadata } from "astro";
+
 export type HCardProps = {
   siteTitle: string;
   baseUrl: string;
-  avatar?: string;
+  avatar: string | ImageMetadata;
   fullName: string;
   pronouns?: string[];
   nickname?: string;
@@ -33,14 +36,25 @@ const location = locationParts.join(", ");
 
 <section class="h-card contact-card">
   {
-    avatar ? (
+    typeof avatar === "object" ? (
+      <Image
+        class="u-photo"
+        src={avatar}
+        alt={`Portrait of ${fullName}`}
+        loading="eager"
+        width={300}
+        height={300}
+      />
+    ) : (
       <img
         class="u-photo"
         src={avatar}
         alt={`Portrait of ${fullName}`}
-        loading="lazy"
+        loading="eager"
+        width={300}
+        height={300}
       />
-    ) : null
+    )
   }
 
   <div class="contact-card__body">

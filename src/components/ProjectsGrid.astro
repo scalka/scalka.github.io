@@ -1,0 +1,260 @@
+---
+import { projects } from "../data/projects";
+
+const limitHighlights = (items, max) => {
+  if (!Array.isArray(items)) return [];
+  return items.slice(0, max);
+};
+
+const tagLabelMap = {
+  context: "Context",
+  skill: "Focus",
+  tool: "Tools",
+  other: "Tags",
+};
+
+const groupTags = (tags = []) =>
+  tags.reduce((groups, tag) => {
+    const key = tag?.category ?? "other";
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(tag);
+    return groups;
+  }, {});
+
+const tagOrder = ["context", "skill", "tool", "other"];
+---
+
+<section class="projects-grid" aria-label="Selected projects">
+  {
+    projects.map((project) => {
+      const groupedTags = groupTags(project.tags);
+
+      return (
+        <article class="project-card">
+          <div class="prose">
+            <div class="project-header">
+              <div>
+                <p class="project-meta">{project.year}</p>
+                <h3 class="project-title">
+                  {project.link ? (
+                    <a href={project.link}>{project.title}</a>
+                  ) : (
+                    project.title
+                  )}
+                </h3>
+                {project.subtitle ? (
+                  <p class="project-subtitle">{project.subtitle}</p>
+                ) : null}
+              </div>
+            </div>
+
+            {project.context ? <p>{project.context}</p> : null}
+
+            {(project.role || project.type || project.scale) && (
+              <dl class="project-facts">
+                {project.role ? (
+                  <div>
+                    <dt>Role</dt>
+                    <dd>{project.role}</dd>
+                  </div>
+                ) : null}
+                {project.type ? (
+                  <div>
+                    <dt>Project type</dt>
+                    <dd>{project.type}</dd>
+                  </div>
+                ) : null}
+                {/* {project.scale ? (
+                  <div>
+                    <dt>Scale</dt>
+                    <dd>{project.scale}</dd>
+                  </div>
+                ) : null} */}
+              </dl>
+            )}
+
+            {project.outcome ? (
+              <div class="project-block">
+                <p class="project-label">Outcome</p>
+                <ul>
+                  {limitHighlights(project.outcome, 3).map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+
+            {project.what_i_did ? (
+              <div class="project-block">
+                <p class="project-label">Highlights</p>
+                <ul>
+                  {limitHighlights(project.what_i_did, 3).map((item) => (
+                    <li>{item}</li>
+                  ))}
+                </ul>
+              </div>
+            ) : null}
+          </div>
+
+          {project.tags ? (
+            <div class="project-tags" aria-label="Project tags">
+              {tagOrder.map((category) => {
+                const items = groupedTags[category];
+                if (!items?.length) return null;
+
+                return (
+                  <div class="project-tag-group">
+                    <p class="project-tag-label">
+                      {tagLabelMap[category] || "Tags"}
+                    </p>
+                    <ul>
+                      {items.map((tag) => (
+                        <li>{tag.name}</li>
+                      ))}
+                    </ul>
+                  </div>
+                );
+              })}
+            </div>
+          ) : null}
+        </article>
+      );
+    })
+  }
+</section>
+
+<style>
+  .projects-grid {
+    display: grid;
+    gap: var(--spacing-xl);
+  }
+
+  .project-card {
+    background: var(--color-surface-calm);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-l);
+    padding: var(--spacing-l);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing-m);
+  }
+
+  .project-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: var(--spacing-l);
+    flex-wrap: wrap;
+  }
+
+  .project-title {
+    margin-bottom: var(--spacing-xxs);
+  }
+
+  .project-meta {
+    font-size: var(--font-size-xxs);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-text-light);
+    margin-bottom: var(--spacing-xxs);
+  }
+
+  .project-subtitle {
+    margin-bottom: var(--spacing-xxs);
+    font-weight: var(--weight-medium);
+  }
+
+  .project-facts {
+    display: grid;
+    gap: var(--spacing-xs);
+    margin: var(--spacing-s) 0;
+    font-size: var(--font-size-xs);
+    color: var(--color-text-light);
+  }
+
+  .project-facts div {
+    display: grid;
+    grid-template-columns: minmax(120px, 160px) minmax(0, 1fr);
+    gap: var(--spacing-s);
+    align-items: baseline;
+  }
+
+  .project-facts dt {
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    font-size: var(--font-size-xxs);
+    color: var(--color-text-light);
+  }
+
+  .project-facts dd {
+    margin: 0;
+  }
+
+  .project-block {
+    display: grid;
+    gap: var(--spacing-xs);
+  }
+
+  .project-label {
+    font-size: var(--font-size-xs);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-text-light);
+    margin: 0;
+  }
+
+  .project-tags {
+    display: grid;
+    gap: var(--spacing-m);
+  }
+
+  .project-tag-group {
+    display: grid;
+    gap: var(--spacing-xs);
+  }
+
+  .project-tag-label {
+    margin: 0;
+    font-size: var(--font-size-xxs);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--color-text-light);
+  }
+
+  .project-tag-group ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-xs);
+  }
+
+  .project-tag-group li {
+    border-radius: var(--radius-l);
+    padding: var(--spacing-xxs) var(--spacing-s);
+    font-size: var(--font-size-xxs);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    background-color: var(--color-secondary);
+    color: var(--color-secondary-text);
+  }
+
+  .project-tag-group li:before {
+    content: none;
+  }
+
+  @media (min-width: 900px) {
+    .projects-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-card {
+      height: 100%;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .project-facts div {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>
