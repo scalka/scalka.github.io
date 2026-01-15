@@ -62,28 +62,28 @@
   --font-style-italic: italic;
 
   /* Light Theme (Rosé Pine Dawn) */
-  --color-background: #faf4ed;
-  --color-surface: #fffaf3;
-  --color-text: #575279;
-  --color-text-light: #797593;
-  --color-primary: #eb6f92; /* Rosy Pink */
-  --color-secondary: #f6c177; /* Warm Gold */
-  --color-accent: #9ccfd8; /* Muted Teal */
-  --color-border: #dfdad9;
+  --color-background: #232937;
+  --color-surface: #1f1d2e;
+  --color-text: #e0def4;
+  --color-text-light: #908caa;
+  --color-primary: #eb6f92;
+  --color-secondary: #f6c177;
+  --color-accent: #9ccfd8;
+  --color-border: #332e41;
   --color-secondary-text: #332e41;
 }
 
 /* Dark Theme (Rosé Pine Moon) */
-
-@media (prefers-color-scheme: dark) {
+/* 
+@media (prefers-color-scheme: light) {
   :root {
-    --color-background: #232937;
-    --color-surface: #1f1d2e;
-    --color-text: #e0def4;
-    --color-text-light: #908caa;
+    --color-text-light: #797593;
+    --color-background: #faf4ed;
+    --color-surface: #fffaf3;
+    --color-text: #575279;
     --color-primary: #eb6f92;
     --color-secondary: #f6c177;
     --color-accent: #9ccfd8;
-    --color-border: #332e41;
+    --color-border: #dfdad9;
   }
-}
+} */

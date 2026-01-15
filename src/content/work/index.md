@@ -13,6 +13,16 @@ I care deeply about making the web more sustainable and accessible, creating dig
 
 My passion for coding and design is complemented by a curiosity for understanding the broader context and strategy behind the solutions I build.
 
+## 2026+
+
+- [Physiotherapy practice website](https://fysiobodybalance.com)
+
+### 2019 - 2025
+
+- [Healthinsurance application and advisory module](https://service.zorgenzekerheid.nl/adviesmodule/)
+
 [Projects 2019-2025](/work/projects/)
+
+## 2015 - 2018
 
 [Projects 2015-2018](/work/projects-archive/)
