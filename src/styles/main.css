@@ -24,13 +24,17 @@ body {
 
 .main-container {
   flex: 1;
-  margin: 0 auto 10rem auto;
+  margin: 0 auto 0 auto;
   max-width: var(--max-width-content);
   width: 90%; /* Keeps it responsive on small screens */
   padding: var(--spacing-m);
   text-align: left; /* Keeps text aligned left inside */
 }
-.photo-container {
+.main-container:only-child {
+  margin-bottom: 10rem;
+}
+
+.wider-container {
   flex: 1;
   margin: 0 auto 4rem auto;
   max-width: var(--max-width-photos);

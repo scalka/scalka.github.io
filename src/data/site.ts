@@ -1,3 +1,5 @@
+import profilePhoto from "../assets/images/fav.jpeg";
+
 export const site = {
   title: "Flowing fragments",
   baseUrl: "https://flowingfragments.com",
@@ -5,7 +7,7 @@ export const site = {
   footerText:
     "Crafted with curiosity by Sylwia. Hosted on the web as a digital garden 🌿.",
   hcard: {
-    avatar: "src/assets/images/me_munich.jpg",
+    avatar: profilePhoto,
     fullName: "Sylwia Całka-Verhulst",
     showLocation: true,
     country: "The Netherlands",

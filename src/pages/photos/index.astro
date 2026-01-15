@@ -84,27 +84,29 @@ const tocItems = sortedGroupNames.map((groupName) => ({
 >
   <PageContents slot="aside" items={tocItems} />
 
-  <div class="photo-container prose">
+  <div class="wider-containerprose">
     <h1>{pageTitle}</h1>
 
-    {sortedGroupNames.map((groupName) => (
-      <section class="photo-group" id={slugify(groupName)}>
-        <h2>{groupName}</h2>
+    {
+      sortedGroupNames.map((groupName) => (
+        <section class="photo-group" id={slugify(groupName)}>
+          <h2>{groupName}</h2>
 
-        <div class="photo-gallery-grid">
-          {groups.get(groupName)!.map(({ path, src, orientation }) => (
-            <Image
-              class={`gallery-photo ${orientation}`}
-              src={src}
-              alt={getFileName(path)}
-              loading="lazy"
-              widths={[480, 800, 1200, 1600]}
-              sizes="(max-width: 768px) 100vw, 360px"
-            />
-          ))}
-        </div>
-      </section>
-    ))}
+          <div class="photo-gallery-grid">
+            {groups.get(groupName)!.map(({ path, src, orientation }) => (
+              <Image
+                class={`gallery-photo ${orientation}`}
+                src={src}
+                alt={getFileName(path)}
+                loading="lazy"
+                widths={[480, 800, 1200, 1600]}
+                sizes="(max-width: 768px) 100vw, 360px"
+              />
+            ))}
+          </div>
+        </section>
+      ))
+    }
   </div>
 </Base>
 <style>

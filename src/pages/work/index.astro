@@ -2,6 +2,7 @@
 import Base from "../../layouts/Base.astro";
 import { site } from "../../data/site";
 import { getCollection } from "astro:content";
+import ProjectsGrid from "../../components/ProjectsGrid.astro";
 
 const workEntries = await getCollection("work");
 const indexEntry = workEntries.find((entry) => entry.slug === "index");
@@ -24,5 +25,8 @@ const pageTitle = indexEntry.data.title ?? "Work";
   <div class="main-container prose">
     <h1>{pageTitle}</h1>
     <Content />
+  </div>
+  <div class="wider-container">
+    <ProjectsGrid />
   </div>
 </Base>
